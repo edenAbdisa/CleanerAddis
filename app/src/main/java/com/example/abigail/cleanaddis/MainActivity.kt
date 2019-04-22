@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         nav_view.setNavigationItemSelectedListener(this)
         //tRIAL ONE
+        //trial two
     }
 
     override fun onBackPressed() {
