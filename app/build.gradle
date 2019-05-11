@@ -63,3 +63,7 @@ dependencies {
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
 }
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+}
