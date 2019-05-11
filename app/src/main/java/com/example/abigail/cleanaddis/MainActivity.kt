@@ -1,36 +1,58 @@
 package com.example.abigail.cleanaddis
 
+import android.os.AsyncTask
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import com.example.abigail.cleanaddis.connectDatabase.news.NewsDatabase
+import com.example.abigail.cleanaddis.data.news.NewsDAO
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private lateinit var newsDatabase:  NewsDatabase
+    private  lateinit var  newsDAO: NewsDAO
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar as Toolbar?)
 
+        AsyncTask.execute {
+            newsDatabase= NewsDatabase.getDatabase(this)
+            newsDAO =newsDatabase.newsDao()
+        }
+       /* The above async and this should be added to the fragment not here cause its alot
+       and also the UI elemenets are accessed in the fragments not here
+       this is just to show the way how betsegaw did
+       addButton.setOnClickListener {
+
+            val news=readFields() our method where we wrote the code that reads the data from the UI
+            AsyncTask.execute{
+                saveNews(news) This method is written below
+            }
+        }*/
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
 
         val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+                this, drawer_layout, toolbar as Toolbar?, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
     }
-
+   /* private fun saveNews(news:News){
+        newsDAO.insertNews(news)
+    }*/
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
