@@ -1,5 +1,6 @@
 package com.example.abigail.cleanaddis
 
+import android.os.AsyncTask
 import android.os.Bundle
 
 import android.view.Menu
@@ -14,12 +15,19 @@ import com.example.abigail.cleanaddis.controller.news.NewsFragment
 
 import com.example.abigail.cleanaddis.utility.replaceFragmenty
 
+
+
+import com.example.abigail.cleanaddis.connectDatabase.news.NewsDatabase
+import com.example.abigail.cleanaddis.data.news.NewsDAO
+
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+    private lateinit var newsDatabase:  NewsDatabase
+    private  lateinit var  newsDAO: NewsDAO
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +35,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar as Toolbar?)
 
+        AsyncTask.execute {
+            newsDatabase= NewsDatabase.getDatabase(this)
+            newsDAO =newsDatabase.newsDao()
+        }
+       /* The above async and this should be added to the fragment not here cause its alot
+       and also the UI elemenets are accessed in the fragments not here
+       this is just to show the way how betsegaw did
+       addButton.setOnClickListener {
+
+            val news=readFields() our method where we wrote the code that reads the data from the UI
+            AsyncTask.execute{
+                saveNews(news) This method is written below
+            }
+        }*/
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
@@ -40,7 +62,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
     }
-
+   /* private fun saveNews(news:News){
+        newsDAO.insertNews(news)
+    }*/
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
