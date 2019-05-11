@@ -43,7 +43,7 @@ dependencies {
 
     def room_version = "2.1.0-alpha07"
 
-    def junit_version = "4.12"
+
 
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
@@ -63,9 +63,25 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
 
 
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-beta01'
 
 }
 
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-beta01'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01'
+}
+
+dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
 }
