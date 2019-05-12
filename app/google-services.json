@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "556037216540",
+    "firebase_url": "https://cleaneraddis.firebaseio.com",
+    "project_id": "cleaneraddis",
+    "storage_bucket": "cleaneraddis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556037216540:android:8b3b013c7f0e0ea1",
+        "android_client_info": {
+          "package_name": "com.example.abigail.cleanaddis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556037216540-dtlr77ii0scum9kqfetsgn89799fvnj0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abigail.cleanaddis",
+            "certificate_hash": "7813b14652f6d68c43b9dee747a6f1278d822076"
+          }
+        },
+        {
+          "client_id": "556037216540-1u617h0g4eg8gv5btg4huuedlj08d0f5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzg538B_lsztKAlc2F_vV0uCHzf-XQdG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556037216540-1u617h0g4eg8gv5btg4huuedlj08d0f5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
