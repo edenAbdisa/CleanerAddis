@@ -4,5 +4,14 @@
     <color name="colorPrimaryDark">#009688</color>
     <color name="colorAccent">#F9AA33</color>
 
+    <color name="greenPrimaryDark">#356859</color>
+    <color name="greenPrimaryLighter">#37966F</color>
+    <color name="greenPrimaryLight">#B9E4C9</color>
+    <color name="orangeSecondary">#FD5523</color>
+    <color name="fadedWhiteSecondary">#FFFBE6</color>
+
+
+
+
 
 </resources>
