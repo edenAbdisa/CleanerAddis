@@ -43,9 +43,11 @@ dependencies {
     //implementation 'com.google.android.gms:play-services-maps:15.0.1'
     //implementation 'com.google.android.gms:play-services-ads:15.0.1'
 
-    //def room_version = "2.1.0-alpha07"
+    def room_version = "2.1.0-alpha07"
+    def coroutines_version="1.2.1"
+    def arch_lifecycle_version = "2.1.0-alpha04"
+    def androidx_arch_version = "2.0.0"
 
-    /*
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
 
@@ -59,21 +61,27 @@ dependencies {
     implementation "androidx.room:room-guava:$room_version"
 
     // Test helpers
-    testImplementation "androidx.room:room-testing:$room_version"*/
+    testImplementation "androidx.room:room-testing:$room_version"
 
     
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
 
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
 
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-beta01'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0-alpha01'
+    //lifecycle
+    implementation "androidx.lifecycle:lifecycle-extensions:$arch_lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$arch_lifecycle_version"
+    androidTestImplementation "androidx.arch.core:core-testing:$androidx_arch_version"
 
-    //implementation 'com.google.firebase:firebase-core:16.0.1'
+   //view model
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_lifecycle_version"
 
-    //implementation 'com.google.firebase:firebase-firestore:11.4.2'
+    //coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
 
 }
 
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'

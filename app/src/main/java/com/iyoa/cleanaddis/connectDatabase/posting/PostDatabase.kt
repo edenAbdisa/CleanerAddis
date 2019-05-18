@@ -1,7 +1,7 @@
 package com.iyoa.cleanaddis.connectDatabase.posting
 
 /*
-@Database(entities = arrayOf(News:: class ),version=1)
+@Database(entities = arrayOf(ArticleViewModel:: class ),version=1)
 abstract class PostDatabase: RoomDatabase() {
     abstract fun newsDao(): NewsDAO
     companion object{

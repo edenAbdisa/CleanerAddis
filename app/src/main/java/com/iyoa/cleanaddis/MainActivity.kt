@@ -4,37 +4,27 @@ import android.os.Bundle
 
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import com.google.android.gms.tasks.OnSuccessListener
 import com.iyoa.cleanaddis.controller.news.NewsFragment
 
 import com.iyoa.cleanaddis.utility.replaceFragmenty
 
 
 
-//import com.example.abigail.cleanaddis.connectDatabase.news.NewsDatabase
+//import com.example.abigail.cleanaddis.connectDatabase.news.ArticleDatabase
 
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FirebaseFirestore
-import com.iyoa.cleanaddis.connectDatabase.Firebase.InitFirestore
-import com.iyoa.cleanaddis.entity.new.Article
-import com.iyoa.cleanaddis.entity.resources.Media
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-   //private lateinit var newsDatabase:  NewsDatabase
+   //private lateinit var newsDatabase:  ArticleDatabase
     //private  lateinit var  newsDAO: NewsDAO
 
 
@@ -45,7 +35,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 
-        // Add media for trial on the cloud firestore
 
 
 
@@ -58,7 +47,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 /*
         AsyncTask.execute {
-            newsDatabase= NewsDatabase.getDatabase(this)
+            newsDatabase= ArticleDatabase.getDatabase(this)
             newsDAO =newsDatabase.newsDao()
         }
         The above async and this should be added to the fragment not here cause its alot
@@ -84,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
     }
-   /* private fun saveNews(news:News){
+   /* private fun saveNews(news:ArticleViewModel){
         newsDAO.insertNews(news)
     }*/
     override fun onBackPressed() {
@@ -121,7 +110,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     true,
                    R.id.linearlayout_fragment_area
                 )
-                setTitle("News")
+                setTitle("ArticleViewModel")
 
 
             }
