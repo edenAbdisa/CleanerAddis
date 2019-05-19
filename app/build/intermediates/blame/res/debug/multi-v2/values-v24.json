@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\mx\\MyGit\\CleanerAddis\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\mx\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\5c02bfaa497b0335544b3fc048ed36ef\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\mx\\.gradle\\caches\\transforms-1\\files-1.1\\media-1.0.0.aar\\571d23b7d3d6a7eefd56c9a6eae1b2ac\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\mx\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\62f7591c2c1f58d1765b8d3d5c2512ac\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\mx\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\9ddcb5cbf1c27072e59325273739d15b\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
