@@ -14,9 +14,9 @@ import java.util.*
 
 @Entity(tableName = "article")
 data class Article(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
 @ColumnInfo(name="uuid")
-val uuid: String = UUID.randomUUID().toString(),
+val uuid: UUID? = null,
     @ColumnInfo(name="title") val title:String,
     @ColumnInfo(name="media_uuid")val media_uuid: String,
     @ColumnInfo(name = "text") val text:String,
