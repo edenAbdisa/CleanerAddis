@@ -9,10 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.iyoa.cleanaddis.R
+import com.iyoa.cleanaddis.adapters.news.MyNewsRecyclerViewAdapter
 
 import com.iyoa.cleanaddis.controller.news.dummy.DummyContent
 import com.iyoa.cleanaddis.controller.news.dummy.DummyContent.DummyItem
+import com.iyoa.cleanaddis.data.news.Article
+import kotlinx.android.synthetic.main.fragment_news.*
 
 /**
  * A fragment representing a list of Items.
@@ -40,7 +44,7 @@ class NewsFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyNewsRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                adapter = MyNewsRecyclerViewAdapter(context)
             }
         }
         return view
@@ -76,5 +80,33 @@ class NewsFragment : Fragment() {
         // TODO: Update argument type and name
         fun onListFragmentInteraction(item: DummyItem?)
     }
+
+
+
+
+    fun addNews(){
+        val addButton: Button = add_news
+
+    }
+
+    fun viewNews(){
+
+
+    }
+    fun viewAllNews(){
+        //get all news
+        //use viewmodel to pass data to the UI
+
+    }
+
+    fun editNews(){
+
+    }
+    fun deleteNews(){
+
+
+    }
+
+
 
 }
