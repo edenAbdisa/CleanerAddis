@@ -1,4 +1,4 @@
-
+./app/build
 #built application files
 *.apk
 *.ap_
@@ -18,6 +18,14 @@ local.properties
 
 # Windows thumbnail db
 Thumbs.db
+
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
 
 # OSX files
 .DS_Store

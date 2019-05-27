@@ -9,8 +9,8 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="28" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
@@ -21,12 +21,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.iyoa.cleanaddis.Main4Activity"
-            android:label="@string/title_activity_main4" >
-        </activity>
         <activity
             android:name="com.iyoa.cleanaddis.MainActivity"
             android:label="@string/app_name"
@@ -59,14 +54,14 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false" />
+
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
             android:authorities="com.example.abigail.cleanaddis.lifecycle-process"
             android:exported="false"
-            android:multiprocess="true" />
-        <provider
-            android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.example.abigail.cleanaddis.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 

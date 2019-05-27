@@ -16,7 +16,7 @@ import java.util.*
 data class Article(
     @PrimaryKey(autoGenerate = true)
 @ColumnInfo(name="uuid")
-val uuid: String = UUID.randomUUID().toString(),
+val uuid: Long ,
     @ColumnInfo(name="title") val title:String,
     @ColumnInfo(name="media_uuid")val media_uuid: String,
     @ColumnInfo(name = "text") val text:String,

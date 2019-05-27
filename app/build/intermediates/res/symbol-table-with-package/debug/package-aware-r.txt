@@ -1234,6 +1234,9 @@ id guideline11
 id guideline12
 id guideline13
 id guideline14
+id guideline15
+id guideline16
+id guideline17
 id guideline2
 id guideline3
 id guideline4
@@ -1257,6 +1260,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id include
 id info
 id invisible
@@ -1312,6 +1316,7 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
+id radioButton2
 id recyclerView_comment_list
 id recyclerView_front_post_view
 id right
@@ -1481,12 +1486,14 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout fragment_after_media_choosen
 layout fragment_display_posts_recycler_view
 layout fragment_main
 layout fragment_news
 layout fragment_news_list
 layout fragment_post
 layout fragment_post_account
+layout fragment_select_picture_to_post
 layout nav_header_main
 layout news_detail_fragment
 layout notification_action
@@ -1507,7 +1514,6 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout select_picture_to_post
 layout single_post_display
 layout support_simple_spinner_dropdown_item
 menu activity_main_drawer
