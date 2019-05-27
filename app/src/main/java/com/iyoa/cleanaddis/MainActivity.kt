@@ -19,19 +19,14 @@ import com.iyoa.cleanaddis.utility.replaceFragmenty
 
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-<<<<<<< HEAD
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FirebaseFirestore
-import com.iyoa.cleanaddis.connectDatabase.Firebase.InitFirestore
 import com.iyoa.cleanaddis.controller.posting.PostFragment
-import com.iyoa.cleanaddis.entity.new.Article
-import com.iyoa.cleanaddis.entity.resources.Media
-=======
->>>>>>> 6cda8e13406a37112cfa850e2d895ce9437364fc
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+
+import retrofit2.Call;
+import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
    //private lateinit var newsDatabase:  ArticleDatabase

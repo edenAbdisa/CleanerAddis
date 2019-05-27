@@ -40,10 +40,22 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     implementation 'androidx.cardview:cardview:1.0.0-beta01'
     implementation 'androidx.gridlayout:gridlayout:1.0.0-beta01'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
 
-    //implementation 'com.google.android.gms:play-services-maps:15.0.1'
-    //implementation 'com.google.android.gms:play-services-ads:15.0.1'
 
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit-converters:$retrofit_version"
+    implementation "com.squareup.retrofit2:retrofit-adapters:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
+    implementation "com.google.code.gson:gson:$gson_version"
+
+    // Rx
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+    //Room
     def room_version = "2.1.0-alpha07"
     def coroutines_version="1.2.1"
     def arch_lifecycle_version = "2.1.0-alpha04"
@@ -51,39 +63,26 @@ dependencies {
 
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
-
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:$room_version"
-
     // optional - RxJava support for Room
     implementation "androidx.room:room-rxjava2:$room_version"
-
     // optional - Guava support for Room, including Optional and ListenableFuture
     implementation "androidx.room:room-guava:$room_version"
-
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
-
-
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-
-    implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
 
     //lifecycle
     implementation "androidx.lifecycle:lifecycle-extensions:$arch_lifecycle_version"
     kapt "androidx.lifecycle:lifecycle-compiler:$arch_lifecycle_version"
     androidTestImplementation "androidx.arch.core:core-testing:$androidx_arch_version"
 
-   //view model
+    //view model
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_lifecycle_version"
 
     //coroutines
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
-
-
 }
-
-
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-kapt'
