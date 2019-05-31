@@ -11,10 +11,11 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
+import javax.annotation.Generated
 
 @Entity(tableName = "article")
 data class Article(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name="uuid")
     val uuid: Long,
 
