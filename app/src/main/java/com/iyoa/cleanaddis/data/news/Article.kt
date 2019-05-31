@@ -16,7 +16,11 @@ import java.util.*
 data class Article(
     @PrimaryKey
 @ColumnInfo(name="uuid")
+<<<<<<< HEAD
 val uuid: Long,
+=======
+val uuid: Long ,
+>>>>>>> 61b9985b276e148cf22369ad1bfdeb5b11542bc6
     @ColumnInfo(name="title") val title:String,
     @ColumnInfo(name="media_uuid")val media_uuid: String,
     @ColumnInfo(name = "text") val text:String,
