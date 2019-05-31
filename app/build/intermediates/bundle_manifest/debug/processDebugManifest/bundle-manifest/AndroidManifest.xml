@@ -53,9 +53,20 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.abigail.cleanaddis.com.squareup.picasso"
+            android:exported="false" />
+
         <service
             android:name="androidx.room.MultiInstanceInvalidationService"
             android:exported="false" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="com.example.abigail.cleanaddis.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>
