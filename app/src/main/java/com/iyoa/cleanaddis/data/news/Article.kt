@@ -11,12 +11,14 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
+import javax.annotation.Generated
 
 @Entity(tableName = "article")
 data class Article(
     @PrimaryKey(autoGenerate = true)
-@ColumnInfo(name="uuid")
-val uuid: Long ,
+    @ColumnInfo(name="uuid")
+    val uuid: Long,
+
     @ColumnInfo(name="title") val title:String,
     @ColumnInfo(name="media_uuid")val media_uuid: String,
     @ColumnInfo(name = "text") val text:String,
