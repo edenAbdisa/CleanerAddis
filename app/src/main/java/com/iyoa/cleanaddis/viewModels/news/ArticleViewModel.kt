@@ -19,10 +19,10 @@ class ArticleViewModel(application: Application):AndroidViewModel(application) {
         articleRepos = ArticleRepository(articleDAO)
         allArticles = articleRepos.allArticles()
     }
-
+/*
     fun insertArticle(article:Article) = viewModelScope.launch(Dispatchers.IO)
     {
         articleRepos.insertArticles(article)
     }
-
+*/
 }

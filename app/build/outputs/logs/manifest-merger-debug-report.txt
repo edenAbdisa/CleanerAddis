@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.room:room-ktx:2.1.0-alpha07] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\room-ktx-2.1.0-alpha07.aar\017afc14aa5478059ce9bee5556a5699\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-ktx-2.1.0-alpha04.aar\4538efc36d46878efa06462fb84d9aff\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\1dbef93eab29d39962a1542f9a685a33\AndroidManifest.xml:17:1-22:12
@@ -59,20 +59,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\mx\.gradle\caches\transforms-1
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\d4a6d0b39207d44e2c23594782f5d418\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\ee0b2fbd7dcfad0fdade479cbcb75d65\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:protolite-well-known-types:16.0.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\protolite-well-known-types-16.0.0.aar\6e88caaea74344d6b2f77ef4cf96ec77\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
-INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:3:11-40
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-25:12
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:2:11-69
@@ -82,8 +82,14 @@ MERGED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\
 MERGED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-17.1.0.aar\6cc4ab04064274232ffe6d10e56f419c\AndroidManifest.xml:11:5-67
 	android:name
 		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:5:5-78
+MERGED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-17.1.0.aar\6cc4ab04064274232ffe6d10e56f419c\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-17.1.0.aar\6cc4ab04064274232ffe6d10e56f419c\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:5:22-76
 application
-ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:5:5-23:19
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:6:5-24:19
 MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\1aacb321521d92a56abf1bea601ab163\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\1aacb321521d92a56abf1bea601ab163\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\e74768a7274711642e8d7a5f57acb13b\AndroidManifest.xml:9:5-20
@@ -113,35 +119,35 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\mx\.gr
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\bbe72df608cd1594834f25b6f8870d53\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:10:13-39
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:11:13-39
 	android:label
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:8:13-45
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:9:13-45
 	android:roundIcon
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:9:13-58
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:10:13-58
 	android:icon
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:7:13-47
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:8:13-47
 	android:allowBackup
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:6:13-39
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:7:13-39
 	android:theme
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:11:13-44
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:12:13-44
 activity#com.iyoa.cleanaddis.MainActivity
-ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:13:9-22:20
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:14:9-23:20
 	android:label
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:15:17-49
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:16:17-49
 	android:theme
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:16:17-60
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:17:17-60
 	android:name
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:14:17-45
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:15:17-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:17:13-21:29
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:18:17-68
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:19:17-68
 	android:name
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:20:17-76
+ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:21:17-76
 	android:name
-		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:20:27-74
+		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml:21:27-74
 uses-sdk
 INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
@@ -266,10 +272,6 @@ INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 		ADDED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\mx\MyGit\CleanerAddis\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-17.1.0.aar\6cc4ab04064274232ffe6d10e56f419c\AndroidManifest.xml:10:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-17.1.0.aar\6cc4ab04064274232ffe6d10e56f419c\AndroidManifest.xml:10:22-76
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-firestore:17.1.0] C:\Users\mx\.gradle\caches\transforms-1\files-1.1\jetified-firebase-firestore-17.1.0.aar\6cc4ab04064274232ffe6d10e56f419c\AndroidManifest.xml:14:9-18:19
 	android:name

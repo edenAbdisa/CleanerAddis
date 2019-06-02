@@ -18,7 +18,6 @@ import kotlinx.android.synthetic.main.fragment_post.view.*
 class PostFragment() : Fragment() {
     private var columnCount = 1
     private var listener: OnFragmentInteractionListener? = null
-
     lateinit var recyclerView:RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
@@ -29,9 +28,7 @@ class PostFragment() : Fragment() {
 
         return view
     }
-    fun replaceChildFragmenty(fragment: Fragment,
-                                           allowStateLoss: Boolean = false,
-                                           @IdRes containerViewId: Int) {
+    fun replaceChildFragmenty(fragment: Fragment,allowStateLoss: Boolean = false, @IdRes containerViewId: Int) {
 
         val ft = childFragmentManager
             .beginTransaction()

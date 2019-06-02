@@ -29,6 +29,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -47,7 +48,7 @@ dependencies {
     implementation 'androidx.gridlayout:gridlayout:1.0.0-beta01'
     implementation 'androidx.recyclerview:recyclerview:1.0.0-beta01'
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+   implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
@@ -76,8 +77,8 @@ dependencies {
     implementation "androidx.room:room-rxjava2:$room_version"
     // optional - Guava support for Room, including Optional and ListenableFuture
     implementation "androidx.room:room-guava:$room_version"
-    implementation 'com.google.dagger:dagger:2.14.1'    // Add it today
-    kapt 'com.google.dagger:dagger-compiler:2.14.1'
+    //implementation 'com.google.dagger:dagger:2.14.1'    // Add it today
+    //kapt 'com.google.dagger:dagger-compiler:2.14.1'
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 

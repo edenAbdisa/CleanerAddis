@@ -1,9 +1,15 @@
 package com.iyoa.cleanaddis.connectDatabase.posting
 
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.iyoa.cleanaddis.entity.posting.Post
+
 /*
-@Database(entities = arrayOf(ArticleViewModel:: class ),version=1)
+@Database(entities = arrayOf(Post:: class ),version=1)
 abstract class PostDatabase: RoomDatabase() {
-    abstract fun newsDao(): NewsDAO
+  //  abstract fun newsDao(): PostDAO
     companion object{
         @Volatile
         private var INSTANCE: PostDatabase?=null
@@ -14,7 +20,7 @@ abstract class PostDatabase: RoomDatabase() {
                 return tempInstance
             }
             synchronized(this){
-                val instance= Room.databaseBuilder(
+               val instance= Room.databaseBuilder(
                     context.applicationContext,
                     PostDatabase::class.java,"post_database"
                 ).build()
@@ -25,4 +31,4 @@ abstract class PostDatabase: RoomDatabase() {
 
     }
 }
-        */
+*/
