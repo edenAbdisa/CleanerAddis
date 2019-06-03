@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.gridlayout:gridlayout:1.0.0-beta01@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/af954e4a8623dfd1b6ef74a1cb730dff/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/af954e4a8623dfd1b6ef74a1cb730dff/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/737be63bc23b2994043c8752e01fba26/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/737be63bc23b2994043c8752e01fba26/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
