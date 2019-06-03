@@ -150,6 +150,7 @@
 =======
     <list default="true" id="0ae83241-bda3-4308-a0b5-290d0e5d84ff" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
 >>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -160,6 +161,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
 >>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" afterDir="false" />
+>>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
     </list>
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/build/classes/" />
@@ -518,8 +523,13 @@
     <panes>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+=======
+      <pane id="AndroidView" />
+      <pane id="ProjectPane" />
+>>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -567,6 +577,7 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -646,6 +657,8 @@
 >>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
       <pane id="ProjectPane" />
       <pane id="AndroidView" />
+=======
+>>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -1002,8 +1015,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <editor active="true" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="1" />
@@ -1033,9 +1050,9 @@
 =======
       <window_info anchor="bottom" id="TODO" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49895832" weight="0.32910052" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5260417" side_tool="true" visible="true" weight="0.32380953" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5265625" side_tool="true" visible="true" weight="0.32380953" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.47395834" visible="true" weight="0.32380953" />
+      <window_info anchor="bottom" id="Build" order="4" sideWeight="0.4734375" visible="true" weight="0.32380953" />
       <window_info anchor="bottom" id="Logcat" order="5" weight="0.32867134" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" />
@@ -1666,16 +1683,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/backend.iml" />
+    <entry file="file://$PROJECT_DIR$/app/google-services.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/google-services.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
