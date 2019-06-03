@@ -15,10 +15,11 @@ class ArticleViewModel(application: Application):AndroidViewModel(application) {
     val allArticles : LiveData<List<Article>>
 
     init{
-        val  articleDAO = ArticleDatabase.getDatabase(application).newsDao()
+        val  articleDAO = ArticleDatabase.getDatabase(application).articleDao()
         articleRepos = ArticleRepository(articleDAO)
         allArticles = articleRepos.allArticles()
     }
+
 
     fun insertArticle(article:Article) = viewModelScope.launch(Dispatchers.IO)
     {
