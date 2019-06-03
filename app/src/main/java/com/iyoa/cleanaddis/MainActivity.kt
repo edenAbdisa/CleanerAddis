@@ -38,18 +38,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar as Toolbar?)
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*
         AsyncTask.execute {
             newsDatabase= ArticleDatabase.getDatabase(this)

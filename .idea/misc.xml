@@ -3,7 +3,11 @@
   <component name="ProjectResources">
     <resource url="xlink" location="$USER_HOME$/Desktop/xlink.xsd" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+=======
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
+>>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
 </project>

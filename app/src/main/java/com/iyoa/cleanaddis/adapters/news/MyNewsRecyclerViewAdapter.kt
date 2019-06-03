@@ -45,6 +45,10 @@ class MyNewsRecyclerViewAdapter(context: Context) : RecyclerView.Adapter<MyNewsR
 
 
     }
+    internal fun setArticles(articles:List<Article>){
+        this.articles = articles
+        notifyDataSetChanged()
+    }
 
     override fun getItemCount(): Int = articles.size
 
