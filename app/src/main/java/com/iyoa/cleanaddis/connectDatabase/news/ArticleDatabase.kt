@@ -9,9 +9,9 @@ import com.iyoa.cleanaddis.data.news.Article
 import com.iyoa.cleanaddis.data.news.ArticleDAO
 
 
-@Database(entities = arrayOf(Article:: class ),version=1)
+//@Database(entities = arrayOf(Article:: class ),version=1)
 abstract class ArticleDatabase: RoomDatabase() {
-    abstract fun newsDao(): ArticleDAO
+    abstract fun articleDao(): ArticleDAO
     companion object{
         @Volatile
         private var INSTANCE: ArticleDatabase?=null

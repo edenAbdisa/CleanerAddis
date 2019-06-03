@@ -1,6 +1,7 @@
 package com.iyoa.cleanaddis.controller.news
 
 import android.content.Context
+import android.os.AsyncTask
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,13 +11,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.lifecycle.ViewModelProviders
+import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.news.MyNewsRecyclerViewAdapter
 
 import com.iyoa.cleanaddis.controller.news.dummy.DummyContent
 import com.iyoa.cleanaddis.controller.news.dummy.DummyContent.DummyItem
 import com.iyoa.cleanaddis.data.news.Article
+import com.iyoa.cleanaddis.data.news.ArticleData
+import com.iyoa.cleanaddis.viewModels.news.ArticleViewModel
 import kotlinx.android.synthetic.main.fragment_news.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * A fragment representing a list of Items.
@@ -26,6 +33,9 @@ import kotlinx.android.synthetic.main.fragment_news.*
 class NewsFragment : Fragment() {
 
     // TODO: Customize parameters
+    lateinit var articleViewModel: ArticleViewModel
+    val context = MainActivity()
+    val articleListAdapter = MyNewsRecyclerViewAdapter(context)
 
     private var columnCount = 1
 
@@ -47,6 +57,13 @@ class NewsFragment : Fragment() {
                 adapter = MyNewsRecyclerViewAdapter(context)
             }
         }
+        articleViewModel = ViewModelProviders.of(this).get(
+            ArticleViewModel::class.java
+        )
+       articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
+           articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticles(articles)}
+       })
+
         return view
     }
 
@@ -85,7 +102,24 @@ class NewsFragment : Fragment() {
 
 
     fun addNews(){
+
         val addButton: Button = add_news
+        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+        val currentDate = sdf.format(Date())
+        addButton.setOnClickListener {
+            val article =
+                Article(1,"Plastic",1
+                    ,"Hey there plastic",currentDate,"PUBLISHED",
+                    "delilah","delilah",0,1)
+
+            AsyncTask.execute{
+                articleViewModel.insertArticle(article)
+            }
+              }
+
+
+
+
 
     }
 
