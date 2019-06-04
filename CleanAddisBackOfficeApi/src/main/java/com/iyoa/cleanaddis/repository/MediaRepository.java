@@ -6,6 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.iyoa.cleanaddis.model.Media;
 
-public interface MediaRepository extends JpaRepository<Media, UUID> {
+
+
+public interface MediaRepository extends JpaRepository<Media, UUID>{
+
 
 }

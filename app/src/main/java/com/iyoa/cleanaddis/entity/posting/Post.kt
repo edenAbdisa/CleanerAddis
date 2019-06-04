@@ -1,10 +1,23 @@
 package com.iyoa.cleanaddis.entity.posting
 
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 import java.util.*
-
-
-
-data class Post (val uuid: String, val username:String, val noLike:Int,
-                 val mediaPath:String)
+/*
+enum class PostStatus {
+   POSTED, REMOVEDBYREPORT,DELETED,EDITED
+}
+enum class CanBeViewedBy {
+    FRIENDS,FRIENDSOFFRIENDS,MEONLY,ALL
+}
+val can_be_viewed_by:Enum<CanBeViewedBy>,
+val status: Enum<PostStatus>,
+val date:Date,
+*/
+@Entity(tableName = "post")
+data class Post (@PrimaryKey val  uuid: Long, val username:String,
+                 val noLike:Int, val noView: Int,  val downloadable: Int,
+                 val allowToBeUsedForArticle:Int,
+                 val mediaUuid:Long, val categoryUuid:Long)

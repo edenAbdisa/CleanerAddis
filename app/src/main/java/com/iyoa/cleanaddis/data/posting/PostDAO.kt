@@ -1,13 +1,13 @@
 package com.iyoa.cleanaddis.data.posting
-/*
+
 import androidx.room.*
 import com.iyoa.cleanaddis.entity.posting.Post
 import java.util.*
 
 @Dao
 interface PostDAO {
-    @Query("SELECT * FROM post WHERE post_uuid =:uuid")
-    fun getPostByUUID(uuid: UUID): Post
+    @Query("SELECT * FROM post WHERE uuid =:uuid")
+    fun getPostByUUID(uuid: Long): Post
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertPost(post: Post)
@@ -20,4 +20,4 @@ interface PostDAO {
 
     @Query("DELETE FROM post")
     fun deleteAll()
-}*/
+}

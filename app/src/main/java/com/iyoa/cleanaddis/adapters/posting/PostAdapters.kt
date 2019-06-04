@@ -11,14 +11,9 @@ import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.entity.posting.Post
 import kotlinx.android.synthetic.main.single_post_display.view.*
 
-class PostAdapters (val context: Context) : RecyclerView.Adapter<PostAdapters.PostViewHolder>() {
+class PostAdapters (val context: Context,val post:List<Post>) : RecyclerView.Adapter<PostAdapters.PostViewHolder>() {
 
-    private val mValues = listOf(
-
-        Post("Software Engineering II", "ITSE-3212",7,"Software Engineering II description"),
-        Post("Advanced Mobile Programming", "ITSE-3223",7,"Advanced Mobile Programming description"),
-        Post("Operating System", "ITSE-3253",7,"Operating System description")
-    )
+    private val mValues = post
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val recyclerViewItem = LayoutInflater.from(parent.context)
             .inflate(R.layout.single_post_display, parent, false)
@@ -30,7 +25,7 @@ class PostAdapters (val context: Context) : RecyclerView.Adapter<PostAdapters.Po
         val item = mValues[position]
         holder.username.text = item.username
         holder.likedBy.text = item.noLike.toString()
-        holder.postDescription.text=item.mediaPath
+        holder.postDescription.text=item.mediaUuid.toString()
 
 
     }
