@@ -12,7 +12,7 @@ import com.iyoa.cleanaddis.model.Article;
 
 
 public interface ArticleRepository extends JpaRepository<Article, UUID> {
-
+/*
 	// List<Article> searchByTitle(String title);
 	
 	Article findBytitle(String title);
@@ -75,7 +75,7 @@ public interface ArticleRepository extends JpaRepository<Article, UUID> {
 	 * @param uuid the uuid of the origin article to ignore
 	 * @return a list of valid articles
 	 */
-	@Query(value = "SELECT * FROM articles "
+	/*@Query(value = "SELECT * FROM articles "
 		+ "WHERE category_id = :category AND published = 1 AND uuid <> :id "
 		+ "AND created_at > :from "
 		,nativeQuery = true)
@@ -88,7 +88,7 @@ public interface ArticleRepository extends JpaRepository<Article, UUID> {
 	 * @param category the category to filter
 	 * @return a list of valid articles
 	 */
-	@Query(value = "SELECT * FROM articles "
+/*	@Query(value = "SELECT * FROM articles "
 		+ "WHERE category_id = :category AND published = 1 "
 		+ "AND created_at > :from "
 		,nativeQuery = true)
@@ -99,11 +99,11 @@ public interface ArticleRepository extends JpaRepository<Article, UUID> {
 	 * @param category the category to search
 	 * @return a list of articles
 	 */
-	@Query(value = "SELECT * FROM articles "
+	/*@Query(value = "SELECT * FROM articles "
 		+ "WHERE category_id = :category AND published = 1 "
 		+ "ORDER BY updated_at DESC "
 		+ "LIMIT 20 "
 		,nativeQuery = true)
-	List<Article> findNewestPublishedArticlesByCategory(@Param("category") UUID category);
+	List<Article> findNewestPublishedArticlesByCategory(@Param("category") UUID category);*/
 	
 }

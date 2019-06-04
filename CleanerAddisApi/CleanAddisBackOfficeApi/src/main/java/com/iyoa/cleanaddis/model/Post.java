@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.controller;
+package com.iyoa.cleanaddis.model;
 
 import java.sql.Date;
 import java.util.UUID;

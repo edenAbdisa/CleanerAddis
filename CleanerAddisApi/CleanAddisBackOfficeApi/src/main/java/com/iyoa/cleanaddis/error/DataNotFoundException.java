@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.controller;
+package com.iyoa.cleanaddis.error;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
