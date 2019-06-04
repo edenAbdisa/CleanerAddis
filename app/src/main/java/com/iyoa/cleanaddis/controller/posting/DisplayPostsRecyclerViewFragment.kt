@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.iyoa.cleanaddis.R
@@ -20,7 +21,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class DisplayPostsRecyclerViewFragment : Fragment() {
-    var listItems = emptyArray <String?>()
+    var listItems :List <Post>? = emptyList()
     private var listener: OnFragmentInteractionListener? = null
     lateinit var recyclerView: RecyclerView
     private var postServiceImpl:PostServiceImpl=PostServiceImpl()
@@ -37,17 +38,22 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
                 Log.wtf("POST", t.message)
             }
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
-                listItems = arrayOfNulls<String>( response.body()!!.size)
-                for (i in 0 until response.body()!!.size) {
+                 listItems=response.body()
+               // listItems = arrayOfNulls<Post>( response.body()!!.size)
+                Log.println(Log.INFO,"POSTLine41",listItems?.get(0).toString())
+              /*  for (i in 0 until response.body()!!.size) {
                     val post = response.body()!![i]
-                    listItems[i] = post.toString()
-                }
+                    listItems?.get(i) = post
+                    Log.println(Log.INFO,"POST",listItems[i].toString())
+                }*/
 
             }
         })
 
         recyclerView = view.findViewById(R.id.recyclerView_front_post_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
+        Log.println(Log.INFO,"POST","HERE")
+        Log.println(Log.INFO,"POSTS",listItems.toString())
         recyclerView.adapter = context?.let { PostAdapters(it,listItems as List<Post>) }
         recyclerView.setHasFixedSize(true)
         return view

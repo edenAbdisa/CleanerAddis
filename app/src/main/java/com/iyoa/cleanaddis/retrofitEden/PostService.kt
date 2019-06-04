@@ -7,7 +7,7 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface PostService {
-    @GET("/post")
+    @GET("/post/getPosts")
     fun findPosts(): Call<List<Post>>
 
     @GET("/post/{id}")

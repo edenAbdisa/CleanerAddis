@@ -41,20 +41,20 @@ public class Post {
 	@Column(name="date")
 	private Date date;
 	
-	@Column(name="noLike")
+	@Column(name="no_like")
 	private int noLike;
 	
 	@Column(name="no_view")
 	private int noView;
 	
 	@Column(name="status")
-	private PostStatus status;
+	private String status;
 	
 	@Column(name="downloadable")
 	private int downloadable;
 	
 	@Column(name="can_be_viewed_by")
-	private CanBeViewedBy canBeViewedBy;
+	private String canBeViewedBy;
 	
 	@Column(name="allow_to_be_used_for_article")
 	private int allowToBeUsedForArticle;	

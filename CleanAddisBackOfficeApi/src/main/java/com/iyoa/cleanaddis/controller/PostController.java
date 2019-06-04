@@ -28,20 +28,20 @@ public class PostController {
 	private PostService postService;
 		
 	@PostMapping(value="/add", consumes = "application/json")
-    public ResponseEntity<Post> addFriend(@RequestBody PostJson postJson) {
+    public ResponseEntity<Post> addPost(@RequestBody PostJson postJson) {
     	Post post=new Post();
     	post.setUsername(postJson.getUsername());
-    	post.setStatus(postJson.getStatus());
+    	post.setStatus(postJson.getStatus().toString());
     	post.setNoView(postJson.getNoView());
     	post.setNoLike(postJson.getNoLike());
     	post.setMediaUuid(postJson.getMediaUuid());
     	post.setDownloadable(postJson.getDownloadable());
     	post.setDate(postJson.getDate());
-    	post.setCanBeViewedBy(postJson.getCanBeViewedBy());
+    	post.setCanBeViewedBy(postJson.getCanBeViewedBy().toString());
     	post.setAllowToBeUsedForArticle(postJson.getAllowToBeUsedForArticle());
     	return new ResponseEntity<Post>(postService.savePost(post), HttpStatus.OK);
     }
-	@GetMapping(value = "/getPosts", consumes = "application/json")
+	@GetMapping(value = "/getPosts")
     public ResponseEntity<List<Post>> getPost() throws DataNotFoundException {
 		return new ResponseEntity<List<Post>>(postService.getPosts(), HttpStatus.OK);
 	}

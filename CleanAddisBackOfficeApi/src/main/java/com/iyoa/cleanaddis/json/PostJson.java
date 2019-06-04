@@ -12,8 +12,7 @@ import com.iyoa.cleanaddis.model.Post.PostStatus;
 
 import lombok.Data;
 @Data
-public class PostJson {
-	
+public class PostJson {	
 	
 	@JsonProperty("username")
 	private String username;
