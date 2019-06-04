@@ -3,20 +3,26 @@ package com.iyoa.cleanaddis.model;
 
 
 import java.util.Date;
-
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -25,6 +31,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "article")
 @Data
+@RequiredArgsConstructor
 public class Article implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -39,15 +46,12 @@ public class Article implements java.io.Serializable{
 	@Column(name = "title", unique = true, nullable = false, length = 100)	
 	private String title;
 	
-	@Column(name = "media_uuid", nullable = false, length = 16777215)
-	private UUID mediaUUID;
 
 	@Column(name = "text", nullable = false, length = 65535)	
 	private String text;
 
 	@Column(name = "full_text", nullable = false, length = 16777215)
 	private String fullText;
-	
 	
 	
 	@Column(name = "published_date", nullable = false, length = 16777215)
@@ -68,8 +72,16 @@ public class Article implements java.io.Serializable{
 	@Column(name = "view_count", nullable = false, length = 16777215)
 	private int viewCount;
 	
-	@Column(name = "category_uuid", nullable = false, length = 16777215)
-	private UUID categoryUUID;
+	
+	@JsonIgnore
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@JoinColumn(name="media_uuid",referencedColumnName="uuid")
+	private Media media;
+
+	@JsonIgnore
+	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@JoinColumn(name="category_uuid",referencedColumnName="uuid")
+	private Category category;
 	
 }
 	
