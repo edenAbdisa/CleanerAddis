@@ -36,10 +36,7 @@ public class MediaController {
 	
 	@Autowired
 	private MediaService mediaService;
-	
-<<<<<<< HEAD
-	@GetMapping(value = "/findMedia/{id}", consumes = "application/json")
-=======
+
 	  @PostMapping(value = "/create")
 	    public ResponseEntity<Media> createArticlePost(@Valid @RequestBody Media media){
 		  mediaService.Save(media);
@@ -52,8 +49,7 @@ public class MediaController {
 	  }
 
 	
-	@GetMapping(value = "/Media/{id}", consumes = "application/json")
->>>>>>> c545b5d15670d976fdede8ee8c6a4d51c19efd8c
+	@GetMapping(value = "/findMedia/{id}", consumes = "application/json")
     public ResponseEntity<Media> findMedia(@PathVariable("id") UUID id) throws DataNotFoundException {
 		return new ResponseEntity<Media>(mediaService.getMedia(id), HttpStatus.OK);
 	}
