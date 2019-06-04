@@ -15,12 +15,12 @@ import java.util.*
 
 @Entity(tableName = "article")
 data class Article(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @ColumnInfo(name="uuid")
-    val uuid: Long,
+    val uuid: String,
 
     @ColumnInfo(name="title") val title:String,
-    @ColumnInfo(name="media_uuid")val media_uuid: Long,
+    @ColumnInfo(name="media_uuid")val media_uuid: String,
     @ColumnInfo(name = "text") val text:String,
 
     @ColumnInfo(name="published_date")val published_date:String,
@@ -28,7 +28,7 @@ data class Article(
     @ColumnInfo(name="updated_by")val updated_by: String,
     @ColumnInfo(name="published_by") val published_by:String,
     @ColumnInfo(name="view_count")val view_count:Int,
-    @ColumnInfo(name = "category_uuid")val category_uuid: Long
+    @ColumnInfo(name = "category_uuid")val category_uuid: String
 ):Serializable {
 
 
