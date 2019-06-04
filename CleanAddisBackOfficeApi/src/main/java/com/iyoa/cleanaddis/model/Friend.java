@@ -42,7 +42,7 @@ public class Friend implements java.io.Serializable{
 	private String status;
 	
 
-
+	
 	@Column(name = "username_requestor", nullable = false, length = 65535)	
 	private String requestor;
 	

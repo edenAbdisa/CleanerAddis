@@ -4,11 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.iyoa.cleanaddis.model.Media;
+import com.iyoa.cleanaddis.model.Teaching;
 
-
-
-public interface MediaRepository extends JpaRepository<Media, UUID>{
-
+public interface TeachingRepository  extends JpaRepository<Teaching, UUID>  {
 
 }
