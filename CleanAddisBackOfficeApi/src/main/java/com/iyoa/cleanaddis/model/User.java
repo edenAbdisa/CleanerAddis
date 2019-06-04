@@ -47,10 +47,10 @@ public class User implements java.io.Serializable{
 	@Column(name = "username", unique = true, nullable = false, length = 100)	
 	private String username;
 	
-	@Column(name = "fName", nullable = false, length = 65535)	
+	@Column(name = "f_name", nullable = false, length = 65535)	
 	private String firstName;
 	
-	@Column(name = "lName", nullable = false, length = 65535)	
+	@Column(name = "l_name", nullable = false, length = 65535)	
 	private String lastName;
 	
 	@Column(name = "email", nullable = false, length = 65535)	
