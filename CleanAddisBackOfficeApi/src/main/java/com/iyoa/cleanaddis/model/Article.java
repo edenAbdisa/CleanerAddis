@@ -50,8 +50,7 @@ public class Article implements java.io.Serializable{
 	@Column(name = "text", nullable = false, length = 65535)	
 	private String text;
 
-	@Column(name = "full_text", nullable = false, length = 16777215)
-	private String fullText;
+
 	
 	
 	@Column(name = "published_date", nullable = false, length = 16777215)
