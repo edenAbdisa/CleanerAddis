@@ -21,24 +21,24 @@ import com.iyoa.cleanaddis.service.FriendService;
 import com.iyoa.cleanaddis.service.PostService;
 
 @RestController
-@RequestMapping(value = "/friends")
+@RequestMapping(value = "/friend")
 public class FriendController {
 	@Autowired
 	private FriendService friendService;
 	
-	@GetMapping(value = "/friend/{username}", consumes = "application/json")
+	@GetMapping(value = "/findFriends/{username}", consumes = "application/json")
     public ResponseEntity<List<Friend>> findFriends(@PathVariable("username") String username) throws DataNotFoundException {
 		return new ResponseEntity<List<Friend>>(friendService.getFriends(username), HttpStatus.OK);
 	}
 	
-	@GetMapping(value ="/friend/{acceptor}/{requestor}", consumes = "application/json")
-	public ResponseEntity<Friend> findFriendsById(@PathVariable("acceptor") String acceptor,
+	@GetMapping(value ="/findAFriend/{acceptor}/{requestor}", consumes = "application/json")
+	public ResponseEntity<Friend> findFriendById(@PathVariable("acceptor") String acceptor,
 												  @PathVariable("requestor") String requestor ){
 	 
 		return new ResponseEntity<Friend>(friendService.getFriendByUsername(acceptor, requestor), HttpStatus.OK);
 	}
 
-    @PostMapping(value="/friend", consumes = "application/json")
+    @PostMapping(value="/addFriend", consumes = "application/json")
     public ResponseEntity<Friend> addFriend(@RequestBody FriendJson friendJson) {
     	Friend friend=new Friend();
     	friend.setAcceptor(friendJson.getAcceptor());

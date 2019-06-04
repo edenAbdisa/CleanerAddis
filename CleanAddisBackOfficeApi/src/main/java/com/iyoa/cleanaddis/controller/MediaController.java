@@ -22,7 +22,7 @@ public class MediaController {
 	@Autowired
 	private MediaService mediaService;
 	
-	@GetMapping(value = "/Media/{id}", consumes = "application/json")
+	@GetMapping(value = "/findMedia/{id}", consumes = "application/json")
     public ResponseEntity<Media> findMedia(@PathVariable("id") UUID id) throws DataNotFoundException {
 		return new ResponseEntity<Media>(mediaService.getMedia(id), HttpStatus.OK);
 	}
