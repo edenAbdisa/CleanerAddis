@@ -151,6 +151,7 @@
     <list default="true" id="0ae83241-bda3-4308-a0b5-290d0e5d84ff" name="Default Changelist" comment="">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
 >>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -165,6 +166,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" afterDir="false" />
 >>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
+=======
+      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/repository/ArticleRepository.java" afterDir="false" />
+>>>>>>> 826ac99f204724d1d716cb0e03b3c41d0a80d511
     </list>
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/build/classes/" />
