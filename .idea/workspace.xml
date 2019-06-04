@@ -141,8 +141,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ae83241-bda3-4308-a0b5-290d0e5d84ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/repository/ArticleRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <ignored path=".gitignore.txt" />
