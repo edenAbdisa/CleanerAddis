@@ -30,12 +30,8 @@ import org.hibernate.annotations.GenericGenerator;
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 @Entity
 @Table(name = "article")
-<<<<<<< HEAD:CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/model/Article.java
-//@Data
-=======
 @Data
 @RequiredArgsConstructor
->>>>>>> 826ac99f204724d1d716cb0e03b3c41d0a80d511:CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/model/Article.java
 public class Article implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;

@@ -27,7 +27,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Table(name = "friends")
 @Data
 @RequiredArgsConstructor
-public class Friends implements java.io.Serializable{
+public class Friend implements java.io.Serializable{
 
 	private static final long serialVersionUID = 1L;
 

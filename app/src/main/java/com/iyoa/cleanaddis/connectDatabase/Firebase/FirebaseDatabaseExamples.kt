@@ -1,8 +1,6 @@
 package com.iyoa.cleanaddis.connectDatabase.Firebase
 
 import android.widget.Toast
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.FirebaseFirestore
 import com.iyoa.cleanaddis.entity.resources.Media
 
 class FirebaseDatabaseExamples {

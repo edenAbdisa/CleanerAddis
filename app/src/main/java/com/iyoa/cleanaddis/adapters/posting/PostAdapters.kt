@@ -25,7 +25,7 @@ class PostAdapters (val context: Context,val post:List<Post>) : RecyclerView.Ada
         val item = mValues[position]
         holder.username.text = item.username
         holder.likedBy.text = item.noLike.toString()
-        holder.postDescription.text=item.media_uuid.toString()
+        holder.postDescription.text=item.mediaUuid.toString()
 
 
     }
