@@ -14,4 +14,8 @@ public class UserService {
 	public User saveUser(User user) {
 		return userRepos.save(user);
 	}
+
+	public User getuser(String username) {
+		return userRepos.getuser(username);
+	}
 }

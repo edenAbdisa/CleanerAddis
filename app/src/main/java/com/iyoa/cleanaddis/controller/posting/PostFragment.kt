@@ -25,11 +25,11 @@ class PostFragment() : Fragment() {
         val view= inflater.inflate(R.layout.fragment_post, container, false)
         view.textView_current_action_title.setText(R.string.title_home)
 
-        replaceChildFragmenty(
+     /*   replaceChildFragmenty(
             DisplayPostsRecyclerViewFragment(),
             true,
             view.linearLayout_front_post_view.id
-        )
+        )*/
         view.navigation_bottom_bar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         return view

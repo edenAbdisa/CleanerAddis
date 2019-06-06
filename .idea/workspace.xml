@@ -140,36 +140,17 @@
     <last-search-timestamp>1559311060482</last-search-timestamp>
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
+
     <list default="true" id="71d0627d-c6b8-490d-b805-3bfb00da3e9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-=======
-    <list default="true" id="0ae83241-bda3-4308-a0b5-290d0e5d84ff" name="Default Changelist" comment="">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/resources/application-delilah.properties" afterDir="false" />
->>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
-=======
-      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/CleanerAddisApi/CleanAddisBackOfficeApi/src/main/java/com/iyoa/cleanaddis/repository/ArticleRepository.java" afterDir="false" />
->>>>>>> 826ac99f204724d1d716cb0e03b3c41d0a80d511
+
+
     </list>
     <manually-removed-from-ignored>
       <directory path="$PROJECT_DIR$/build/classes/" />
@@ -208,27 +189,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-=======
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/MainActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-              <folding>
-                <element signature="e#29#841#0" expanded="true" />
-              </folding>
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
+
         <entry file="file://$PROJECT_DIR$/app/.gitignore">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -238,86 +210,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-=======
-        <entry file="file://$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/SocialNetworkApplication.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/model/Comment.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="6" selection-end-line="33" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
+
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/controller/news/NewsDetailViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-=======
-        <entry file="file://$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/model/Post.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="36" selection-end-line="42" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
+
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
+
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/controller/news/NewsDetailFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
-=======
-        <entry file="file://$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/model/UserRowMapper.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-            </state>
+             </state>
           </provider>
-=======
-        <entry file="file://$PROJECT_DIR$/app/app.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
-        </entry>
-      </file>
-<<<<<<< HEAD
+
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/controller/news/NewsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
               <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
-=======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
+
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
+
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.31/6564e716b89de5eaa0dd234ae7989576503ddf3/tomcat-embed-websocket-8.5.31.jar!/META-INF/web-fragment.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -335,51 +267,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.0.2.RELEASE/15012cf02e9f77938244e554f0598535fdd1cb38/spring-boot-2.0.2.RELEASE.jar!/META-INF/spring-configuration-metadata.json">
           <provider selected="true" editor-type-id="text-editor" />
-=======
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-            </state>
-          </provider>
+
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/data/news/ArticleDAO.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/data/news/Article.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-              <folding>
-                <element signature="e#39#369#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/connectDatabase/news/ArticleDatabase.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding>
-                <element signature="e#50#299#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-        </entry>
-      </file>
-=======
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -388,15 +279,9 @@
         <option value="Kotlin File" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
-<<<<<<< HEAD
+
         <option value="layoutResourceFile_vertical" />
-=======
-        <option value="Kotlin Script" />
-<<<<<<< HEAD
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-=======
-        <option value="JUnit4 Test Class" />
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+
       </list>
     </option>
   </component>
@@ -416,9 +301,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-<<<<<<< HEAD
+
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
-<<<<<<< HEAD
+
         <option value="$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/iyoa/cleanaddis/data/news/Article.java" />
         <option value="$PROJECT_DIR$/app/.gitignore" />
@@ -458,9 +343,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/viewModels/news/ArticleViewModel.kt" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/connectDatabase/news/ArticleDatabase.kt" />
-=======
-=======
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/iyoa/cleanaddis/data/news/Article.java" />
         <option value="$PROJECT_DIR$/app/.gitignore" />
@@ -478,25 +361,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/iyoa/cleanaddis/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/model/Article/Article.kts" />
         <option value="$PROJECT_DIR$/.gitignore" />
-<<<<<<< HEAD
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-=======
-        <option value="$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/model/Article/Article.kt" />
-        <option value="$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/repository/ArticleRepos/ArticleRepository.kt" />
-        <option value="$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/security/SecurityConfigurer.kt" />
-        <option value="$PROJECT_DIR$/app/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/SocialNetworkApplication.kt" />
-        <option value="$PROJECT_DIR$/app/src/test/java/SocialNetworkApplicationTest.java" />
-        <option value="$PROJECT_DIR$/app/src/test/java/SocialNetworkApplicationTest.kt" />
-        <option value="$PROJECT_DIR$/CleanerAddisBackend/CleanerAddisBackOffice/src/main/kotlin/com/packtpub/sunnat629/social_network/SocialNetworkApplication.kt" />
-        <option value="$PROJECT_DIR$/CleanerAddisBackend/build.gradle" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <option name="x" value="258" />
     <option name="y" value="18" />
     <option name="width" value="1401" />
@@ -504,37 +374,17 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-=======
-    <option name="x" value="973" />
-    <option name="width" value="954" />
-    <option name="height" value="1047" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-=======
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+
   </component>
   <component name="ProjectView">
-<<<<<<< HEAD
+
     <navigator currentView="ProjectPane" proportions="" version="1">
-=======
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
+
       <hideEmptyPackages AndroidView="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
-=======
-      <pane id="AndroidView" />
-      <pane id="ProjectPane" />
->>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
+
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -542,7 +392,7 @@
               <item name="CleanerAddis" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
             </path>
-<<<<<<< HEAD
+
             <path>
               <item name="CleanerAddis" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
@@ -576,14 +426,10 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
-=======
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -657,13 +503,10 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="cleanaddis" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
-=======
-=======
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+            </path>
       <pane id="ProjectPane" />
       <pane id="AndroidView" />
-=======
->>>>>>> 36e1a885fff53cb0f24f889e7478c3637394391a
+
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -685,7 +528,7 @@
             <path>
               <item name="CleanerAddis" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-<<<<<<< HEAD
+
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="CleanerAddisBackOffice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -808,10 +651,8 @@
             <path>
               <item name="CleanerAddis" type="58d84e3e:PackageViewProjectNode" />
               <item name="app" type="616d4139:PackageViewModuleNode" />
->>>>>>> ddaccd8efea2fc95c799d9000803e964139257b5
-=======
-              <item name="backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
->>>>>>> 6f78c41a67e9145920fcdbb2ca2ce234bc7b3cd0
+
+
             </path>
           </expand>
           <select />
@@ -820,8 +661,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$" />
     <property name="device.picker.selection" value="8WXNW18125010183" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />

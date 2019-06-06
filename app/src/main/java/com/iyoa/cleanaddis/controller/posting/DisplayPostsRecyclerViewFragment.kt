@@ -1,6 +1,8 @@
 package com.iyoa.cleanaddis.controller.posting
 
 import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -16,6 +18,7 @@ import com.iyoa.cleanaddis.adapters.posting.PostAdapters
 import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.retrofitEden.PostService
 import com.iyoa.cleanaddis.retrofitEden.PostServiceImpl
+import com.iyoa.cleanaddis.utility.Connection
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,26 +33,29 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         val view= inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
-        val postService: PostService = PostServiceImpl().getPostServiceImpl()
 
-        val call: Call<List<Post>> = postServiceImpl.findPosts()
-        call.enqueue(object: Callback<List<Post>> {
-            override fun onFailure(call: Call<List<Post>>, t: Throwable) {
-                Log.wtf("POST", t.message)
-            }
-            override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
-                 listItems=response.body()
-               // listItems = arrayOfNulls<Post>( response.body()!!.size)
-                Log.println(Log.INFO,"POSTLine41",listItems?.get(0).toString())
-              /*  for (i in 0 until response.body()!!.size) {
+        if(Connection.checkConnection(context)) {
+            val postService: PostService = PostServiceImpl().getPostServiceImpl()
+
+            val call: Call<List<Post>> = postServiceImpl.findPosts()
+            call.enqueue(object : Callback<List<Post>> {
+                override fun onFailure(call: Call<List<Post>>, t: Throwable) {
+                    Log.wtf("POST", t.message)
+                }
+
+                override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
+                    listItems = response.body()
+                    // listItems = arrayOfNulls<Post>( response.body()!!.size)
+                    Log.println(Log.INFO, "POSTLine41", listItems?.get(0).toString())
+                    /*  for (i in 0 until response.body()!!.size) {
                     val post = response.body()!![i]
                     listItems?.get(i) = post
                     Log.println(Log.INFO,"POST",listItems[i].toString())
                 }*/
 
-            }
-        })
-
+                }
+            })
+        }
         recyclerView = view.findViewById(R.id.recyclerView_front_post_view)
         recyclerView.layoutManager = LinearLayoutManager(context)
         Log.println(Log.INFO,"POST","HERE")
