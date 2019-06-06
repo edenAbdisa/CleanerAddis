@@ -18,20 +18,23 @@ import kotlinx.android.synthetic.main.fragment_post.view.*
 class PostFragment() : Fragment() {
     private var columnCount = 1
     private var listener: OnFragmentInteractionListener? = null
-
     lateinit var recyclerView:RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
 
         val view= inflater.inflate(R.layout.fragment_post, container, false)
+        view.textView_current_action_title.setText(R.string.title_home)
 
+     /*   replaceChildFragmenty(
+            DisplayPostsRecyclerViewFragment(),
+            true,
+            view.linearLayout_front_post_view.id
+        )*/
         view.navigation_bottom_bar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         return view
     }
-    fun replaceChildFragmenty(fragment: Fragment,
-                                           allowStateLoss: Boolean = false,
-                                           @IdRes containerViewId: Int) {
+    fun replaceChildFragmenty(fragment: Fragment,allowStateLoss: Boolean = false, @IdRes containerViewId: Int) {
 
         val ft = childFragmentManager
             .beginTransaction()

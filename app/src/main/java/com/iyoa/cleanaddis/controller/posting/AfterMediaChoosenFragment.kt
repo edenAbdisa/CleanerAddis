@@ -1,103 +1,76 @@
 package com.iyoa.cleanaddis.controller.posting
 
+import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.DialogFragment
 import com.iyoa.cleanaddis.R
+import kotlinx.android.synthetic.main.fragment_after_media_choosen.*
+import kotlinx.android.synthetic.main.fragment_after_media_choosen.view.*
+import android.content.Intent.getIntent
+import android.graphics.BitmapFactory
+import android.content.Intent
+import android.content.Intent.getIntentOld
+import android.view.View.GONE
+import android.view.View.INVISIBLE
+import android.widget.ImageView
+import android.widget.Toast
 
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class AfterMediaChoosenFragment : DialogFragment() {
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [AfterMediaChoosenFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [AfterMediaChoosenFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
-class AfterMediaChoosenFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-    private var listener: OnFragmentInteractionListener? = null
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+       // if (getIntentOld().hasExtra("byteArray")) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+     val inflater = requireActivity().layoutInflater;
+        val view=inflater.inflate(R.layout.fragment_after_media_choosen, null)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_after_media_choosen, container, false)
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AfterMediaChoosenFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AfterMediaChoosenFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+        val _imv = view.imageView_choosen_Media_display
+        val _vid = view.videoView_choosen_Media_display
+        val bun=arguments
+        if(bun?.getString("type").equals("Image")) {
+            Toast.makeText(context,"image",Toast.LENGTH_SHORT).show()
+            val _bitmap = BitmapFactory.decodeByteArray(
+                bun?.getByteArray("image")
+                , 0,
+                bun?.getByteArray("image")!!.size
+            )
+            _vid.visibility= GONE
+            _imv.setImageBitmap(_bitmap)
+        }else{
+            Toast.makeText(context,"video",Toast.LENGTH_SHORT).show()
+           val videoUri= bun?.getString("path")
+            _imv.visibility= GONE
+            _vid.setVideoPath(videoUri)
+            _vid.requestFocus()
+            _vid.start()
+            _vid.setOnClickListener{
+                _vid.requestFocus()
+                _vid.start()
             }
+        }
+        return activity?.let {
+            val builder = AlertDialog.Builder(it)
+            builder.setView(view)
+                .setPositiveButton("Post",
+                    DialogInterface.OnClickListener { dialog, id ->
+                        // sign in the user ...
+                    })
+                .setNegativeButton("Cancel",
+                    DialogInterface.OnClickListener { dialog, id ->
+                        getDialog().cancel()
+                    })
+            builder.create()
+        } ?: throw IllegalStateException("Activity cannot be null")
     }
+
+
 }

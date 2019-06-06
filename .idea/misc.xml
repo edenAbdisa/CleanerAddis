@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+=======
+  <component name="ProjectResources">
+    <resource url="xlink" location="$USER_HOME$/Desktop/xlink.xsd" />
+  </component>
+
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+>>>>>>> bf10166a34dd66ddfdf1595d95dcc3c76a034543
 </project>

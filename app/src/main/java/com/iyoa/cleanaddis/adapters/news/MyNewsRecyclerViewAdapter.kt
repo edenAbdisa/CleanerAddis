@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.google.firebase.firestore.CollectionReference
-import com.google.firebase.firestore.FirebaseFirestore
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.connectDatabase.Firebase.InitFirestore
 

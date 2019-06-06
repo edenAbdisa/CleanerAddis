@@ -108,9 +108,9 @@ class NewsFragment : Fragment() {
         val currentDate = sdf.format(Date())
         addButton.setOnClickListener {
             val article =
-                Article(1,"Plastic",1
+                Article("1","Plastic","1"
                     ,"Hey there plastic",currentDate,"PUBLISHED",
-                    "delilah","delilah",0,1)
+                    "delilah","delilah",0,"1")
 
             AsyncTask.execute{
                 articleViewModel.insertArticle(article)
