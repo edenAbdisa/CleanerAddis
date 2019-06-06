@@ -23,6 +23,8 @@ class PostAdapters (val context: Context,val post:List<Post>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val item = mValues[position]
+        //add a listener that will allow to delete the post
+        //to item after checking if the currently logged user is equal to item.username
         holder.username.text = item.username
         holder.likedBy.text = item.noLike.toString()
         holder.postDescription.text=item.mediaUuid.toString()

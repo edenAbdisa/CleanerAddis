@@ -46,7 +46,7 @@
     <Button
             android:text="Take picture \n by camera"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button_vimage_from_camera"
+            android:layout_height="wrap_content" android:id="@+id/button_image_from_camera"
             android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@+id/guideline8" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"

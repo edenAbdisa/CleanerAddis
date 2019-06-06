@@ -1101,11 +1101,12 @@ id beginning
 id blocking
 id bottom
 id button
+id button2
 id buttonPanel
+id button_image_from_camera
 id button_image_from_gallery
 id button_video_from_camera
 id button_video_from_gallery
-id button_vimage_from_camera
 id cancel_action
 id center
 id center_horizontal
@@ -1117,6 +1118,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id constraintLayout
+id constraintLayout_inner
 id container
 id content
 id contentPanel
@@ -1135,6 +1137,7 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
+id editText
 id editText_comment
 id edit_query
 id end
@@ -1144,7 +1147,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1164,6 +1166,7 @@ id guideline14
 id guideline15
 id guideline16
 id guideline17
+id guideline18
 id guideline2
 id guideline3
 id guideline4
@@ -1186,7 +1189,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
-id imageView5
+id imageView_choosen_Media_display
 id include
 id info
 id invisible
@@ -1221,6 +1224,7 @@ id navigation_bottom_bar
 id navigation_header_container
 id navigation_home
 id navigation_setting
+id nestedScrollView
 id never
 id news_card
 id news_card_image
@@ -1240,7 +1244,16 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id radioButton2
+id radioButton5
+id radioButton6
+id radioButton7
+id radioButton8
+id radioButton_all
+id radioButton_friends
+id radioButton_friends_of_friends
+id radioButton_me_only
+id radioGroup2
+id radioGroup3
 id recyclerView_comment_list
 id recyclerView_front_post_view
 id right
@@ -1302,8 +1315,11 @@ id textSpacerNoTitle
 id textStart
 id textView
 id textView2
+id textView3
 id textView4
 id textView5
+id textView6
+id textView7
 id textView_current_action_title
 id textView_liked_by
 id textView_no_friends_requested
@@ -1334,6 +1350,7 @@ id unlabeled
 id up
 id useLogo
 id vertical
+id videoView_choosen_Media_display
 id view_button_news
 id view_offset_helper
 id views_textview_news
