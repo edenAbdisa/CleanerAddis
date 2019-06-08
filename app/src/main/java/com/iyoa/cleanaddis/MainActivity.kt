@@ -9,7 +9,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import com.iyoa.cleanaddis.controller.news.NewsFragment
+import com.iyoa.cleanaddis.controller.news.ArticleFragment
 
 import com.iyoa.cleanaddis.utility.replaceFragmenty
 
@@ -18,15 +18,10 @@ import com.iyoa.cleanaddis.utility.replaceFragmenty
 //import com.example.abigail.cleanaddis.connectDatabase.news.ArticleDatabase
 
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.iyoa.cleanaddis.controller.posting.PostFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-
-import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
    //private lateinit var newsDatabase:  ArticleDatabase
@@ -96,12 +91,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_camera -> {
 
                 replaceFragmenty(
-                    NewsFragment(),
+                    ArticleFragment(),
                     true,
                    R.id.linearlayout_fragment_area
                 )
-                setTitle("ArticleViewModel")
-
+                setTitle("Article")
 
             }
             R.id.nav_post -> {

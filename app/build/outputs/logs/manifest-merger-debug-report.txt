@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\abigail\AndroidStudioProjects\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from C:\Users\abigail\AndroidStudioProjects\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
 INJECTED from C:\Users\abigail\AndroidStudioProjects\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-26:12
@@ -330,3 +331,290 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\abigail
 		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\abigail\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\5708e52c5ab1c6b1b7160f6b7e4f9573\AndroidManifest.xml:26:13-37
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\abigail\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\5708e52c5ab1c6b1b7160f6b7e4f9573\AndroidManifest.xml:24:13-79
+=======
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [androidx.room:room-ktx:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-ktx-2.1.0-alpha07.aar\940c44cc5d34f95cb0fd4ae241d81c26\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-ktx-2.1.0-alpha04.aar\20be0fae8ce5c52815c4a84ad0cce512\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\5f0e2527b2ae09c18df5dbffe9f61183\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\939c906b3b3647ea37ce3714864a158c\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0-beta01.aar\dfd8957f9239ced60217c0acc45ee872\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\78dfcd8c94b749a2c0e46af997c2fe0a\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0-beta01.aar\84f3bf6be9338ca8379c8c3786d98b6c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0-beta01.aar\3a1fc1da46518bce6972d8b8a4b2069c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0-beta01.aar\7811d007fbcf34bcfc8bc14b12240314\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0-beta01.aar\246f76a23895a7ec2cae124720c0535e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0-beta01.aar\83ea6054a988d23b2c0a211043511b71\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.gridlayout:gridlayout:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\gridlayout-1.0.0-beta01.aar\063259022ec2206bf646493443f361a8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:2:1-14:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\8b266d34b90c46779e8cfcc75d33351a\AndroidManifest.xml:15:1-21:12
+MERGED from [androidx.room:room-rxjava2:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-rxjava2-2.1.0-alpha07.aar\40def4a204d1492aaee20a5812df2238\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-guava:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-guava-2.1.0-alpha07.aar\2643014dd342cd2b61681f81bd262781\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0-alpha04.aar\5d92ef1cc008b7ff325e1bfd8288802d\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.transition:transition:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\transition-1.0.0-beta01.aar\f26f8d309fea03cd54cd55502fc0217d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\media-1.0.0-beta01.aar\b0db42471f1e470fe8aab6ea1c63f59b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\3babd2dec5e385cd01161c6d0db5e3c4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\d0fc12b0942d5d23e2f36e13d03de4cd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\c1407bdbed89223c2fa53661bdd82734\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\6910bef25ef502dbad5ee9fbc42c9bf8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\63252aec466e21b1a0819de154dbf885\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\310fa137d0020d2b1d909b5cb7a2816c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\3ea686823e23335d5948bdb3b0ae10bc\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\f5f184ea10f3a3f76c8ee45851f7e218\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\f05f70e4af5eac5deac4af1b07e7e13c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\85d060deaae358f34b7a173437ddceac\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\16bbf312b842bdc481b1a00c90066ad1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\8da40ebbc60f4067342e108d5e79123a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\eb54ac5e940a94b866ba24845a20501e\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\f95b5ee35a929000f51cf7ecca795d5f\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\sqlite-framework-2.0.1.aar\6a73feeefceb70cd3bf7b484ac9e1cd8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\sqlite-2.0.1.aar\4d042ee25752c7061ed181438099f4dc\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.1.0-alpha04.aar\dc1db5f7b65c1eb04ca0a81c77f72218\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.1.0-alpha04.aar\e016f51bb6010b14f99708e0f69e2864\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0-alpha01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-runtime-2.1.0-alpha01.aar\0890b718ba2240c32bbeb86942d03367\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-service-2.1.0-alpha04.aar\db5986a0f415eee61637e1dbc7943ff6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0-alpha04.aar\3060ba93d19aa2acca7175b7eaa7e13a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0-alpha04.aar\92d3d8f74069d2ef5e52b01216db1f38\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\a680cb58745cfe39241df29e1bbed06e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ed5884d745762d5c1f67cac0322be0ec\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\a9973632be9bbdb1657178326b02961b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\41055285d9a3cb04538eb3f3a38f96cf\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\4b09bf50a9d644a8631bd10f30ba3139\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+	package
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:3:11-40
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:6:5-80
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:6:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:8:5-64
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:8:22-62
+uses-feature#android.hardware.camera.any
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:9:5-11:39
+	android:required
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:11:13-36
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:10:13-55
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:12:5-14:40
+	android:required
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:13:13-61
+application
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:16:5-34:19
+MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\939c906b3b3647ea37ce3714864a158c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\939c906b3b3647ea37ce3714864a158c\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\78dfcd8c94b749a2c0e46af997c2fe0a\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\78dfcd8c94b749a2c0e46af997c2fe0a\AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0-alpha04.aar\5d92ef1cc008b7ff325e1bfd8288802d\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0-alpha04.aar\5d92ef1cc008b7ff325e1bfd8288802d\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.core:core:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\eb54ac5e940a94b866ba24845a20501e\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\eb54ac5e940a94b866ba24845a20501e\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\f95b5ee35a929000f51cf7ecca795d5f\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\f95b5ee35a929000f51cf7ecca795d5f\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:22:5-28:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\eb54ac5e940a94b866ba24845a20501e\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:21:13-39
+	android:label
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:19:13-45
+	android:roundIcon
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:20:13-58
+	android:icon
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:18:13-47
+	android:allowBackup
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:17:13-39
+	android:theme
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:22:13-44
+activity#com.iyoa.cleanaddis.MainActivity
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:24:9-33:20
+	android:label
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:26:17-49
+	android:theme
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:27:17-60
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:25:17-45
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:29:17-68
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml:31:27-74
+uses-sdk
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+MERGED from [androidx.room:room-ktx:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-ktx-2.1.0-alpha07.aar\940c44cc5d34f95cb0fd4ae241d81c26\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-ktx-2.1.0-alpha07.aar\940c44cc5d34f95cb0fd4ae241d81c26\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-ktx-2.1.0-alpha04.aar\20be0fae8ce5c52815c4a84ad0cce512\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-ktx-2.1.0-alpha04.aar\20be0fae8ce5c52815c4a84ad0cce512\AndroidManifest.xml:20:5-44
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\5f0e2527b2ae09c18df5dbffe9f61183\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\multidex-2.0.0.aar\5f0e2527b2ae09c18df5dbffe9f61183\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\939c906b3b3647ea37ce3714864a158c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\material-1.0.0-beta01.aar\939c906b3b3647ea37ce3714864a158c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0-beta01.aar\dfd8957f9239ced60217c0acc45ee872\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0-beta01.aar\dfd8957f9239ced60217c0acc45ee872\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\78dfcd8c94b749a2c0e46af997c2fe0a\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.3.aar\78dfcd8c94b749a2c0e46af997c2fe0a\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0-beta01.aar\84f3bf6be9338ca8379c8c3786d98b6c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0-beta01.aar\84f3bf6be9338ca8379c8c3786d98b6c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0-beta01.aar\3a1fc1da46518bce6972d8b8a4b2069c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0-beta01.aar\3a1fc1da46518bce6972d8b8a4b2069c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0-beta01.aar\7811d007fbcf34bcfc8bc14b12240314\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0-beta01.aar\7811d007fbcf34bcfc8bc14b12240314\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0-beta01.aar\246f76a23895a7ec2cae124720c0535e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0-beta01.aar\246f76a23895a7ec2cae124720c0535e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0-beta01.aar\83ea6054a988d23b2c0a211043511b71\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0-beta01.aar\83ea6054a988d23b2c0a211043511b71\AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\gridlayout-1.0.0-beta01.aar\063259022ec2206bf646493443f361a8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.gridlayout:gridlayout:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\gridlayout-1.0.0-beta01.aar\063259022ec2206bf646493443f361a8\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:5:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\8b266d34b90c46779e8cfcc75d33351a\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\8b266d34b90c46779e8cfcc75d33351a\AndroidManifest.xml:19:5-43
+MERGED from [androidx.room:room-rxjava2:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-rxjava2-2.1.0-alpha07.aar\40def4a204d1492aaee20a5812df2238\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-rxjava2:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-rxjava2-2.1.0-alpha07.aar\40def4a204d1492aaee20a5812df2238\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-guava:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-guava-2.1.0-alpha07.aar\2643014dd342cd2b61681f81bd262781\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-guava:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-guava-2.1.0-alpha07.aar\2643014dd342cd2b61681f81bd262781\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0-alpha04.aar\5d92ef1cc008b7ff325e1bfd8288802d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-extensions-2.1.0-alpha04.aar\5d92ef1cc008b7ff325e1bfd8288802d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\transition-1.0.0-beta01.aar\f26f8d309fea03cd54cd55502fc0217d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\transition-1.0.0-beta01.aar\f26f8d309fea03cd54cd55502fc0217d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\media-1.0.0-beta01.aar\b0db42471f1e470fe8aab6ea1c63f59b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0-beta01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\media-1.0.0-beta01.aar\b0db42471f1e470fe8aab6ea1c63f59b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\3babd2dec5e385cd01161c6d0db5e3c4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\3babd2dec5e385cd01161c6d0db5e3c4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\d0fc12b0942d5d23e2f36e13d03de4cd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\d0fc12b0942d5d23e2f36e13d03de4cd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\c1407bdbed89223c2fa53661bdd82734\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\c1407bdbed89223c2fa53661bdd82734\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\6910bef25ef502dbad5ee9fbc42c9bf8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\6910bef25ef502dbad5ee9fbc42c9bf8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\63252aec466e21b1a0819de154dbf885\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\63252aec466e21b1a0819de154dbf885\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\310fa137d0020d2b1d909b5cb7a2816c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\310fa137d0020d2b1d909b5cb7a2816c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\3ea686823e23335d5948bdb3b0ae10bc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\3ea686823e23335d5948bdb3b0ae10bc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\f5f184ea10f3a3f76c8ee45851f7e218\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\f5f184ea10f3a3f76c8ee45851f7e218\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\f05f70e4af5eac5deac4af1b07e7e13c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\f05f70e4af5eac5deac4af1b07e7e13c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\85d060deaae358f34b7a173437ddceac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\85d060deaae358f34b7a173437ddceac\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\16bbf312b842bdc481b1a00c90066ad1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\16bbf312b842bdc481b1a00c90066ad1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\8da40ebbc60f4067342e108d5e79123a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\8da40ebbc60f4067342e108d5e79123a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\eb54ac5e940a94b866ba24845a20501e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-1.0.0.aar\eb54ac5e940a94b866ba24845a20501e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\f95b5ee35a929000f51cf7ecca795d5f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\f95b5ee35a929000f51cf7ecca795d5f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\sqlite-framework-2.0.1.aar\6a73feeefceb70cd3bf7b484ac9e1cd8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\sqlite-framework-2.0.1.aar\6a73feeefceb70cd3bf7b484ac9e1cd8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\sqlite-2.0.1.aar\4d042ee25752c7061ed181438099f4dc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\sqlite-2.0.1.aar\4d042ee25752c7061ed181438099f4dc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.1.0-alpha04.aar\dc1db5f7b65c1eb04ca0a81c77f72218\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.1.0-alpha04.aar\dc1db5f7b65c1eb04ca0a81c77f72218\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.1.0-alpha04.aar\e016f51bb6010b14f99708e0f69e2864\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.1.0-alpha04.aar\e016f51bb6010b14f99708e0f69e2864\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0-alpha01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-runtime-2.1.0-alpha01.aar\0890b718ba2240c32bbeb86942d03367\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0-alpha01] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\core-runtime-2.1.0-alpha01.aar\0890b718ba2240c32bbeb86942d03367\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-service-2.1.0-alpha04.aar\db5986a0f415eee61637e1dbc7943ff6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-service-2.1.0-alpha04.aar\db5986a0f415eee61637e1dbc7943ff6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0-alpha04.aar\3060ba93d19aa2acca7175b7eaa7e13a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.1.0-alpha04.aar\3060ba93d19aa2acca7175b7eaa7e13a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0-alpha04.aar\92d3d8f74069d2ef5e52b01216db1f38\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.1.0-alpha04.aar\92d3d8f74069d2ef5e52b01216db1f38\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\a680cb58745cfe39241df29e1bbed06e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\a680cb58745cfe39241df29e1bbed06e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ed5884d745762d5c1f67cac0322be0ec\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\ed5884d745762d5c1f67cac0322be0ec\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\a9973632be9bbdb1657178326b02961b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\a9973632be9bbdb1657178326b02961b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\41055285d9a3cb04538eb3f3a38f96cf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\41055285d9a3cb04538eb3f3a38f96cf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\4b09bf50a9d644a8631bd10f30ba3139\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\4b09bf50a9d644a8631bd10f30ba3139\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\jetified-picasso-2.71828.aar\1c36eb0c2b401581685ad2194edf78aa\AndroidManifest.xml:9:13-64
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.room:room-runtime:2.1.0-alpha07] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\room-runtime-2.1.0-alpha07.aar\015e93e15958719b0ae7299cc967da9a\AndroidManifest.xml:24:13-74
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:25:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.1.0-alpha04] C:\Users\Delilah Dessalegn\.gradle\caches\transforms-1\files-1.1\lifecycle-process-2.1.0-alpha04.aar\b403e6ebdb586d70ecb7225baba57f51\AndroidManifest.xml:24:13-79
+>>>>>>> 77bccfcb650b4c802fbdf90e3201262268d7fc51

@@ -1042,6 +1042,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_remove_red_eye_black_24dp
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
 drawable notification_action_background
@@ -1153,6 +1154,7 @@ id fill_vertical
 id filled
 id fixed
 id forever
+id fragment_news_list
 id ghost_view
 id gone
 id group_divider
@@ -1189,6 +1191,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id imageView_choosen_Media_display
 id include
 id info
@@ -1202,7 +1205,6 @@ id line1
 id line3
 id linearLayout_front_post_view
 id linearlayout_fragment_area
-id list
 id listMode
 id list_item
 id masked

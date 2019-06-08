@@ -21,5 +21,9 @@ public class ArticleService {
 	public List<Article> saveAll(List<Article> articles){
 		return articleRepos.saveAll(articles);
 	}
+	
+	public List<Article> findAll(){
+		return articleRepos.findAll();
+	}
 
 }

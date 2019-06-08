@@ -2,6 +2,6 @@ package com.iyoa.cleanaddis.controller.news
 
 import androidx.lifecycle.ViewModel;
 
-class NewsDetailViewModel : ViewModel() {
+class ArticleDetailViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }
