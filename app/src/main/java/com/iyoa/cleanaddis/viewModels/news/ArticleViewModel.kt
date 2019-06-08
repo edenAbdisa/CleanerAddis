@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.iyoa.cleanaddis.connectDatabase.news.ArticleDatabase
 import com.iyoa.cleanaddis.data.news.Article
+import com.iyoa.cleanaddis.data.news.ArticleData
 import com.iyoa.cleanaddis.repository.news.ArticleRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,7 +16,7 @@ class ArticleViewModel(application: Application):AndroidViewModel(application) {
     val allArticles : LiveData<List<Article>>
 
     init{
-        val  articleDAO = ArticleDatabase.getDatabase(application).articleDao()
+        val  articleDAO = ArticleDatabase.getArticleDatabase(application).articleDao()
         articleRepos = ArticleRepository(articleDAO)
         allArticles = articleRepos.allArticles()
     }
@@ -24,6 +25,14 @@ class ArticleViewModel(application: Application):AndroidViewModel(application) {
     fun insertArticle(article:Article) = viewModelScope.launch(Dispatchers.IO)
     {
         articleRepos.insertArticles(article)
+    }
+
+    fun getArticles() = viewModelScope.launch(Dispatchers.IO) {
+        articleRepos.allArticles()
+    }
+
+    fun addArticles(article:List<Article>) = viewModelScope.launch(Dispatchers.IO) {
+        articleRepos.addArticles(article)
     }
 
 }

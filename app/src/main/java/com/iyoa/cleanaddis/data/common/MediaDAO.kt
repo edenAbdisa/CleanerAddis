@@ -16,7 +16,7 @@ interface MediaDAO {
     fun getMediaByUuid(uuid: Long): Media
 
 
-    @Query("SELECT * FROM Article")
+    @Query("SELECT * FROM Media")
     fun getAllMedias(): LiveData<List<Media>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

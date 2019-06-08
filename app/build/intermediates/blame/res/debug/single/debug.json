@@ -1644,6 +1644,10 @@
         "source": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\src\\main\\res\\layout\\fragment_post.xml"
     },
     {
+        "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_remove_red_eye_black_24dp.xml.flat",
+        "source": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\src\\main\\res\\drawable\\ic_remove_red_eye_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Delilah Dessalegn\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0-beta01.aar\\dfd8957f9239ced60217c0acc45ee872\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },

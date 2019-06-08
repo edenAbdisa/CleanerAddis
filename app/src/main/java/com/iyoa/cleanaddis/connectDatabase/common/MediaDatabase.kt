@@ -1,0 +1,42 @@
+package com.iyoa.cleanaddis.connectDatabase.news
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.iyoa.cleanaddis.data.common.Category
+import com.iyoa.cleanaddis.data.common.Media
+import com.iyoa.cleanaddis.data.news.Article
+import com.iyoa.cleanaddis.data.news.ArticleDAO
+import com.iyoa.cleanaddis.data.news.CategoryDAO
+import com.iyoa.cleanaddis.data.news.MediaDAO
+
+
+@Database(entities = arrayOf(Media:: class),version=1)
+abstract class MediaDatabase: RoomDatabase() {
+
+    abstract fun mediaDao(): MediaDAO
+
+    companion object{
+        @Volatile
+        private var INSTANCE: MediaDatabase?=null
+
+        fun getMediaDatabase(context: Context):MediaDatabase{
+            val tempInstance= INSTANCE
+            if(tempInstance!=null){
+                return tempInstance
+            }
+            synchronized(this){
+                val instance= Room.databaseBuilder(
+                    context.applicationContext,
+                    MediaDatabase::class.java,"media_database"
+                ).build()
+                INSTANCE=instance
+                return instance
+            }
+        }
+
+
+    }
+}

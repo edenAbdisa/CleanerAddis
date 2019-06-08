@@ -15,7 +15,7 @@ interface CategoryDAO {
     fun getCategoryByUuid(uuid: Long): Category
 
 
-    @Query("SELECT * FROM Article")
+    @Query("SELECT * FROM Category")
     fun getAllCategory(): LiveData<List<Category>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
