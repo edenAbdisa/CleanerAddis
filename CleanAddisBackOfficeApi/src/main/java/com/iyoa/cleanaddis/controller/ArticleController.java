@@ -1,5 +1,7 @@
 package com.iyoa.cleanaddis.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -42,6 +44,14 @@ public class ArticleController {
 		  	
 	        articleService.Save(article);
 	        return new ResponseEntity<>(article, HttpStatus.OK);
+	    }
+	  @GetMapping(value = "/articles")
+	    public ResponseEntity<List<Article>> getAllArticles()
+	            {
+		  	List<Article> articles = articleService.findAll();
+
+	       
+	        return new ResponseEntity<>(articles, HttpStatus.OK);
 	    }
 	  
 	  @GetMapping(value = "/get-recent")

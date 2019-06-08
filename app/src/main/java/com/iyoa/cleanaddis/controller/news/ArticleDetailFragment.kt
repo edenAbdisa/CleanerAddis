@@ -10,13 +10,13 @@ import android.view.ViewGroup
 
 import com.iyoa.cleanaddis.R
 
-class NewsDetailFragment : Fragment() {
+class ArticleDetailFragment : Fragment() {
 
     companion object {
-        fun newInstance() = NewsDetailFragment()
+        fun newInstance() = ArticleDetailFragment()
     }
 
-    private lateinit var viewModel: NewsDetailViewModel
+    private lateinit var viewModel: ArticleDetailViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,7 +27,7 @@ class NewsDetailFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(NewsDetailViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(ArticleDetailViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
