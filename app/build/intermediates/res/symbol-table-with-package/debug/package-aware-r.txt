@@ -1176,15 +1176,9 @@ id activity_chooser_view_content
 id add
 id add_news
 id add_report_button
+id add_report_message
 id addreport_button
-id addreport_category_textview
-id addreport_from_textview
-id addreport_fromemail
 id addreport_header_edittext
-id addreport_header_textview
-id addreport_message_textview
-id addreport_to_textview
-id addreport_toemail
 id adjust_height
 id adjust_width
 id alertTitle
@@ -1211,6 +1205,7 @@ id button_image_from_gallery
 id button_video_from_camera
 id button_video_from_gallery
 id cancel_action
+id category_spinner
 id center
 id center_horizontal
 id center_vertical
@@ -1260,7 +1255,6 @@ id divider8
 id divider9
 id drawer_layout
 id editText
-id editText4
 id editText_comment
 id edit_query
 id email_edittext
@@ -1451,7 +1445,6 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
-id spinner
 id split_action_bar
 id spread
 id spread_inside
@@ -1461,7 +1454,9 @@ id src_over
 id standard
 id start
 id status_bar_latest_event_content
+id streetname_spinner
 id stretch
+id subcity_spinner
 id submenuarrow
 id submit_area
 id subtitle_news_card
@@ -1530,6 +1525,7 @@ id views_textview_news
 id visible
 id wide
 id withText
+id woreda_spinner
 id wrap
 id wrap_content
 integer abc_config_activityDefaultDur
@@ -1738,6 +1734,7 @@ string report_category
 string report_date
 string report_email
 string report_header
+string report_message
 string report_name
 string report_summary_text
 string search_menu_title
