@@ -24,7 +24,6 @@
 	</properties>
 
 	<dependencies>
-	<!-- json dependencies -->
 	<dependency>
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.json</artifactId>

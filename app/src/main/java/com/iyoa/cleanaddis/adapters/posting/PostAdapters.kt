@@ -11,9 +11,10 @@ import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.entity.posting.Post
 import kotlinx.android.synthetic.main.single_post_display.view.*
 
-class PostAdapters (val context: Context,val post:List<Post>) : RecyclerView.Adapter<PostAdapters.PostViewHolder>() {
+class PostAdapters (val context: Context) : RecyclerView.Adapter<PostAdapters.PostViewHolder>() {
 
-    private val mValues = post
+    private var postList: List<Post> = emptyList()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val recyclerViewItem = LayoutInflater.from(parent.context)
             .inflate(R.layout.single_post_display, parent, false)
@@ -22,7 +23,7 @@ class PostAdapters (val context: Context,val post:List<Post>) : RecyclerView.Ada
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val item = mValues[position]
+        val item = postList[position]
         //add a listener that will allow to delete the post
         //to item after checking if the currently logged user is equal to item.username
         holder.username.text = item.username
@@ -31,8 +32,14 @@ class PostAdapters (val context: Context,val post:List<Post>) : RecyclerView.Ada
 
 
     }
-
-    override fun getItemCount(): Int = mValues.size
+    internal fun getPosts():List<Post>{
+        return postList
+    }
+    internal fun setPosts(postList:List<Post>){
+        this.postList = postList
+        notifyDataSetChanged()
+    }
+    override fun getItemCount(): Int = postList.size
 
     inner class PostViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         val username: TextView = mView.textView_username
