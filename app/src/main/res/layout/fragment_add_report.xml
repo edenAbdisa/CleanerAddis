@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="60dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
             android:text="@string/report_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/addreport_from_textview"
@@ -31,7 +31,7 @@
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="@+id/divider5" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"/>
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
             android:text="@string/report_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/addreport_to_textview"
@@ -39,7 +39,7 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/divider7"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintTop_toTopOf="@+id/addreport_toemail"/>
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
             android:text="@string/report_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/addreport_header_textview"
@@ -48,7 +48,7 @@
             android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="@+id/addreport_header_edittext"/>
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
             android:text="@string/report_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/addreport_category_textview"
@@ -56,7 +56,7 @@
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="@+id/spinner"/>
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
             android:text="@string/report_summary_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/addreport_message_textview"
@@ -64,7 +64,7 @@
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="@+id/editText4"/>
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -74,7 +74,7 @@
             app:layout_constraintTop_toTopOf="@+id/divider5" app:layout_constraintStart_toEndOf="@+id/divider7"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"

@@ -22,9 +22,9 @@
                 type="String"/>
 
 
-<<<<<<< HEAD
-    <com.google.android.material.textfield.TextInputEditText
-=======
+
+    <com.google.android.material.textfield.TextInputEditText></com.google.android.material.textfield.TextInputEditText>
+
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,7 +50,7 @@
 
     <View
             android:id="@+id/divider"
->>>>>>> 14f865db55ec1675d8203d1e43beaa84279fdd6a
+
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="?android:attr/listDivider"

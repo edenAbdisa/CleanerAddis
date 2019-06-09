@@ -33,7 +33,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/profile_divider" android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
-            <TextView
+            <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/report_title_textview"
                     android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
                     app:layout_constraintTop_toTopOf="@+id/profile_divider" android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintVertical_bias="0.0"/>
-            <TextView
+            <com.google.android.material.textfield.TextInputEditText
                     android:text="@string/report_header"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/report_header_textview"
@@ -49,7 +49,7 @@
                     android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toBottomOf="@+id/report_title_textview"
             />
-            <TextView
+            <com.google.android.material.textfield.TextInputEditText
                     android:text="@string/report_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/report_date_textview"
@@ -57,7 +57,7 @@
                     android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
                     app:layout_constraintTop_toTopOf="parent"/>
-            <TextView
+            <com.google.android.material.textfield.TextInputEditText
                     android:text="@string/report_summary_text"
                     android:layout_width="0dp"
                     android:layout_height="0dp" android:id="@+id/report_summary_textview"
