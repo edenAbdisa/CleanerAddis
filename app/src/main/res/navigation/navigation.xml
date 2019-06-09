@@ -154,6 +154,11 @@
               tools:layout="@layout/fragment_post">
         <action android:id="@+id/action_postFragment_to_postAccountFragment"
                 app:destination="@id/postAccountFragment"/>
+        <action android:id="@+id/action_postFragment_to_displayPostsRecyclerViewFragment"
+                app:destination="@id/displayPostsRecyclerViewFragment"/>
+        <action android:id="@+id/action_postFragment_to_selectPictureToPostFragment"
+                app:destination="@id/selectPictureToPostFragment"/>
+
     </fragment>
     <fragment android:id="@+id/postAccountFragment"
               android:name="com.iyoa.cleanaddis.controller.posting.PostAccountFragment"

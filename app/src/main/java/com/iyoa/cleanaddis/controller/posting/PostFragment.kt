@@ -52,26 +52,29 @@ class PostFragment() : Fragment() {
                     true,
                     R.id.linearLayout_front_post_view
                 )*/
-                this.findNavController().navigate(R.id.action_postFragment_to_postAccountFragment)
+                this.findNavController().navigate(R.id.action_postFragment_to_displayPostsRecyclerViewFragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_account -> {
                 textView_current_action_title.setText(R.string.title_dashboard)
-                replaceChildFragmenty(
+               /* replaceChildFragmenty(
                     PostAccountFragment(),
                     true,
                     R.id.linearLayout_front_post_view
-                )
+                )*/
+                this.findNavController().navigate(R.id.action_postFragment_to_postAccountFragment)
 
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_add_image -> {
                 textView_current_action_title.setText(R.string.title_notifications)
-                replaceChildFragmenty(
+              /*  replaceChildFragmenty(
                     SelectPictureToPostFragment(),
                     true,
                     R.id.linearLayout_front_post_view
-                )
+                )*/
+                this.findNavController().navigate(R.id.action_postFragment_to_selectPictureToPostFragment)
+
                 return@OnNavigationItemSelectedListener true
             }
 
