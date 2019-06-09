@@ -8,9 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 
 
 import com.iyoa.cleanaddis.R
+import com.iyoa.cleanaddis.data.news.Article
+import com.iyoa.cleanaddis.databinding.FragmentNewsBinding
+import com.iyoa.cleanaddis.databinding.NewsDetailFragmentBinding
 import com.iyoa.cleanaddis.viewModels.news.ArticleViewModel
 
 class ArticleDetailFragment : Fragment() {
@@ -26,18 +30,19 @@ class ArticleDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-      val view = inflater.inflate(R.layout.news_detail_fragment,container,false)
-      /*
-        val binding= DataBindingUtil
-          .setContentView(this.activity!!.parent,R.layout.news_detail_fragment)
-        binding.apply {
+      //val view = inflater.inflate(R.layout.news_detail_fragment,container,false)
 
-        }
-        */
+        val binding:NewsDetailFragmentBinding= DataBindingUtil.setContentView(this.requireActivity(), R.layout.news_detail_fragment)
+            //DataBindingUtil.inflate(inflater ,R.layout.news_detail_fragment,container , false)
+        val article = arguments?.getSerializable("article") as Article
+        var myView : View  = binding.root
+        binding.text = article.text
+        binding.title = article.title
 
 
 
-        return inflater.inflate(R.layout.news_detail_fragment, container, false)
+
+        return myView
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
