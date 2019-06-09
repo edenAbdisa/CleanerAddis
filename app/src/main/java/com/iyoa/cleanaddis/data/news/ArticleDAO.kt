@@ -24,6 +24,8 @@ interface ArticleDAO {
     fun addArticles(listOfArticles: List<Article>)
 
 
+
+
 }
 
 
