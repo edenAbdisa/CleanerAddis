@@ -15,6 +15,7 @@ import com.iyoa.cleanaddis.adapters.report.MyReportRecyclerViewAdapter
 
 import com.iyoa.cleanaddis.controller.report.dummy.DummyContent
 import com.iyoa.cleanaddis.controller.report.dummy.DummyContent.DummyItem
+import com.iyoa.cleanaddis.retrofitDelilah.ArticleService
 
 /**
  * A fragment representing a list of Items.
@@ -27,6 +28,7 @@ class ReportFragment : Fragment() {
     private var columnCount = 1
 
     private var listener: OnListFragmentInteractionListener? = null
+    private lateinit var  articleService: ArticleService
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
