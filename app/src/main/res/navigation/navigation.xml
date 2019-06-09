@@ -3,6 +3,7 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/navigation"
             app:startDestination="@+id/fragment_news_list"
+            xmlns:tools="http://schemas.android.com/tools"
 >
     <fragment
             xmlns:tools="http://schemas.android.com/tools"
@@ -147,6 +148,23 @@
                 app:enterAnim="@anim/slide_in_right"
                 app:exitAnim="@anim/slide_out_left"/>
     </fragment>
-
-
+    <fragment android:id="@+id/postFragment"
+              android:name="com.iyoa.cleanaddis.controller.posting.PostFragment"
+              android:label="PostFragment"
+              tools:layout="@layout/fragment_post">
+        <action android:id="@+id/action_postFragment_to_postAccountFragment"
+                app:destination="@id/postAccountFragment"/>
+    </fragment>
+    <fragment android:id="@+id/postAccountFragment"
+              android:name="com.iyoa.cleanaddis.controller.posting.PostAccountFragment"
+              android:label="PostAccountFragment"
+              tools:layout="@layout/fragment_post_account"/>
+    <fragment android:id="@+id/displayPostsRecyclerViewFragment"
+              android:name="com.iyoa.cleanaddis.controller.posting.DisplayPostsRecyclerViewFragment"
+              android:label="DisplayPostsRecyclerViewFragment"
+              tools:layout="@layout/fragment_display_posts_recycler_view"/>
+    <fragment android:id="@+id/selectPictureToPostFragment"
+              android:name="com.iyoa.cleanaddis.controller.posting.SelectPictureToPostFragment"
+              android:label="SelectPictureToPostFragment"
+              tools:layout="@layout/fragment_select_picture_to_post"/>
 </navigation>

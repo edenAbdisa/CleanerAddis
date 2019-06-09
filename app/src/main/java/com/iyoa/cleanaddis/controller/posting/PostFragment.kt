@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.iyoa.cleanaddis.R
@@ -24,12 +26,6 @@ class PostFragment() : Fragment() {
 
         val view= inflater.inflate(R.layout.fragment_post, container, false)
         view.textView_current_action_title.setText(R.string.title_home)
-
-     /*   replaceChildFragmenty(
-            DisplayPostsRecyclerViewFragment(),
-            true,
-            view.linearLayout_front_post_view.id
-        )*/
         view.navigation_bottom_bar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
         return view
@@ -51,12 +47,12 @@ class PostFragment() : Fragment() {
             R.id.navigation_home -> {
                 textView_current_action_title.setText(R.string.title_home)
 
-                replaceChildFragmenty(
+               /* replaceChildFragmenty(
                     DisplayPostsRecyclerViewFragment(),
                     true,
                     R.id.linearLayout_front_post_view
-                )
-
+                )*/
+                this.findNavController().navigate(R.id.action_postFragment_to_postAccountFragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_account -> {
@@ -78,15 +74,7 @@ class PostFragment() : Fragment() {
                 )
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_setting -> {
-                textView_current_action_title.setText(R.string.title_notifications)
-                replaceChildFragmenty(
-                    SelectPictureToPostFragment(),
-                    true,
-                    R.id.linearLayout_front_post_view
-                )
-                return@OnNavigationItemSelectedListener true
-            }
+
         }
         false
     }
