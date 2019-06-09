@@ -3,6 +3,8 @@ package com.iyoa.cleanaddis.utility
 
 import java.util.*
 import androidx.room.TypeConverter
+import com.iyoa.cleanaddis.entity.posting.CanBeViewedBy
+import com.iyoa.cleanaddis.entity.posting.FriendRequestStatus
 import java.io.Serializable
 import java.time.Instant
 
@@ -28,7 +30,12 @@ class DataConverter:Serializable{
 
         @TypeConverter
         @JvmStatic
-        fun toString(value:Enum):String{
+        fun toString(value:Enum<FriendRequestStatus>):String{
+            return value.toString()
+        }
+        @TypeConverter
+        @JvmStatic
+        fun enumToString(value:Enum<CanBeViewedBy>):String{
             return value.toString()
         }
     }
