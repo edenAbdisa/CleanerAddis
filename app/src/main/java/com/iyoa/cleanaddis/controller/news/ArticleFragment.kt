@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.news.MyNewsRecyclerViewAdapter
@@ -60,6 +61,9 @@ class ArticleFragment : Fragment() {
         var articleList = articleListAdapter.getArticles()
         loadArticles(articleListAdapter,articleList)
         val view = inflater.inflate(R.layout.fragment_news_list, container, false)
+        view.findViewById<View>(R.id.news_card).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_article_list_to_article_detail)
+        }
 
         recyclerView = view.findViewById(R.id.fragment_news_list)
         recyclerView.layoutManager = LinearLayoutManager(context)

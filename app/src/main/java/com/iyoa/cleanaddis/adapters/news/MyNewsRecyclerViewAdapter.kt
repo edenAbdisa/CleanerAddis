@@ -40,7 +40,7 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
         Log.wtf("ArticleLine35",course.text)
 
         holder.mIdView.text = course.title
-        holder.mContentView.text = course.published_date
+        holder.mContentView.text = course.published_date.toString()
 
 
     }
