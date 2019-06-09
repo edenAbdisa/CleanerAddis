@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation"
+            app:startDestination="@+id/fragment_news_list"
+>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/article_screen"
+            android:name="com.iyoa.cleanaddis.controller.news.ArticleFragment"
+            android:label="fragment_main"
+            tools:layout="@layout/fragment_news_list">
+        <action
+                android:id="@+id/action_article_list_to_article_detail"
+                app:destination="@id/article_detail_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/article_detail_screen"
+            android:name="com.iyoa.cleanaddis.controller.news.ArticleFragment"
+            android:label="fragment_main"
+            tools:layout="@layout/fragment_news_list">
+
+    </fragment>
+
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/report_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_report"
+            tools:layout="@layout/fragment_report">
+        <action
+                android:id="@+id/action_report_list_to_report_detail"
+                app:destination="@id/report_detail_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+        <action
+                android:id="@+id/action_report_list_to_add_report"
+                app:destination="@id/report_add_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/report_detail_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_detail_report"
+            tools:layout="@layout/fragment_report_detail">
+        <action
+                android:id="@+id/action_register_to_signup"
+                app:destination="@id/report_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/report_add_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_add_report"
+            tools:layout="@layout/fragment_add_report">
+        <action
+                android:id="@+id/action_addreport_to_report_list"
+                app:destination="@id/report_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+
+
+    </fragment>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/register_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_add_report"
+            tools:layout="@layout/fragment_register">
+
+        <action
+                android:id="@+id/action_register_to_signup"
+                app:destination="@id/register_signup_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+        <action
+                android:id="@+id/action_register_to_signin"
+                app:destination="@id/register_signin_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/register_signup_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_add_report"
+            tools:layout="@layout/fragment_signup">
+        <action
+                android:id="@+id/action_register_to_signup"
+                app:destination="@id/article_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+
+    </fragment>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/register_signin_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_add_report"
+            tools:layout="@layout/fragment_signin">
+        <action
+                android:id="@+id/action_register_to_signup"
+                app:destination="@id/article_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/post_screen"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:label="fragment_add_report"
+            tools:layout="@layout/fragment_post">
+        <action
+                android:id="@+id/action_register_to_signup"
+                app:destination="@id/article_screen"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+
+</navigation>

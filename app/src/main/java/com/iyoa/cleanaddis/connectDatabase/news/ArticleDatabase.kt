@@ -8,9 +8,11 @@ import androidx.room.TypeConverters
 import com.iyoa.cleanaddis.data.common.Category
 import com.iyoa.cleanaddis.data.common.Media
 import com.iyoa.cleanaddis.data.news.*
+import com.iyoa.cleanaddis.utility.DataConverter
 
 
 @Database(entities = arrayOf(Article:: class),version=1)
+@TypeConverters(DataConverter::class)
 abstract class ArticleDatabase: RoomDatabase() {
     abstract fun articleDao(): ArticleDAO
 

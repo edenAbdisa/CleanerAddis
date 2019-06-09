@@ -1,13 +1,6 @@
 package com.iyoa.cleanaddis.data.news
 
-import android.text.format.DateFormat
 import androidx.room.*
-import com.iyoa.cleanaddis.utility.TypeConverter
-import retrofit2.Converter
-import retrofit2.Retrofit
-import java.lang.StringBuilder
-import java.util.*
-import kotlin.coroutines.coroutineContext
 
 
 @Entity(tableName = "article")

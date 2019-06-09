@@ -17,13 +17,21 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
 
     <string name="nav_header_username">Username</string>
 
+=======
+    <string name="title_report">Report title</string>
+    <string name="report_header">Report header</string>
+    <string name="report_date">Report dates</string>
+    <string name="report_summary_text">Report summary</string>
+>>>>>>> 14f865db55ec1675d8203d1e43beaa84279fdd6a
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+<<<<<<< HEAD
     <string name="fragment_after_media_choosen_friends">FRIENDS</string>
     <string name="fragment_after_media_choosen_friends_of_friends">FRIENDS OF FRIENDS</string>
     <string name="fragment_after_media_choosen_me_only">ME ONLY</string>
@@ -70,4 +78,19 @@
     <string name="teaching_rec_more">More</string>
     <string name="teaching_rec_next">Next</string>
     <string name="teaching_rec_button">Button</string>
+=======
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="report_email">report email</string>
+    <string name="report_category">report category</string>
+    <string name="account_name">account name</string>
+    <string name="password">password</string>
+    <string name="username_or_email">Email/username</string>
+    <string name="lastname">lastname</string>
+    <string name="username">username</string>
+    <string name="email">email</string>
+    <string name="firstname">firstname</string>
+    <string name="phonenumber">phonenumber</string>
+>>>>>>> 14f865db55ec1675d8203d1e43beaa84279fdd6a
 </resources>

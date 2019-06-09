@@ -11,9 +11,11 @@ import com.iyoa.cleanaddis.data.news.Article
 import com.iyoa.cleanaddis.data.news.ArticleDAO
 import com.iyoa.cleanaddis.data.news.CategoryDAO
 import com.iyoa.cleanaddis.data.news.MediaDAO
+import com.iyoa.cleanaddis.utility.DataConverter
 
 
 @Database(entities = arrayOf(Media:: class),version=1)
+@TypeConverters(DataConverter::class)
 abstract class MediaDatabase: RoomDatabase() {
 
     abstract fun mediaDao(): MediaDAO

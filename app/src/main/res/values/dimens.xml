@@ -7,4 +7,5 @@
     <dimen name="title_height">24dp</dimen>
     <dimen name="button_dimen">48dp</dimen>
     <dimen name="card_bottom_margin">731dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
