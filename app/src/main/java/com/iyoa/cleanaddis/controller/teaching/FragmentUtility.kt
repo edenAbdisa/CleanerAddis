@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.adapters.teaching
+package com.iyoa.cleanaddis.controller.teaching
 
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity

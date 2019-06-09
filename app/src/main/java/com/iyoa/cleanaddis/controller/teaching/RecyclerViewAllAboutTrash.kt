@@ -1,4 +1,4 @@
-package com.example.abigail.myapplication
+package com.iyoa.cleanaddis.controller.teaching
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  *
  */
-class RecycleViewAllAboutTrash : Fragment() {
+class RecyclerViewAllAboutTrash : Fragment() {
 
 
 

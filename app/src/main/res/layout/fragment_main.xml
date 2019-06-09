@@ -18,7 +18,7 @@
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintTop_creator="1" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginRight="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="@+id/add_news" android:layout_marginLeft="8dp"
+            android:layout_marginLeft="8dp"
             app:layout_constraintBottom_toTopOf="parent"/>
 
 

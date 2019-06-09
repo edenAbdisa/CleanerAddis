@@ -3,7 +3,7 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".teaching_nonrecyclable"  android:id="@+id/frameThird">
+             tools:context=".controller.teaching.TeachingNonRecyclable"  android:id="@+id/frameThird">
 
 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
                                                    android:layout_height="match_parent">
@@ -27,8 +27,8 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
     />
-    <TextView
-            android:text="Non-Recyclable"
+    <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/teaching_nrec_non_recyclable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="291dp"
             tools:layout_editor_absoluteX="176dp" android:id="@+id/NRECTitle"
@@ -37,8 +37,8 @@
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
             app:layout_constraintTop_toTopOf="@+id/NREC1"
     />
-    <TextView
-            android:text="Description"
+    <com.google.android.material.textfield.TextInputEditText
+            android:text="@string/teaching_nrec_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="368dp"
             tools:layout_editor_absoluteX="176dp" android:id="@+id/NRECDescription"
@@ -48,8 +48,8 @@
             android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/NREC1"
 
     />
-    <Button
-            android:text="More"
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/teaching_nrec_more"
             android:textColor="#FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="490dp"
@@ -60,5 +60,41 @@
             app:layout_constraintTop_toTopOf="@+id/NREC2"
             android:background="@drawable/button"
     />
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="317dp"
+            android:id="@+id/guideline21"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/teaching_nrec_next"
+            android:textColor="#FFFFFF"
+            android:layout_width="68dp"
+            android:layout_height="36dp"
+            android:background="@drawable/button"
+            android:id="@+id/button4" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="@+id/guideline20"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/NREC2"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="106dp"
+            android:id="@+id/guideline23"/>
+    <com.google.android.material.button.MaterialButton
+            android:text="@string/teaching_nrec_button"
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:layout_width="68dp"
+            android:layout_height="36dp"
+            android:id="@+id/button5" app:layout_constraintEnd_toStartOf="@+id/guideline23"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/NREC2"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
