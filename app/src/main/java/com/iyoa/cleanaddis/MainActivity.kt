@@ -4,11 +4,13 @@ import android.os.Bundle
 
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.controller.news.ArticleFragment
 
 import com.iyoa.cleanaddis.utility.replaceFragmenty
