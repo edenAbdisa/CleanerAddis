@@ -11,7 +11,7 @@ import com.iyoa.cleanaddis.entity.posting.Post
 
 
 @Database(entities = arrayOf(Friend:: class ),version=1)
-@TypeConverters(DataConverter::class)
+
 abstract class FriendDatabase: RoomDatabase() {
     abstract fun friendDao(): FriendDAO
     companion object{

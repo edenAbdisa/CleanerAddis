@@ -25,6 +25,12 @@ class DataConverter:Serializable{
         fun toString(value:UUID):String{
             return value.toString()
         }
+
+        @TypeConverter
+        @JvmStatic
+        fun toString(value:Enum):String{
+            return value.toString()
+        }
     }
 
 
