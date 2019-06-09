@@ -1165,6 +1165,9 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_postFragment_to_displayPostsRecyclerViewFragment
+id action_postFragment_to_postAccountFragment
+id action_postFragment_to_selectPictureToPostFragment
 id action_register_to_signin
 id action_register_to_signup
 id action_report_list_to_add_report
@@ -1238,6 +1241,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id displayPostsRecyclerViewFragment
 id divider
 id divider10
 id divider11
@@ -1351,7 +1355,6 @@ id navigation_add_image
 id navigation_bottom_bar
 id navigation_header_container
 id navigation_home
-id navigation_setting
 id nestedScrollView
 id never
 id news_card
@@ -1374,6 +1377,8 @@ id password
 id percent
 id phonenumber
 id pin
+id postAccountFragment
+id postFragment
 id post_screen
 id profile_divider
 id progress_circular
@@ -1433,6 +1438,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id section_label
+id selectPictureToPostFragment
 id select_dialog_listview
 id selected
 id shortcut

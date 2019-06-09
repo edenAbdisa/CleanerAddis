@@ -11,7 +11,7 @@ interface ReportDAO {
     fun getReportByUuid(uuid: Long): LiveData<Report>
 
 
-    @Query("SELECT * FROM Report")
+    @Query("SELECT * FROM Report WHERE username=:username")
     fun getAllReports(username:String): LiveData<List<Report>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -21,10 +21,10 @@ interface ReportDAO {
     fun addReports(listOfReports: List<Report>)
 
      @Update
-     fun updateReport(report: Report): LiveData<Report>
+     fun updateReport(report: Report): Int
 
       @Delete
-     fun deleteReport(report: Report)
+     fun deleteReport(report: Report):Int
 
 
 }
