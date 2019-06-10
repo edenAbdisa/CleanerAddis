@@ -9,7 +9,7 @@ import java.util.*
 @Dao
 interface CommentDAO {
     @Query("SELECT * FROM comment WHERE uuid =:uuid")
-    fun getCommentByUUID(uuid: Long): LiveData<Comment>
+    fun getCommentByUUID(uuid: String): LiveData<Comment>
 
     @Query("SELECT * FROM comment")
     fun getAllComment(): LiveData<List<Comment>>

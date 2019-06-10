@@ -14,7 +14,6 @@ import com.iyoa.cleanaddis.utility.DataConverter
 
 @Database(entities = arrayOf(Friend:: class ),version=1)
 @TypeConverters(DataConverter::class)
-
 abstract class FriendDatabase: RoomDatabase() {
     abstract fun friendDao(): FriendDAO
     companion object{

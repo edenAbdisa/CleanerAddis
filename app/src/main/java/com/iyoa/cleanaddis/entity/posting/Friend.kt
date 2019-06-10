@@ -10,7 +10,7 @@ enum class FriendRequestStatus{
 @Entity(tableName = "friend")
 data class Friend(
                     @PrimaryKey
-                   val uuid:Long,
+                   val uuid:String,
                    val status:String,
                    val username_requestor:String,
                    val username_acceptor:String) {

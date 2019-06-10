@@ -12,7 +12,6 @@ import com.iyoa.cleanaddis.utility.DataConverter
 
 @Database(entities = arrayOf(Post:: class ),version=1)
 @TypeConverters(DataConverter::class)
-
 abstract class PostDatabase: RoomDatabase() {
     abstract fun postDao(): PostDAO
     companion object{

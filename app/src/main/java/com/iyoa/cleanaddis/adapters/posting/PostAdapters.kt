@@ -4,63 +4,85 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.entity.posting.Post
-import kotlinx.android.synthetic.main.single_post_display.view.*
-import android.R
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.*
+import androidx.recyclerview.widget.RecyclerView
+import com.iyoa.cleanaddis.entity.posting.Post
+import com.iyoa.cleanaddis.R
+import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
+
 class PostAdapters (val context: Context) : RecyclerView.Adapter<PostAdapters.PostViewHolder>() {
 
     private var postList: List<Post> = emptyList()
-
+    lateinit var viewModel:PostViewModel
+    private  lateinit var binding:ViewDataBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-       /* val recyclerViewItem = LayoutInflater.from(parent.context)
-            .inflate(R.layout.single_post_display, parent, false)*/
-        val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, R.layout.single_post_display, parent, false)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        viewModel = ViewModelProviders.of(this).get(
+            PostViewModel::class.java
+        )
+         binding =
+            DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, R.layout.single_post_display, parent, false)
+        val viewHolder = BindingViewHolder(binding.root, binding)
 
-        return PostViewHolder(binding)
+        binding.setLifecycleOwner(viewHolder)
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val item = postList[position]
+        var item = postList[position]
+        val context = holder.containerView.context
 
-        holder.SinglePostDisplayBinding..setPost(postList[position])
-        holder.binding.thumbnail.setOnClickListener(View.OnClickListener {
-            if (listener != null) {
-                listener.onPostClicked(postList[position])
+        when (item) {
+            is Post -> {
+                if (holder is BindingViewHolder) {
+                    holder.apply {
+                        viewModel.liveItem.post.value = item
+                        binding.viewModel = viewModel
+
+                        // optional observer to update name if it changes (2-way binding through EditText)
+                        viewModel.liveItem.post.observe(this, Observer {
+                            it?.also {
+                                item = it
+                            }
+                        })
+                    }
+                }
             }
-        })
-        holder.username.text = item.username
-        holder.likedBy.text = item.noLike.toString()
-        holder.postDescription.text=item.mediaUuid.toString()
+
+        }
 
 
     }
-    internal fun getPosts():List<Post>{
+
+    internal fun getPosts(): List<Post> {
         return postList
     }
-    internal fun setPosts(postList:List<Post>){
+
+    internal fun setPosts(postList: List<Post>) {
         this.postList = postList
         notifyDataSetChanged()
     }
+
     override fun getItemCount(): Int = postList.size
 
-    public class PostViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-      public val SinglePostDisplayBinding singlePostDisplayBinding
-        public fun ViewHolder(SinglePostDisplayBinding singlePostDisplayLayoutBinding){
-            super(singlePostDisplayLayoutBinding)
-            singlePostDisplayBinding= singlePostDisplayLayoutBinding
+    open inner class PostViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView)
 
+    inner class BindingViewHolder(
+        override val containerView: View,
+        val binding: com.iyoa.cleanaddis.databinding.SinglePostDisplayBinding
+    ) : PostViewHolder(containerView),
+        LifecycleOwner {
+        private val lifecycleRegistry = LifecycleRegistry(this)
+
+        init {
+            lifecycleRegistry.markState(Lifecycle.State.INITIALIZED)
         }
-       /* val username: TextView = mView.textView_username
-        val likedBy: TextView = mView.textView_liked_by
-        val postDescription: TextView = mView.textView_post_description*/
 
-
+        override fun getLifecycle(): Lifecycle {
+            return lifecycleRegistry
         }
-
     }
 
+}

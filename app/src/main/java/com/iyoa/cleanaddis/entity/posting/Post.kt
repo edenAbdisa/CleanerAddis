@@ -14,9 +14,9 @@ enum class CanBeViewedBy {
 }
 
 @Entity(tableName = "post")
-data class Post (@PrimaryKey val  uuid: Long, val username:String,
+data class Post (@PrimaryKey val  uuid: String, val username:String,
                  val noLike:Int, val noView: Int,  val downloadable: Int,
                  val allowToBeUsedForArticle:Int,
-                 val mediaUuid:Long, val categoryUuid:Long,val can_be_viewed_by:String,
+                 val mediaUuid:String, val categoryUuid:String,val can_be_viewed_by:String,
                  val status: String ,
                  val date:Date)

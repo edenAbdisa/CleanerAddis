@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,8 +39,7 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        val view= inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
-
+       val view= inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
         val postListAdapter = PostAdapters(context)
         var postList = postListAdapter.getPosts()
         loadPosts(postListAdapter,postList)

@@ -8,7 +8,7 @@ import java.util.*
 @Dao
 interface PostDAO {
     @Query("SELECT * FROM post WHERE uuid =:uuid")
-    fun getPostByUUID(uuid: Long): LiveData<Post>
+    fun getPostByUUID(uuid: String): LiveData<Post>
 
     @Query("SELECT * FROM post")
     fun getAllPost(): LiveData<List<Post>>

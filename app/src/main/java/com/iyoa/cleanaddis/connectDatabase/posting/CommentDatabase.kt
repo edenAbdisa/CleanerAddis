@@ -4,13 +4,16 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.iyoa.cleanaddis.data.posting.CommentDAO
 import com.iyoa.cleanaddis.data.posting.PostDAO
 import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.entity.posting.Post
+import com.iyoa.cleanaddis.utility.DataConverter
 
 
 @Database(entities = arrayOf(Comment:: class ),version=1)
+@TypeConverters(DataConverter::class)
 abstract class CommentDatabase: RoomDatabase() {
     abstract fun commentDao(): CommentDAO
     companion object{

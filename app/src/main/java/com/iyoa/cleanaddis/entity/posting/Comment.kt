@@ -11,7 +11,7 @@ enum class CommentStatus {
 }
 
 @Entity(tableName = "comment")
-data class Comment (@PrimaryKey val  uuid: Long, val text:String,
-                 val postUuid:Long, val status: CommentStatus,  val noLike: Int,
-                 val commenterUuid:Long,
+data class Comment (@PrimaryKey val  uuid: String, val text:String,
+                 val postUuid:String, val status: CommentStatus,  val noLike: Int,
+                 val commenterUuid:String,
                  val date:Date)

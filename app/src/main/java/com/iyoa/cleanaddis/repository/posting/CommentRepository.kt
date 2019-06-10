@@ -17,7 +17,7 @@ class CommentRepository(private val commentDAO: CommentDAO) {
     fun updateComment(comment:Comment){
         commentDAO.updateComment(comment)
     }
-    fun getCommentByUUID(uuid:Long){
+    fun getCommentByUUID(uuid:String){
         commentDAO.getCommentByUUID(uuid)
     }
     fun deleteComment(comment:Comment){

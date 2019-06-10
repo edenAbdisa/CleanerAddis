@@ -15,7 +15,7 @@ class PostRepository(private val postDAO: PostDAO) {
     fun updatePost(post:Post){
         postDAO.updatePost(post)
     }
-    fun getPostByUUID(uuid:Long){
+    fun getPostByUUID(uuid:String){
         postDAO.getPostByUUID(uuid)
     }
     fun deletePost(post:Post){

@@ -15,7 +15,7 @@ class FriendRepository(private val friendDAO: FriendDAO) {
     fun updateFriend(friend:Friend){
         friendDAO.updateFriend(friend)
     }
-    fun getFriendByUUID(uuid:Long){
+    fun getFriendByUUID(uuid:String){
         friendDAO.getFriendByUUID(uuid)
     }
     fun deleteFriend(friend:Friend){

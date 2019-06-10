@@ -35,7 +35,7 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline"
     />
     <TextView
-            android:text="TextView"
+            android:text="@{viewmodel.username}"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/textView_username"
@@ -75,7 +75,7 @@
             app:layout_constraintHorizontal_bias="0.966" android:layout_marginTop="8dp"
             style="@android:style/Widget.Holo.Light.ImageButton"/>
     <TextView
-            android:text="TextView"
+            android:text="@{viewmodel.noLike}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView_liked_by" app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +85,7 @@
             app:layout_constraintTop_toBottomOf="@+id/guideline3" android:layout_marginTop="8dp"
             app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
-            android:text="TextView"
+            android:text="@{viewmodel.noView}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView_post_description" app:layout_constraintEnd_toEndOf="parent"

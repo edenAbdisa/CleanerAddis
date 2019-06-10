@@ -9,7 +9,7 @@ import java.util.*
 @Dao
 interface FriendDAO {
     @Query("SELECT * FROM friend WHERE uuid =:uuid")
-    fun getFriendByUUID(uuid: Long): LiveData<Friend>
+    fun getFriendByUUID(uuid: String): LiveData<Friend>
 
     @Query("SELECT * FROM friend")
     fun getAllFriend(): LiveData<List<Friend>>
