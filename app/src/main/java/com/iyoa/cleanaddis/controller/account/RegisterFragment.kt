@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 
 import com.iyoa.cleanaddis.R
 
@@ -24,8 +25,15 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register, container, false)
+        val view = inflater.inflate(R.layout.fragment_register, container, false)
+
+        view.findViewById<View>(R.id.check_imageview).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_signup_to_account_setting)
+        }
+        view.findViewById<View>(R.id.account_signin_button).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_signin_to_account_setting)
+        }
+        return view
     }
 
 

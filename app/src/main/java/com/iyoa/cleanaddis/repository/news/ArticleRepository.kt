@@ -15,4 +15,9 @@ class ArticleRepository(private val articleDAO: ArticleDAO) {
     fun addArticles(listOfarticles: List<Article>) {
         articleDAO.addArticles(listOfarticles)
     }
+
+    fun getArticle(uuid:Long):LiveData<Article>{
+
+        return articleDAO.getNewsByUuid(uuid)
+    }
 }

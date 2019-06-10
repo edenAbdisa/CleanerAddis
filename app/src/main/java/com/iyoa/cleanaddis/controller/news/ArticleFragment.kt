@@ -63,6 +63,7 @@ class ArticleFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_news_list, container, false)
         view.findViewById<View>(R.id.news_card).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_article_list_to_article_detail)
+
         }
 
         recyclerView = view.findViewById(R.id.fragment_news_list)

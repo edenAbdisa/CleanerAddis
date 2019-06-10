@@ -1,1 +1,1 @@
-include ':app', ':CleanerAddisBackend', ':backend'
+include ':app'

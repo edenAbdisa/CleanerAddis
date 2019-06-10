@@ -5,7 +5,7 @@
     <string name="post_name">Post</string>
     <string name="news_name">News</string>
     <string name="teaching_name">Teaching</string>
-
+    <string name="preference_file_key">"user_data"</string>
     <string name="title_add_picture">Media</string>
     <string name="title_home">Home</string>
     <string name="title_account">Account</string>
@@ -104,6 +104,10 @@
     <string name="email">email</string>
     <string name="firstname">firstname</string>
     <string name="phonenumber">phonenumber</string>
+<<<<<<< HEAD
     <string name="rec_recycleable_trash">Recycleable Trash</string>
     >>>>>>> 14f865db55ec1675d8203d1e43beaa84279fdd6a
+=======
+    <string name="report_message">Your message..</string>
+>>>>>>> e3b77cace2c565ad96836ee286f8ec41c567d987
 </resources>

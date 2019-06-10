@@ -1,5 +1,6 @@
 package com.iyoa.cleanaddis.model
 
+import com.iyoa.cleanaddis.data.news.ArticleData
 import com.iyoa.cleanaddis.entity.new.ArticleEntity
 import org.junit.Before
 import org.junit.Test

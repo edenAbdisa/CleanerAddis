@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.data.common
+package com.iyoa.cleanaddis.data.user
 
 
 import androidx.room.ColumnInfo

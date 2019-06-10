@@ -14,11 +14,7 @@ import kotlinx.coroutines.launch
 import java.util.*
 
 class ArticleViewModel(application: Application):AndroidViewModel(application) {
-    private val title:LiveData<String> = MutableLiveData<String>()
-    private val imageUrl:LiveData<String> = MutableLiveData<String>()
-    private val text:LiveData<String> = MutableLiveData<String>()
-    private val date:LiveData<Date> = MutableLiveData<Date>()
-    private val viewCount:LiveData<Int> = MutableLiveData<Int>()
+
 
     private val articleRepos: ArticleRepository
     val allArticles : LiveData<List<Article>>
