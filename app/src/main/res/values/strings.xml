@@ -39,4 +39,5 @@
     <string name="firstname">firstname</string>
     <string name="phonenumber">phonenumber</string>
     <string name="report_message">Your message..</string>
+    <string name="impact_of_waste">Impact of waste</string>
 </resources>

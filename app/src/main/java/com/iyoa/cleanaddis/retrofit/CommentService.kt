@@ -1,5 +1,4 @@
-package com.iyoa.cleanaddis.retrofitEden
-
+package com.iyoa.cleanaddis.retrofit
 import com.iyoa.cleanaddis.entity.posting.Comment
 import retrofit2.Call
 import retrofit2.http.*

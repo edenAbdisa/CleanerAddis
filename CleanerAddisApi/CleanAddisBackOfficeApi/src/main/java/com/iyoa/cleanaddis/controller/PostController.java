@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iyoa.cleanaddis.error.DataNotFoundException;
-import com.iyoa.cleanaddis.model.Post;
+import com.iyoa.cleanaddis.data.Post;
 import com.iyoa.cleanaddis.service.PostService;
 
 @RestController

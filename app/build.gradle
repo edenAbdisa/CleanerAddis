@@ -120,8 +120,8 @@ dependencies {
     androidTestImplementation "androidx.test.uiautomator:uiautomator:2.2.0"
     androidTestImplementation "androidx.work:work-testing:2.1.0-alpha03"
     androidTestImplementation "com.google.truth:truth:0.42"
-    //testImplementation "junit:junit:4.12"
-    //testImplementation 'androidx.test:core:1.2.0'
+    testImplementation "junit:junit:4.12"
+    testImplementation 'androidx.test:core:1.2.0'
     // Optional -- Mockito framework
     //testImplementation 'org.mockito:mockito-core:2.23.4'
 

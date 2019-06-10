@@ -6,8 +6,8 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import com.iyoa.cleanaddis.model.Article;
-import com.iyoa.cleanaddis.model.Report;
+import com.iyoa.cleanaddis.data.Article;
+import com.iyoa.cleanaddis.data.Report;
 
 public interface ReportRepository extends JpaRepository<Report, UUID> {
 	@Query(value = "SELECT * FROM report "

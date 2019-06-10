@@ -4,13 +4,13 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 
 import com.iyoa.cleanaddis.R
 
 
 import com.iyoa.cleanaddis.controller.report.ReportFragment.OnListFragmentInteractionListener
 import com.iyoa.cleanaddis.controller.report.dummy.DummyContent.DummyItem
+import com.iyoa.cleanaddis.data.report.Report
 
 /**
  * [RecyclerView.Adapter] that can display a [DummyItem] and makes a call to the
@@ -18,7 +18,7 @@ import com.iyoa.cleanaddis.controller.report.dummy.DummyContent.DummyItem
  * TODO: Replace the implementation with code for your data type.
  */
 class MyReportRecyclerViewAdapter(
-    private val mValues: List<DummyItem>,
+    private val mValues: List<Report>,
     private val mListener: OnListFragmentInteractionListener?
 ) : RecyclerView.Adapter<MyReportRecyclerViewAdapter.ViewHolder>() {
 
@@ -26,9 +26,7 @@ class MyReportRecyclerViewAdapter(
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as DummyItem
-            // Notify the active callbacks interface (the activity, if the fragment is attached to
-            // one) that an item has been selected.
+            val item = v.tag as Report
             mListener?.onListFragmentInteraction(item)
         }
     }
@@ -45,6 +43,7 @@ class MyReportRecyclerViewAdapter(
         holder.mIdView.text = item.id
         holder.mContentView.text = item.content
         */
+
 
         with(holder.mView) {
             tag = item

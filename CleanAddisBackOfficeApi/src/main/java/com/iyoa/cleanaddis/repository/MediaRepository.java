@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.iyoa.cleanaddis.model.Media;
+import com.iyoa.cleanaddis.data.Media;
 
 
 

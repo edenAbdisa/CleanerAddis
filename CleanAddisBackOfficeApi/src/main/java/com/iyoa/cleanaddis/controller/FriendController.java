@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.iyoa.cleanaddis.error.DataNotFoundException;
 import com.iyoa.cleanaddis.json.FriendJson;
-import com.iyoa.cleanaddis.model.Friend;
-import com.iyoa.cleanaddis.model.Post;
+import com.iyoa.cleanaddis.data.Friend;
+import com.iyoa.cleanaddis.data.Post;
 import com.iyoa.cleanaddis.service.FriendService;
 import com.iyoa.cleanaddis.service.PostService;
 

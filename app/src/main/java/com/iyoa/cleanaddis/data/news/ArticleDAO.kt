@@ -3,7 +3,6 @@ package com.iyoa.cleanaddis.data.news
 //import com.iyoa.cleanaddis.entity.new.ArticleViewModel
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import java.util.*
 
 @Dao
 interface ArticleDAO {

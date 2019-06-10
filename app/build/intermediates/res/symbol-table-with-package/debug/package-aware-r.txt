@@ -1099,9 +1099,11 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account_circle_black_24dp
 drawable ic_action_explore
+drawable ic_attachment_black_24dp
 drawable ic_camera_alt_black_24dp
 drawable ic_check_circle_black_24dp
 drawable ic_home_black_24dp
+drawable ic_image_black_24dp
 drawable ic_insert_drive_file_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -1146,6 +1148,9 @@ id SHIFT
 id SYM
 id account_logout_button
 id account_profile_imageview
+id account_setting_screen
+id account_signin_button
+id account_signup_button
 id action0
 id action_addreport_to_report_list
 id action_article_list_to_article_detail
@@ -1173,6 +1178,8 @@ id action_register_to_signup
 id action_report_list_to_add_report
 id action_report_list_to_report_detail
 id action_settings
+id action_signin_to_account_setting
+id action_signup_to_account_setting
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1195,6 +1202,7 @@ id article_imageview
 id article_screen
 id article_text_textview
 id async
+id attach_image_view
 id auto
 id barrier
 id beginning
@@ -1317,6 +1325,8 @@ id imageView4
 id imageView5
 id imageView6
 id imageView_choosen_Media_display
+id impact_rating
+id impact_rating_bar
 id include
 id info
 id invisible
@@ -1374,6 +1384,7 @@ id parent
 id parentPanel
 id parent_matrix
 id password
+id password_edittext
 id percent
 id phonenumber
 id pin
@@ -1472,8 +1483,6 @@ id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id text
 id text2
-id textInputEditText
-id textInputEditText2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -1522,6 +1531,7 @@ id unlabeled
 id up
 id useLogo
 id username_editText
+id username_email_edittext
 id vertical
 id videoView_choosen_Media_display
 id view_button_news
@@ -1718,6 +1728,7 @@ string fab_transformation_sheet_behavior
 string firstname
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string impact_of_waste
 string lastname
 string mtrl_chip_close_icon_content_description
 string nav_app_bar_navigate_up_description
@@ -1736,6 +1747,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string phonenumber
 string post_name
+string preference_file_key
 string report_category
 string report_date
 string report_email

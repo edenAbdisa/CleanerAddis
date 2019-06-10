@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.iyoa.cleanaddis.model.Friend;
-import com.iyoa.cleanaddis.model.Role;
+import com.iyoa.cleanaddis.data.Friend;
+import com.iyoa.cleanaddis.data.Role;
 
 public interface RoleRepository  extends JpaRepository<Role, UUID>  {
 

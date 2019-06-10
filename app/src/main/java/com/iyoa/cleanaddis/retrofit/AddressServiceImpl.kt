@@ -1,17 +1,17 @@
-package com.iyoa.cleanaddis.retrofitDelilah
+package com.iyoa.cleanaddis.retrofit
 
 import com.iyoa.cleanaddis.utility.BASE_URL_NEW
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class ReportServiceImpl {
-    fun getAccountServiceImpl(): ReportService {
+class AddressServiceImpl {
+    fun getAddressServiceImpl(): AddressService {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL_NEW)
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
-        return retrofit.create(ReportService::class.java)
+        return retrofit.create(AddressService::class.java)
     }
 }

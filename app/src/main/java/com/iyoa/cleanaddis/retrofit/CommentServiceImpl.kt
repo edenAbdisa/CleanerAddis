@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.retrofitEden
+package com.iyoa.cleanaddis.retrofit
 
 import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.utility.BASE_URL
