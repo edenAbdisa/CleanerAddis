@@ -76,7 +76,17 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_postFragment_to_displayPostsRecyclerViewFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_postFragment_to_postAccountFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_postFragment_to_selectPictureToPostFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
