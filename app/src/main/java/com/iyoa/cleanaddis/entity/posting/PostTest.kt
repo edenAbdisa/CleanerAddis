@@ -10,4 +10,10 @@ class PostTest {
                       status: String ,
                       date: Date
     ){}
+
+    fun generateComment(  uuid: String,  text:String,
+                           postUuid:String,  status: CommentStatus,   noLike: Int,
+                           commenterUuid:String,
+                           date:Date
+    ){}
 }

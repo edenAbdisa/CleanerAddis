@@ -5,9 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.iyoa.cleanaddis.connectDatabase.posting.CommentDatabase
 import com.iyoa.cleanaddis.entity.posting.Comment
-import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.repository.posting.CommentRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -17,7 +15,7 @@ class CommentViewModel(application: Application): AndroidViewModel(application) 
     val allComment : LiveData<List<Comment>>
     val liveItem: LiveItem = LiveItem()
     init{
-        val  commentDAO = CommentDatabase.getCommentDatabase(application).commentDao()
+        val  commentDAO = PostDatabase.getCommentDatabase(application).commentDao()
         commentRepos = CommentRepository(commentDAO)
         allComment = commentRepos.getAllComment()
     }

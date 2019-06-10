@@ -7,7 +7,7 @@ import java.util.*
 
 
 enum class CommentStatus {
-    REPLIED,UPDATED
+    REPLIED,UPDATED,POSTED
 }
 
 @Entity(tableName = "comment")
