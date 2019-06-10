@@ -12,13 +12,10 @@ import android.widget.EditText
 import androidx.navigation.Navigation
 
 import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.data.news.Article
 import com.iyoa.cleanaddis.data.user.User
-import com.iyoa.cleanaddis.retrofitDelilah.AccountService
-import com.iyoa.cleanaddis.retrofitDelilah.AccountServiceImpl
-import com.iyoa.cleanaddis.retrofitDelilah.ArticleServiceImpl
+import com.iyoa.cleanaddis.retrofit.AccountService
+import com.iyoa.cleanaddis.retrofit.AccountServiceImpl
 import kotlinx.android.synthetic.main.fragment_signin.*
-import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

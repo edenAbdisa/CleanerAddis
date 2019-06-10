@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.retrofitDelilah
+package com.iyoa.cleanaddis.retrofit
 
 import com.iyoa.cleanaddis.utility.BASE_URL_NEW
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

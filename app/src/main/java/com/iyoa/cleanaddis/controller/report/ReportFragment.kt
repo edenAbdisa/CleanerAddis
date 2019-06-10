@@ -11,11 +11,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.adapters.report.MyReportRecyclerViewAdapter
 
-import com.iyoa.cleanaddis.controller.report.dummy.DummyContent
 import com.iyoa.cleanaddis.data.report.Report
-import com.iyoa.cleanaddis.retrofitDelilah.ArticleService
+import com.iyoa.cleanaddis.retrofit.ArticleService
 
 /**
  * A fragment representing a list of Items.

@@ -13,16 +13,14 @@ import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.data.user.User
 import com.iyoa.cleanaddis.data.user.UserData
-import com.iyoa.cleanaddis.retrofitDelilah.AccountService
-import com.iyoa.cleanaddis.retrofitDelilah.AccountServiceImpl
+import com.iyoa.cleanaddis.retrofit.AccountService
+import com.iyoa.cleanaddis.retrofit.AccountServiceImpl
 import kotlinx.android.synthetic.main.fragment_signin.*
 import kotlinx.android.synthetic.main.fragment_signup.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.time.Instant
-import java.time.LocalDate
-import java.time.LocalDateTime
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match

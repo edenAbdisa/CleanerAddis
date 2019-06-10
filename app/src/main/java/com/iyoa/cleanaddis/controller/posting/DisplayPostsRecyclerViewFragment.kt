@@ -1,8 +1,6 @@
 package com.iyoa.cleanaddis.controller.posting
 
 import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +8,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,9 +16,8 @@ import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.posting.PostAdapters
 import com.iyoa.cleanaddis.entity.posting.Post
-import com.iyoa.cleanaddis.retrofitEden.PostService
-import com.iyoa.cleanaddis.retrofitEden.PostServiceImpl
-import com.iyoa.cleanaddis.utility.Connection
+import com.iyoa.cleanaddis.retrofit.PostService
+import com.iyoa.cleanaddis.retrofit.PostServiceImpl
 import com.iyoa.cleanaddis.utility.Connection.Companion.checkConnection
 import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
 import retrofit2.Call
@@ -34,7 +30,7 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
     var listItems :List <Post>? = emptyList()
     private var listener: OnFragmentInteractionListener? = null
     lateinit var recyclerView: RecyclerView
-    private lateinit var postService:PostService
+    private lateinit var postService: PostService
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
@@ -51,7 +47,7 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
     }
     fun loadPosts(postAdapter:PostAdapters,  postList:List<Post>){
         var postList = postList
-        postService =PostServiceImpl().getPostServiceImpl()
+        postService = PostServiceImpl().getPostServiceImpl()
         val call: Call<List<Post>> = postService.findPosts()
         call.enqueue(object:Callback<List<Post>>{
             override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {

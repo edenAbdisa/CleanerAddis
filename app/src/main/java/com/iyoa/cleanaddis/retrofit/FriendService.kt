@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.retrofitEden
+package com.iyoa.cleanaddis.retrofit
 
 import com.iyoa.cleanaddis.entity.posting.Friend
 import com.iyoa.cleanaddis.entity.posting.Post

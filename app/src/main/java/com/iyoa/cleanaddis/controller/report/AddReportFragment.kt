@@ -22,10 +22,7 @@ import com.iyoa.cleanaddis.data.common.Media
 import com.iyoa.cleanaddis.data.common.MediaData
 import com.iyoa.cleanaddis.data.report.Report
 import com.iyoa.cleanaddis.data.report.ReportData
-import com.iyoa.cleanaddis.data.user.User
-import com.iyoa.cleanaddis.retrofitDelilah.*
-import com.iyoa.cleanaddis.retrofitEden.MediaService
-import com.iyoa.cleanaddis.retrofitEden.MediaServiceImpl
+import com.iyoa.cleanaddis.retrofit.*
 import kotlinx.android.synthetic.main.fragment_add_report.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -56,7 +53,7 @@ class AddReportFragment : Fragment() {
     private lateinit var streetNameSpinner:Spinner
     private lateinit var  reportService: ReportService
     private lateinit var addressService: AddressService
-    private lateinit var mediaService:MediaService
+    private lateinit var mediaService: MediaService
     private lateinit var impactRatingBar: RatingBar
     private lateinit var attachImageView: ImageView
     private lateinit var mCapturedImageURI:Uri

@@ -1,16 +1,12 @@
 package com.iyoa.cleanaddis.controller.account
 
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.retrofitDelilah.AccountService
-import com.iyoa.cleanaddis.retrofitDelilah.ArticleService
 
 
 // TODO: Rename parameter arguments, choose names that match

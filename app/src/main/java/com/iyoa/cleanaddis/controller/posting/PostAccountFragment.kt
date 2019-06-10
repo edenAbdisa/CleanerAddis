@@ -1,7 +1,5 @@
 package com.iyoa.cleanaddis.controller.posting
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,11 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.entity.user.User
-import com.iyoa.cleanaddis.retrofitEden.PostService
-import com.iyoa.cleanaddis.retrofitEden.PostServiceImpl
-import com.iyoa.cleanaddis.retrofitEden.UserServiceImpl
+import com.iyoa.cleanaddis.retrofit.PostService
+import com.iyoa.cleanaddis.retrofit.PostServiceImpl
+import com.iyoa.cleanaddis.retrofit.UserServiceImpl
 import com.iyoa.cleanaddis.utility.Connection
 import kotlinx.android.synthetic.main.fragment_post_account.view.*
 import retrofit2.Call
@@ -21,7 +18,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class PostAccountFragment : Fragment() {
-    private var userServiceImpl: UserServiceImpl =UserServiceImpl()
+    private var userServiceImpl: UserServiceImpl =
+        UserServiceImpl()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

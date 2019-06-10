@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.retrofitDelilah
+package com.iyoa.cleanaddis.retrofit
 
 import com.iyoa.cleanaddis.data.common.AddressData
 import com.iyoa.cleanaddis.data.user.User
