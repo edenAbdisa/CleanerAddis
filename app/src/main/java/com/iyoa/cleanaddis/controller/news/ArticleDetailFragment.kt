@@ -37,7 +37,6 @@ class ArticleDetailFragment : Fragment() {
 
 
 
-
         return myView
     }
 

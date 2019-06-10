@@ -7,53 +7,51 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.*
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
+import com.iyoa.cleanaddis.adapters.commenting.CommentAdapter
+import com.iyoa.cleanaddis.viewModels.posting.CommentViewModel
+import com.iyoa.cleanaddis.databinding.SinglePostDisplayBinding
+import java.util.*
 
-class PostAdapters (val context: Context) : RecyclerView.Adapter<PostAdapters.PostViewHolder>() {
+class PostAdapters (val context: Context,val commentViewModel:CommentViewModel) : ListAdapter<Post,PostAdapters.PostViewHolder>(PostDiffCallBack()) {
 
     private var postList: List<Post> = emptyList()
-    lateinit var viewModel:PostViewModel
     private  lateinit var binding:ViewDataBinding
+    lateinit var view:ViewDataBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        viewModel = ViewModelProviders.of(this).get(
-            PostViewModel::class.java
+
+        view =   DataBindingUtil.inflate(
+                LayoutInflater.from(parent.context),
+                R.layout.single_post_display, parent, false
+            )
         )
-         binding =
-            DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, R.layout.single_post_display, parent, false)
-        val viewHolder = BindingViewHolder(binding.root, binding)
 
-        binding.setLifecycleOwner(viewHolder)
-        return viewHolder
+        return PostViewHolder(view)
+
     }
+     fun callComment(val uuid: String){
 
+        val commentListAdapter = CommentAdapter(context)
+        var commentList = commentListAdapter.getComments()
+
+        val recyclerViewComment=view.root.findViewById<RecyclerView>(R.id.recyclerView_comment_list)
+        val layoutManager = LinearLayoutManager(context)
+         recyclerViewComment.adapter = context?.let { CommentAdapter(it) }
+         recyclerViewComment.setHasFixedSize(true)
+    }
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        var item = postList[position]
-        val context = holder.containerView.context
 
-        when (item) {
-            is Post -> {
-                if (holder is BindingViewHolder) {
-                    holder.apply {
-                        viewModel.liveItem.post.value = item
-                        binding.viewModel = viewModel
+        getItem(position).let { post ->
+            with(holder) {
 
-                        // optional observer to update name if it changes (2-way binding through EditText)
-                        viewModel.liveItem.post.observe(this, Observer {
-                            it?.also {
-                                item = it
-                            }
-                        })
-                    }
-                }
+                bind(post)
             }
-
         }
-
-
     }
 
     internal fun getPosts(): List<Post> {
@@ -67,22 +65,24 @@ class PostAdapters (val context: Context) : RecyclerView.Adapter<PostAdapters.Po
 
     override fun getItemCount(): Int = postList.size
 
-    open inner class PostViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView)
-
-    inner class BindingViewHolder(
-        override val containerView: View,
-        val binding: com.iyoa.cleanaddis.databinding.SinglePostDisplayBinding
-    ) : PostViewHolder(containerView),
-        LifecycleOwner {
-        private val lifecycleRegistry = LifecycleRegistry(this)
-
-        init {
-            lifecycleRegistry.markState(Lifecycle.State.INITIALIZED)
+    open inner class PostViewHolder(private val binding: SinglePostDisplayBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+        fun bind( item: Post) {
+            with(binding) {
+                post=item
+                executePendingBindings()
+            }
+            callComment(item.uuid)
         }
+    }
+}
+class PostDiffCallBack: DiffUtil.ItemCallback<Post>(){
+    override fun areItemsTheSame(oldItem: Post, newItem: Post): Boolean {
+        return oldItem.uuid == newItem.uuid
+    }
 
-        override fun getLifecycle(): Lifecycle {
-            return lifecycleRegistry
-        }
+    override fun areContentsTheSame(oldItem: Post, newItem: Post): Boolean {
+        return oldItem == newItem
     }
 
 }

@@ -22,31 +22,38 @@ import com.iyoa.cleanaddis.adapters.posting.PostAdapters
 import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.retrofitEden.PostService
 import com.iyoa.cleanaddis.retrofitEden.PostServiceImpl
-import com.iyoa.cleanaddis.utility.Connection
+import com.iyoa.cleanaddis.databinding.SinglePostDisplayBinding
 import com.iyoa.cleanaddis.utility.Connection.Companion.checkConnection
+import com.iyoa.cleanaddis.viewModels.posting.CommentViewModel
 import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class DisplayPostsRecyclerViewFragment : Fragment() {
-     lateinit var postViewModel: PostViewModel
+    lateinit var postViewModel: PostViewModel
+
+    lateinit var commentViewModel: CommentViewModel
+    //lateinit var userViewModel: UserViewModel
+
     val context = MainActivity()
-    var listItems :List <Post>? = emptyList()
     private var listener: OnFragmentInteractionListener? = null
-    lateinit var recyclerView: RecyclerView
     private lateinit var postService:PostService
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-       val view= inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
-        val postListAdapter = PostAdapters(context)
+        postViewModel = ViewModelProviders.of(this).get(PostViewModel::class.java)
+        commentViewModel = ViewModelProviders.of(this).get(CommentViewModel::class.java)
+        val binding = SinglePostDisplayBinding.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
+
+        val postListAdapter = PostAdapters(context,commentViewModel)
         var postList = postListAdapter.getPosts()
+
         loadPosts(postListAdapter,postList)
-        recyclerView = view.findViewById(R.id.recyclerView_front_post_view)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = context?.let { PostAdapters(it) }
-        recyclerView.setHasFixedSize(true)
+
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.adapter = context?.let { PostAdapters(it) }
+        binding.recyclerView.setHasFixedSize(true)
         return view
     }
     fun loadPosts(postAdapter:PostAdapters,  postList:List<Post>){
@@ -103,8 +110,5 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
     }
     interface OnFragmentInteractionListener {
         fun onFragmentInteraction(uri: Uri)
-    }
-
-    companion object {
     }
 }

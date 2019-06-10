@@ -1,6 +1,7 @@
 package com.iyoa.cleanaddis.viewModels.posting
 
 import android.app.Application
+import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,6 +16,9 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     private val postRepos: PostRepository
     val allPost : LiveData<List<Post>>
     val liveItem: LiveItem = LiveItem()
+    lateinit var username : ObservableField<String>
+    lateinit var noLike : ObservableField<Int>
+    lateinit var noView : ObservableField<Int>
     init{
         val  postDAO = PostDatabase.getPostDatabase(application).postDao()
         postRepos = PostRepository(postDAO)
