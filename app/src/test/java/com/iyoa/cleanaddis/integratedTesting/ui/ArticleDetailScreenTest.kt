@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.ui
+package com.iyoa.cleanaddis.integratedTesting.ui
 
 import androidx.navigation.NavController
 import androidx.test.espresso.Espresso
@@ -12,13 +12,12 @@ import org.mockito.Mockito
 
 
 @RunWith(AndroidJUnit4::class)
-class ReportDetailScreenTest {
-
+class ArticleDetailScreenTest {
     @Test
     fun test1() {
 
         val mockNavController = Mockito.mock(NavController::class.java)
-        Espresso.onView(ViewMatchers.withId(R.id.report_cardview)).perform(ViewActions.click())
-        Mockito.verify(mockNavController).navigate(R.id.action_report_list_to_report_detail)
+        Espresso.onView(ViewMatchers.withId(R.id.news_card)).perform(ViewActions.click())
+        Mockito.verify(mockNavController).navigate(R.id.action_article_list_to_article_detail)
     }
 }

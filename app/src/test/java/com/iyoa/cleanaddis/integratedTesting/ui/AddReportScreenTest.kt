@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.ui
+package com.iyoa.cleanaddis.integratedTesting.ui
 
 import androidx.navigation.NavController
 import androidx.test.espresso.Espresso
