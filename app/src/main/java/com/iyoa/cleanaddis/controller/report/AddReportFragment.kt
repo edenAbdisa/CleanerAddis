@@ -65,6 +65,7 @@ class AddReportFragment : Fragment() {
         var streetName = streetNameSpinner.selectedItem.toString()
         var header = headerEditText.text
         var category = categorySpinner.selectedItem.toString()
+
         //TODO get the username
         //TODO get the email of the user by using the username
 
