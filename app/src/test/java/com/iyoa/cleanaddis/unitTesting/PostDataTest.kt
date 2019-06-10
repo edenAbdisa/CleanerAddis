@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.model
+package com.iyoa.cleanaddis.unitTesting
 
 import com.iyoa.cleanaddis.data.news.ArticleData
 import com.iyoa.cleanaddis.entity.new.ArticleEntity
