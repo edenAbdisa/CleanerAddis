@@ -1,8 +1,7 @@
 package com.iyoa.cleanaddis.retrofitEden
 
-import com.iyoa.cleanaddis.entity.posting.Friend
+import com.iyoa.cleanaddis.data.common.MediaData
 import com.iyoa.cleanaddis.entity.posting.Media
-import com.iyoa.cleanaddis.entity.posting.Post
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -17,7 +16,7 @@ interface MediaService {
     fun findMediaByPath(@Path("mediaUrl") mediaUrl:String ): Call<Media>
 
     @POST("/media")
-    fun insertMedia(@Body media: Media): Call<Void>
+    fun insertMedia(@Body media: MediaData): Call<Media>
 
     @PUT("/media/{id}")
     fun updateMedia(@Path("id") id:Long, @Body media: Media): Call<Void>

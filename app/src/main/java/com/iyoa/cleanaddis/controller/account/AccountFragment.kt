@@ -37,25 +37,5 @@ class AccountFragment : Fragment() {
 
 
 
-    fun removeSession(){
 
-    }
-
-
-
-    fun addAccount(){
-
-    }
-
-    fun editAccount(){
-
-    }
-
-    fun deleteAccount(){
-
-    }
-
-    fun viewAccount(){
-
-    }
 }

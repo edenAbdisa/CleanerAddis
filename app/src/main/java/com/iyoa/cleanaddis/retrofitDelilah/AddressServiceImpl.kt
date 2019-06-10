@@ -5,13 +5,13 @@ import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterF
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class ReportServiceImpl {
-    fun getReportServiceImpl(): ReportService {
+class AddressServiceImpl {
+    fun getAddressServiceImpl(): AddressService {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL_NEW)
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
-        return retrofit.create(ReportService::class.java)
+        return retrofit.create(AddressService::class.java)
     }
 }
