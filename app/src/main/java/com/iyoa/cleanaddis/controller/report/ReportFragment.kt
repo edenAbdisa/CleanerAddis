@@ -43,7 +43,7 @@ class ReportFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyReportRecyclerViewAdapter(DummyContent.ITEMS, listener)
+                //adapter = MyReportRecyclerViewAdapter(DummyContent.ITEMS, listener)
             }
         }
         view.findViewById<View>(R.id.report_cardview).setOnClickListener {

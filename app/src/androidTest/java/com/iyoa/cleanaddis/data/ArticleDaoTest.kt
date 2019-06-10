@@ -18,12 +18,12 @@ package com.google.samples.apps.sunflower.data
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
-import com.google.samples.apps.sunflower.utilities.getValue
+import com.iyoa.cleanaddis.connectDatabase.news.ArticleDatabase
 import com.iyoa.cleanaddis.data.news.Article
 import com.iyoa.cleanaddis.data.news.ArticleDAO
+import io.reactivex.internal.util.NotificationLite.getValue
 import org.hamcrest.Matchers.equalTo
 import org.junit.After
 import org.junit.Assert.assertThat
@@ -31,53 +31,42 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.text.SimpleDateFormat
 
 @RunWith(AndroidJUnit4::class)
-class PlantDaoTest {
-    private lateinit var database: AppDatabase
+class ArticleDaoTestTest {
+
+    private lateinit var database: ArticleDatabase
+    val sdf = SimpleDateFormat("yy-mm-dd")
     private lateinit var articleDao: ArticleDAO
-    private val plantA = Article("1", "A", "", 1, 1, "")
-    private val plantB = Article("2", "B", "", 1, 1, "")
-    private val plantC = Article("3", "C", "", 2, 2, "")
+    private val articleA = Article("e9e847af-a680-4704-8d6b-840106aad78d".toLong(), "delilah", "c2545c58-3352-4986-94ee-68c64b6e935e".toLong(), "post",
+        sdf.parse("2019-11-10"),0,"b7d68bed-bb4c-4e71-bad5-f0a0e28c9c79".toLong())
+
 
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
+
+
     @Before fun createDb() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        database = Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java).build()
-        plantDao = database.plantDao()
+        database = Room.inMemoryDatabaseBuilder(context, ArticleDatabase::class.java).build()
+        articleDao = database.articleDao()
 
-        // Insert plants in non-alphabetical order to test that results are sorted by name
-        plantDao.insertAll(listOf(plantB, plantC, plantA))
+        articleDao.insertArticle(articleA)
     }
 
     @After fun closeDb() {
+
         database.close()
     }
 
-    @Test fun testGetPlants() {
-        val plantList = getValue(plantDao.getPlants())
-        assertThat(plantList.size, equalTo(3))
 
-        // Ensure plant list is sorted by name
-        assertThat(plantList[0], equalTo(plantA))
-        assertThat(plantList[1], equalTo(plantB))
-        assertThat(plantList[2], equalTo(plantC))
+
+
+
+    @Test fun testGetArticle() {
+        assertThat(getValue(articleDao.getNewsByUuid(articleA.uuid)), equalTo(articleA))
     }
 
-    @Test fun testGetPlantsWithGrowZoneNumber() {
-        val plantList = getValue(plantDao.getPlantsWithGrowZoneNumber(1))
-        assertThat(plantList.size, equalTo(2))
-        assertThat(getValue(plantDao.getPlantsWithGrowZoneNumber(2)).size, equalTo(1))
-        assertThat(getValue(plantDao.getPlantsWithGrowZoneNumber(3)).size, equalTo(0))
-
-        // Ensure plant list is sorted by name
-        assertThat(plantList[0], equalTo(plantA))
-        assertThat(plantList[1], equalTo(plantB))
-    }
-
-    @Test fun testGetPlant() {
-        assertThat(getValue(plantDao.getPlant(plantA.plantId)), equalTo(plantA))
-    }
 }
