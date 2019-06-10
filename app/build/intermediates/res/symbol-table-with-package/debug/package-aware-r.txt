@@ -1150,6 +1150,7 @@ id account_logout_button
 id account_profile_imageview
 id account_setting_screen
 id account_signin_button
+id account_signup_button
 id action0
 id action_addreport_to_report_list
 id action_article_list_to_article_detail
