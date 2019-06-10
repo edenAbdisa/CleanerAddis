@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.iyoa.cleanaddis.model.Label;
-import com.iyoa.cleanaddis.model.Role;
+import com.iyoa.cleanaddis.data.Label;
+import com.iyoa.cleanaddis.data.Role;
 
 public interface LabelRepository extends JpaRepository<Label, UUID>{
  

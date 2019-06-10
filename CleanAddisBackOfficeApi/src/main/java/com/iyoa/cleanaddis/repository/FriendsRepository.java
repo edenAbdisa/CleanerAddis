@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.iyoa.cleanaddis.model.Friend;
+import com.iyoa.cleanaddis.data.Friend;
 
 public interface FriendsRepository extends JpaRepository<Friend, UUID>{
 

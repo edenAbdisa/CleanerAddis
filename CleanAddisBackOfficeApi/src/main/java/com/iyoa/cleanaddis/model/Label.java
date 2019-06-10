@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.model;
+package com.iyoa.cleanaddis.data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
