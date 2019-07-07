@@ -2,30 +2,30 @@ package com.iyoa.cleanaddis.data.posting
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.iyoa.cleanaddis.entity.posting.Comment
-import com.iyoa.cleanaddis.entity.posting.Post
-import java.util.*
 
 @Dao
 interface CommentDAO {
     @Query("SELECT * FROM comment WHERE uuid =:uuid")
-    fun getCommentByUUID(uuid: String): LiveData<Comment>
+    fun getCommentByUUID(uuid: String): LiveData<CommentUUID>
 
     @Query("SELECT * FROM comment")
-    fun getAllComment(): LiveData<List<Comment>>
+    fun getAllComment(): LiveData<List<CommentUUID>>
+
+    @Query("SELECT * FROM comment WHERE postUuid=:uuidPost")
+    fun getAllCommentOfPost(uuidPost:String): LiveData<List<CommentUUID>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertComment(comment: Comment)
+    fun insertComment(commentUUID: CommentUUID)
 
     @Update
-    fun updateComment(comment: Comment)
+    fun updateComment(commentUUID: CommentUUID)
 
     @Delete
-    fun deleteComment(comment: Comment)
+    fun deleteComment(commentUUID: CommentUUID)
 
     @Query("DELETE FROM comment")
     fun deleteAll()
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addComments(listOfComment: List<Comment>)
+    fun addComments(listOfCommentUUID: List<CommentUUID>)
 }

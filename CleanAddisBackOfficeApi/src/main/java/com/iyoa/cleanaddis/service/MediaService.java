@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 
 
-import com.iyoa.cleanaddis.data.Media;
+import com.iyoa.cleanaddis.model.Media;
 import com.iyoa.cleanaddis.repository.MediaRepository;
 
 @Service

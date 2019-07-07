@@ -8,16 +8,12 @@
     tools:showIn="@layout/app_bar_main"
               android:orientation="vertical">
 
-    <LinearLayout
+    <fragment
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:id="@+id/linearlayout_fragment_area">
-
-    </LinearLayout>
-
-
-
-
+            app:navGraph="@navigation/navigation"
+            app:defaultNavHost="true"
+            android:id="@+id/nav_host_fragment"/>
 </LinearLayout>

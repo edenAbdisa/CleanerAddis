@@ -9,8 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.IdRes
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.iyoa.cleanaddis.R
@@ -18,18 +21,26 @@ import kotlinx.android.synthetic.main.fragment_post.*
 import kotlinx.android.synthetic.main.fragment_post.view.*
 
 
-class PostFragment() : Fragment() {
+class PostFragment : Fragment() {
     private var columnCount = 1
-    private var listener: OnFragmentInteractionListener? = null
     lateinit var recyclerView:RecyclerView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
         val view= inflater.inflate(R.layout.fragment_post, container, false)
-        view.textView_current_action_title.setText(R.string.title_home)
-        view.navigation_bottom_bar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        // view.textView_current_action_title.setText(R.string.title_home)
+        // view.navigation_bottom_bar.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        // Navigation.findNavController(it).navigate(R.id.next_action)
+        val navController = this.findNavController()
+        view.navigation_bottom_bar?.let {
+            NavigationUI.setupWithNavController(it, navController)}
+
 
         return view
     }
+
+
     fun replaceChildFragmenty(fragment: Fragment,allowStateLoss: Boolean = false, @IdRes containerViewId: Int) {
 
         val ft = childFragmentManager
@@ -42,38 +53,41 @@ class PostFragment() : Fragment() {
             ft.commitAllowingStateLoss()
         }
     }
+
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_home -> {
-                textView_current_action_title.setText(R.string.title_home)
-
-               /* replaceChildFragmenty(
-                    DisplayPostsRecyclerViewFragment(),
-                    true,
-                    R.id.linearLayout_front_post_view
-                )*/
-                this.findNavController().navigate(R.id.action_postFragment_to_displayPostsRecyclerViewFragment)
+            R.id.displayPostsRecyclerViewFragment -> {
+                //   textView_current_action_title.setText(R.string.title_home)
+                /*  replaceChildFragmenty(
+                      DisplayPostsRecyclerViewFragment(),
+                      true,
+                      R.id.linearLayout_front_post_view
+                  )*/
+                // Navigation.findNavController(view!!.findViewById(R.id.nav_post_fragments_display)).navigate(R.id.action_postFragment_to_displayPostsRecyclerViewFragment)
+                // this.findNavController().navigate(R.id.action_postFragment_to_displayPostsRecyclerViewFragment)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_account -> {
-                textView_current_action_title.setText(R.string.title_dashboard)
-               /* replaceChildFragmenty(
-                    PostAccountFragment(),
-                    true,
-                    R.id.linearLayout_front_post_view
-                )*/
-                this.findNavController().navigate(R.id.action_postFragment_to_postAccountFragment)
+            R.id.postAccountFragment -> {
+                //  textView_current_action_title.setText(R.string.title_dashboard)
+                // Navigation.findNavController(view!!.findViewById(R.id.nav_post_fragments_display)).navigate(R.id.action_postFragment_to_postAccountFragment)
+                /* replaceChildFragmenty(
+                     PostAccountFragment(),
+                     true,
+                     R.id.linearLayout_front_post_view
+                 )*/
+                // this.findNavController().navigate(R.id.action_postFragment_to_postAccountFragment,null)
 
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_add_image -> {
-                textView_current_action_title.setText(R.string.title_notifications)
-              /*  replaceChildFragmenty(
+            R.id.selectPictureToPostFragment -> {
+                // Navigation.findNavController(view!!.findViewById(R.id.nav_post_fragments_display)).navigate(R.id.action_postFragment_to_selectPictureToPostFragment)
+                // textView_current_action_title.setText(R.string.title_notifications)
+                /*replaceChildFragmenty(
                     SelectPictureToPostFragment(),
                     true,
                     R.id.linearLayout_front_post_view
                 )*/
-                this.findNavController().navigate(R.id.action_postFragment_to_selectPictureToPostFragment)
+                // this.findNavController().navigate(R.id.action_postFragment_to_selectPictureToPostFragment,null)
 
                 return@OnNavigationItemSelectedListener true
             }
@@ -81,38 +95,15 @@ class PostFragment() : Fragment() {
         }
         false
     }
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
-    }
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-      /*  if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }*/
+
     }
 
     override fun onDetach() {
         super.onDetach()
-        listener = null
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     *
-     *
-     * See the Android Training lesson [Communicating with Other Fragments]
-     * (http://developer.android.com/training/basics/fragments/communicating.html)
-     * for more information.
-     */
-    interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
     }
 
 

@@ -15,16 +15,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.iyoa.cleanaddis.data.Category;
+import com.iyoa.cleanaddis.model.Category;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iyoa.cleanaddis.error.DataNotFoundException;
-import com.iyoa.cleanaddis.data.Friend;
+import com.iyoa.cleanaddis.model.Friend;
 
-import com.iyoa.cleanaddis.data.Media;
+import com.iyoa.cleanaddis.model.Media;
 import com.iyoa.cleanaddis.service.MediaService;
 
 @RestController

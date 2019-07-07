@@ -61,7 +61,7 @@
                 android:layout_marginBottom="8dp" android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp" style="@style/TextAppearance.MaterialComponents.Chip"
-                android:id="@+id/radioGroup2">
+                android:id="@+id/radioGroup_post_viewer">
             <RadioButton
                     android:checked="true"
                     android:text="FRIENDS"
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content" android:id="@+id/radioButton_all" android:layout_weight="1"/>
         </RadioGroup>
         <TextView
-                android:text="Choose who can view this post"
+                android:text="Choose who can view this postUUID"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView3" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
@@ -108,26 +108,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" app:layout_constraintGuide_begin="532dp"
                 android:id="@+id/guideline17"/>
-        <RadioGroup
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/guideline17"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" android:orientation="vertical"
-                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.166"
-                android:layout_marginRight="8dp" android:layout_marginLeft="8dp"
-                android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
-            <RadioButton
-                    android:text="Downloadable"
-                    android:checked="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton5" android:layout_weight="1"/>
-            <RadioButton
-                    android:text="Disable Download"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton6" android:layout_weight="1"/>
-        </RadioGroup>
+            <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline17"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" android:orientation="vertical"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.166"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp" android:layout_marginTop="8dp"
+                    android:id="@+id/radioGroup_downloadable">
+                <RadioButton
+                        android:text="Downloadable"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/radioButton_downloadable" android:layout_weight="1"/>
+                <RadioButton
+                        android:text="Disable Download"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/radioButton_disable_download" android:layout_weight="1"/>
+            </RadioGroup>
         <TextView
                 android:text="Article"
                 android:layout_width="0dp"
@@ -147,16 +148,16 @@
                 app:layout_constraintVertical_bias="0.03"
                 android:layout_marginRight="8dp" android:layout_marginLeft="8dp"
                 android:layout_marginBottom="8dp" android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toTopOf="@+id/guideline16" android:id="@+id/radioGroup3">
+                app:layout_constraintBottom_toTopOf="@+id/guideline16" android:id="@+id/radioGroup_can_be_used_for_article">
             <RadioButton
                     android:checked="true"
                     android:text="Use for articles"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton7" android:layout_weight="1"/>
+                    android:layout_height="wrap_content" android:id="@+id/radioButton_use_for_article" android:layout_weight="1"/>
             <RadioButton
                     android:text="Dont use for article"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/radioButton8" android:layout_weight="1"/>
+                    android:layout_height="wrap_content" android:id="@+id/radioButton_dont_use_for_article" android:layout_weight="1"/>
         </RadioGroup>
             <androidx.constraintlayout.widget.Guideline
                     android:orientation="horizontal"
@@ -169,8 +170,8 @@
                 android:inputType="textMultiLine"
                 android:gravity="start|top"
                 android:ems="10" android:text="Descritpion"
-                android:id="@+id/editText" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup3" android:layout_marginBottom="8dp"
+                android:id="@+id/editText_post_description" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup_can_be_used_for_article" android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="@+id/constraintLayout_inner" android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"

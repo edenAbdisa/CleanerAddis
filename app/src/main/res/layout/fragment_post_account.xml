@@ -3,7 +3,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+                name="viewmodel"
+                type="com.iyoa.cleanaddis.viewModels.common.UserViewModel"/>
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
              android:layout_width="match_parent"
@@ -29,7 +31,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textView_username" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
     <TextView
-            android:text="Username"
+            android:text="@{viewmodel.user.username}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView_username" app:layout_constraintEnd_toStartOf="@+id/guideline11"
@@ -64,7 +66,7 @@
             android:layout_height="wrap_content" app:layout_constraintGuide_begin="334dp"
             android:id="@+id/guideline14"/>
     <TextView
-            android:text="No"
+            android:text="@{String.valueOf(viewmodel.user.blocked)}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView_no_of_friend" android:layout_marginTop="8dp"
@@ -75,7 +77,7 @@
             app:layout_constraintBottom_toTopOf="@+id/textView4" app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintVertical_bias="0.877"/>
     <TextView
-            android:text="Friends"
+            android:text="@{String.valueOf(viewmodel.user.activated)}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView4" app:layout_constraintEnd_toStartOf="@+id/guideline13"
@@ -121,11 +123,29 @@
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="76dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline12" app:layout_constraintHorizontal_bias="0.0"/>
     <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="395dp"
-            android:layout_height="432dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="@+id/guideline10"/>
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/guideline10" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/guideline25" android:id="@+id/recyclerview_user_posts"/>
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:layout_constraintGuide_begin="650dp"
+            android:id="@+id/guideline25"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation_bottom_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/guideline25"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

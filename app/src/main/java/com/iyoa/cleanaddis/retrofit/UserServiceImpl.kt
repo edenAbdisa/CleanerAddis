@@ -1,24 +1,34 @@
-package com.iyoa.cleanaddis.retrofit
+package com.iyoa.cleanaddis.retrofitEden
 
 import com.iyoa.cleanaddis.entity.user.User
 import com.iyoa.cleanaddis.utility.BASE_URL
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import retrofit2.Call
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import com.squareup.moshi.*
+import java.util.*
+
 
 class UserServiceImpl {
 
-    fun getUserServiceImpl(): UserService {
+    fun getUserService(): UserService {
+        val moshi = Moshi.Builder()
+            .add(Date::class.java!!,Rfc3339DateJsonAdapter().nullSafe()).build()
+
+
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
         return retrofit.create(UserService::class.java)
     }
 
-    fun findUser(username:String): Call<User> {
-        return getUserServiceImpl().findByUsername(username)
-    }
+    suspend fun getUserByName(username:String): Response<User> =
+        withContext(Dispatchers.IO){
+            getUserService().findUserByUsername(username).await()
+        }
 }

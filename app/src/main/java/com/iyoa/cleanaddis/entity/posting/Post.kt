@@ -6,17 +6,10 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 import java.util.*
 
-enum class PostStatus {
-   POSTED, REMOVEDBYREPORT,DELETED,EDITED
-}
-enum class CanBeViewedBy {
-    FRIENDS,FRIENDSOFFRIENDS,MEONLY,ALL
-}
 
-@Entity(tableName = "post")
-data class Post (@PrimaryKey val  uuid: String, val username:String,
+ data class Post ( val username:String,
                  val noLike:Int, val noView: Int,  val downloadable: Int,
                  val allowToBeUsedForArticle:Int,
-                 val mediaUuid:String, val categoryUuid:String,val can_be_viewed_by:String,
+                 val mediaUuid:String, val categoryUuid:String,val canBeViewedBy:String,
                  val status: String ,
-                 val date:Date)
+                 val date:String)

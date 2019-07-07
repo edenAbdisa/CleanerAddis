@@ -2,32 +2,31 @@ package com.iyoa.cleanaddis.repository.posting
 
 import androidx.lifecycle.LiveData
 import com.iyoa.cleanaddis.data.posting.CommentDAO
-import com.iyoa.cleanaddis.data.posting.PostDAO
-import com.iyoa.cleanaddis.entity.posting.Comment
-import com.iyoa.cleanaddis.entity.posting.Post
-import java.util.*
+import com.iyoa.cleanaddis.data.posting.CommentUUID
 
 class CommentRepository(private val commentDAO: CommentDAO) {
-    fun getAllComment():LiveData<List<Comment>> = commentDAO.getAllComment()
+    fun getAllComment():LiveData<List<CommentUUID>> = commentDAO.getAllComment()
 
-    fun insertComment(comment : Comment){
-        commentDAO.insertComment(comment)
+    fun getAllCommentOfPost(postUUID:String):LiveData<List<CommentUUID>> = commentDAO.getAllCommentOfPost(postUUID)
+
+    fun insertComment(commentUUID : CommentUUID){
+        commentDAO.insertComment(commentUUID)
     }
 
-    fun updateComment(comment:Comment){
-        commentDAO.updateComment(comment)
+    fun updateComment(commentUUID:CommentUUID){
+        commentDAO.updateComment(commentUUID)
     }
     fun getCommentByUUID(uuid:String){
         commentDAO.getCommentByUUID(uuid)
     }
-    fun deleteComment(comment:Comment){
-        commentDAO.deleteComment(comment)
+    fun deleteComment(commentUUID:CommentUUID){
+        commentDAO.deleteComment(commentUUID)
     }
     fun deleteAll(){
         commentDAO.deleteAll()
     }
-    fun addComments(comments:List<Comment>){
-        commentDAO.addComments(comments)
+    fun addComments(commentUUIDS:List<CommentUUID>){
+        commentDAO.addComments(commentUUIDS)
     }
 
 }

@@ -9,7 +9,7 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/news_name" />
         <item
-                android:id="@+id/nav_post"
+                android:id="@+id/nav_postFragment"
                 android:icon="@drawable/ic_menu_camera"
                 android:title="@string/post_name"/>
         <item

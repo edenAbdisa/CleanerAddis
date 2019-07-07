@@ -11,11 +11,13 @@ interface CategoryDAO {
 
 
 
-    @Query("SELECT * FROM Category WHERE uuid =:uuid")
-    fun getCategoryByUuid(uuid: Long): Category
+    @Query("SELECT * FROM category WHERE uuid =:uuid")
+    fun getCategoryByUuid(uuid: String): Category
 
+    @Query("SELECT * FROM category WHERE name =:name")
+    fun getCategoryByName(name: String): Category
 
-    @Query("SELECT * FROM Category")
+    @Query("SELECT * FROM category")
     fun getAllCategory(): LiveData<List<Category>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

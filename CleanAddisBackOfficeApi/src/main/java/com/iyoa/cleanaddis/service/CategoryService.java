@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.iyoa.cleanaddis.data.Category;
+import com.iyoa.cleanaddis.model.Category;
 import com.iyoa.cleanaddis.repository.CategoryRepository;
 
 @Service 

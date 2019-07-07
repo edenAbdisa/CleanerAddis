@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iyoa.cleanaddis.json.RoleJson;
-import com.iyoa.cleanaddis.data.Article;
-import com.iyoa.cleanaddis.data.Report;
-import com.iyoa.cleanaddis.data.Role;
+import com.iyoa.cleanaddis.model.Article;
+import com.iyoa.cleanaddis.model.Report;
+import com.iyoa.cleanaddis.model.Role;
 import com.iyoa.cleanaddis.service.ReportService;
 
 @RestController

@@ -2,6 +2,7 @@ package com.iyoa.cleanaddis.controller.account
 
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -12,10 +13,12 @@ import android.widget.EditText
 import androidx.navigation.Navigation
 
 import com.iyoa.cleanaddis.R
+import com.iyoa.cleanaddis.data.news.Article
 import com.iyoa.cleanaddis.data.user.User
 import com.iyoa.cleanaddis.retrofit.AccountService
 import com.iyoa.cleanaddis.retrofit.AccountServiceImpl
 import kotlinx.android.synthetic.main.fragment_signin.*
+import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -32,6 +35,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class SigninFragment : Fragment() {
 
+    private lateinit var sharedPreference: SharedPreferences
     private lateinit var  accountService: AccountService
     private lateinit var usernameEmailEditText: EditText
     private lateinit var  passwordEditText: EditText
@@ -45,7 +49,7 @@ class SigninFragment : Fragment() {
 
         view.findViewById<View>(R.id.account_signin_button).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_signin_to_account_setting)
-        login()
+            login()
         }
         // Inflate the layout for this fragment
         return view
@@ -81,22 +85,27 @@ class SigninFragment : Fragment() {
     fun login(){
         getUser()
         val username = user.username
+        val userUUID=user.uuid.toString()
         val password = user.password
         if(usernameEmailEditText.text.toString()==username &&
-                passwordEditText.text.toString()==password){
-            saveSession(username,user.email,user.lastVisit)
+            passwordEditText.text.toString()==password){
+            saveSession(username,userUUID,user.email,user.lastVisit)
         }
 
     }
-    fun saveSession(username:String,email:String,lastActive: Date){
-        val sharedPreference = activity?.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+    fun saveSession(username:String,uuid:String,email:String,lastActive: Date){
+        sharedPreference = activity?.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)!!
         with(sharedPreference!!.edit()){
             putString("username",username)
+            putString("userUUID",uuid)
             putString("email",email)
             putString("date",lastActive.toString())
             commit()
         }
     }
 
+    fun getSavedUserUUID():String{
+        return sharedPreference.getString("userUUID","null")
+    }
 
 }

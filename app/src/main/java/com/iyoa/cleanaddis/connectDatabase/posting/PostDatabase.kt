@@ -5,20 +5,15 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.iyoa.cleanaddis.data.posting.CommentDAO
-import com.iyoa.cleanaddis.data.posting.FriendDAO
 import com.iyoa.cleanaddis.data.posting.PostDAO
-import com.iyoa.cleanaddis.entity.posting.Comment
-import com.iyoa.cleanaddis.entity.posting.Friend
-import com.iyoa.cleanaddis.entity.posting.Post
+import com.iyoa.cleanaddis.data.posting.PostUUID
+import com.iyoa.cleanaddis.utility.CommentListConvertor
 import com.iyoa.cleanaddis.utility.DataConverter
 
 
-@Database(entities = arrayOf(Post:: class, Friend:: class, Comment:: class ),version=1)
-@TypeConverters(DataConverter::class)
+@Database(entities = arrayOf(PostUUID:: class ),version=1)
+@TypeConverters(CommentListConvertor::class)
 abstract class PostDatabase: RoomDatabase() {
-    abstract fun commentDao(): CommentDAO
-    abstract fun friendDao(): FriendDAO
     abstract fun postDao(): PostDAO
     companion object{
         @Volatile

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.iyoa.cleanaddis.json.PostJson;
 import com.iyoa.cleanaddis.json.RoleJson;
-import com.iyoa.cleanaddis.data.Post;
-import com.iyoa.cleanaddis.data.Role;
+import com.iyoa.cleanaddis.model.Post;
+import com.iyoa.cleanaddis.model.Role;
 import com.iyoa.cleanaddis.service.RoleService;
 
 @RestController

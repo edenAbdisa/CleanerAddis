@@ -1,58 +1,39 @@
 package com.iyoa.cleanaddis.controller.posting
 
 import android.app.Activity.RESULT_OK
-import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.iyoa.cleanaddis.R
 import kotlinx.android.synthetic.main.fragment_select_picture_to_post.view.*
 import java.io.ByteArrayOutputStream
-import java.net.URI
-import android.Manifest
-import android.app.Activity
-import android.os.Build.*
 import android.widget.Toast
-import androidx.core.content.ContextCompat.checkSelfPermission
-import android.R.attr.data
-import android.opengl.Visibility
-import android.view.View.GONE
-import androidx.core.app.NotificationCompat.getExtras
-import androidx.room.util.CursorUtil.getColumnIndexOrThrow
-import kotlinx.android.synthetic.main.fragment_after_media_choosen.view.*
-import android.R.attr.data
-import androidx.room.util.CursorUtil.getColumnIndexOrThrow
-import android.os.Environment
-import android.util.Log
-import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.util.*
-
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 
 class SelectPictureToPostFragment : Fragment() {
     val REQUEST_IMAGE_CAPTURE = 1
-    val REQUEST_IMAGE_FROM_GALERY = 2
     private val SELECT_PICTURE = 3
     val REQUEST_VIDEO_CAPTURE = 4
     private val REQUEST_VIDEO_FROM_GALLERY = 5
     private val VIDEO_DIRECTORY = "/cleanerAddis"
     private val TAG = "MainActivity"
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-          val view= inflater.inflate(com.iyoa.cleanaddis.R.layout.fragment_select_picture_to_post, container, false)
+        val view= inflater.inflate(com.iyoa.cleanaddis.R.layout.fragment_select_picture_to_post, container, false)
+        val navController = this.findNavController()
+        view.navigation_bottom_bar?.let {
+            NavigationUI.setupWithNavController(it, navController)}
+
         view.button_image_from_camera.setOnClickListener {
             dispatchTakePictureIntent()
         }
         view.button_image_from_gallery.setOnClickListener {
-            openImageChooser() 
+            openImageChooser()
         }
         view.button_video_from_gallery.setOnClickListener {
             chooseVideoFromGallery()
@@ -89,24 +70,25 @@ class SelectPictureToPostFragment : Fragment() {
     }
     private fun dispatchTakePictureIntent() {
         Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-            takePictureIntent.resolveActivity(context?.packageManager)?.also {
+            takePictureIntent.resolveActivity(context?.packageManager).also {
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
             }
         }
     }
     private fun dispatchTakeVideoIntent() {
         Intent(MediaStore.ACTION_VIDEO_CAPTURE).also { takeVideoIntent ->
-            takeVideoIntent.resolveActivity(context?.packageManager)?.also {
+            takeVideoIntent.resolveActivity(context?.packageManager).also {
                 startActivityForResult(takeVideoIntent, REQUEST_VIDEO_CAPTURE)
             }
         }
     }
-    fun displayBitMap(bitMap:Bitmap){
+    fun displayBitMap(bitMap:Bitmap,imageUri:Uri){
         val bundle=Bundle()
         val _bs = ByteArrayOutputStream()
         bitMap.compress(Bitmap.CompressFormat.PNG, 50, _bs)
         bundle.putByteArray("image",_bs.toByteArray())
         bundle.putString("type","Image")
+        bundle.putString("pathUri",imageUri.toString())
         val newFragment = AfterMediaChoosenFragment()
         newFragment.arguments=bundle
         newFragment.show(childFragmentManager, "Image")
@@ -124,18 +106,13 @@ class SelectPictureToPostFragment : Fragment() {
             return
         }
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            val imageBitmap = data.extras.get("data") as Bitmap
-            displayBitMap(imageBitmap)
-        }
-        if (requestCode == REQUEST_IMAGE_FROM_GALERY && resultCode == RESULT_OK) {
-
-            val thumbnail = data.extras.get("data") as Bitmap
-            displayBitMap(thumbnail)
+            val imageBitmap = data?.extras.get("data") as Bitmap
+            val imageUri = data?.extras.get("data") as Uri
+            displayBitMap(imageBitmap,imageUri)
         }
         if(requestCode == SELECT_PICTURE && resultCode == RESULT_OK){
-            val selectedImageUri = data!!.data
+            val selectedImageUri = data.data
             var bitmap: Bitmap? = null
-
             try {
                 bitmap = MediaStore.Images.Media.getBitmap(
                     context?.applicationContext?.getContentResolver(), selectedImageUri
@@ -144,23 +121,19 @@ class SelectPictureToPostFragment : Fragment() {
                 Toast.makeText(context,"Couldnt select picture",Toast.LENGTH_SHORT).show()
             }
             if (bitmap != null) {
-                displayBitMap(bitmap)
+                displayBitMap(bitmap,selectedImageUri)
             }
         }
         if (requestCode == REQUEST_VIDEO_CAPTURE && resultCode == RESULT_OK) {
             val videoUri: Uri = data.data
             displayVideo(videoUri)
         }
-        if (requestCode === REQUEST_VIDEO_FROM_GALLERY) {
-            if (data != null) {
-                val contentURI = data.data
-                val selectedVideoPath = getPath(contentURI)
-               // saveVideoToInternalStorage(selectedVideoPath)
-                displayVideo(contentURI)
+        if (requestCode == REQUEST_VIDEO_FROM_GALLERY) {
 
-
-            }
-
+            val contentURI = data.data
+            val selectedVideoPath = getPath(contentURI)
+            // saveVideoToInternalStorage(selectedVideoPath)
+            displayVideo(contentURI)
         }
     }
 
@@ -170,10 +143,10 @@ class SelectPictureToPostFragment : Fragment() {
         if (cursor != null) {
             // HERE YOU WILL GET A NULLPOINTER IF CURSOR IS NULL
             // THIS CAN BE, IF YOU USED OI FILE MANAGER FOR PICKING THE MEDIA
-            val column_index = cursor!!
+            val column_index = cursor
                 .getColumnIndexOrThrow(MediaStore.Video.Media.DATA)
-            cursor!!.moveToFirst()
-            return cursor!!.getString(column_index)
+            cursor.moveToFirst()
+            return cursor.getString(column_index)
         } else
             return null
     }

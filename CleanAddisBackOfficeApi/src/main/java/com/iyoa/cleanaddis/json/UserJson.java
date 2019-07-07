@@ -13,9 +13,9 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.iyoa.cleanaddis.data.Role;
-import com.iyoa.cleanaddis.data.Post.CanBeViewedBy;
-import com.iyoa.cleanaddis.data.Post.PostStatus;
+import com.iyoa.cleanaddis.model.Role;
+import com.iyoa.cleanaddis.model.Post.CanBeViewedBy;
+import com.iyoa.cleanaddis.model.Post.PostStatus;
 
 import lombok.Data;
 

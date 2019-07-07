@@ -18,11 +18,12 @@ import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.data.common.Address
 import com.iyoa.cleanaddis.data.common.AddressData
-import com.iyoa.cleanaddis.data.common.Media
+import com.iyoa.cleanaddis.data.common.MediaUUID
 import com.iyoa.cleanaddis.data.common.MediaData
 import com.iyoa.cleanaddis.data.report.Report
 import com.iyoa.cleanaddis.data.report.ReportData
 import com.iyoa.cleanaddis.retrofit.*
+import com.iyoa.cleanaddis.retrofitEden.MediaService
 import kotlinx.android.synthetic.main.fragment_add_report.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -43,7 +44,7 @@ private const val ARG_PARAM2 = "param2"
  */
 
 class AddReportFragment : Fragment() {
-
+/*
     private lateinit var addButton: ImageButton
     private lateinit var headerEditText: EditText
     private lateinit var textEditText : EditText
@@ -144,11 +145,11 @@ class AddReportFragment : Fragment() {
     fun addReport(user:String?){
         loadFields()
         reportService = ReportServiceImpl().getReportServiceImpl()
-        var media:Media = addMedia() as Media
+        var mediaUUID:MediaUUID = addMedia() as MediaUUID
         var address:Address = addAddress() as Address
 
         val report = ReportData(user.toString(),textEditText.text.toString(),
-            media.uuid,"WASTE", Date.from(Instant.now()),address.uuid,
+            mediaUUID.uuid,"WASTE", Date.from(Instant.now()),address.uuid,
             impactRatingBar.numStars)
         val call: Call<Report> = reportService.addReport(report)
 
@@ -196,6 +197,6 @@ class AddReportFragment : Fragment() {
         //TODO observe the data change using viewmodel and livedata
 
     }
-
+*/
 
 }

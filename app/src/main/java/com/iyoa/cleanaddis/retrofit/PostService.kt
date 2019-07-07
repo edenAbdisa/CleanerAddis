@@ -1,5 +1,6 @@
-package com.iyoa.cleanaddis.retrofit
+package com.iyoa.cleanaddis.retrofitEden
 
+import com.iyoa.cleanaddis.data.posting.PostUUID
 import com.iyoa.cleanaddis.entity.posting.Post
 import kotlinx.coroutines.Deferred
 import retrofit2.Call
@@ -8,7 +9,10 @@ import retrofit2.http.*
 
 interface PostService {
     @GET("/post/getPosts")
-    fun findPosts(): Call<List<Post>>
+    fun getPosts(): Deferred<Response<List<PostUUID>>>
+
+    @PUT("/post/increaseLike/{id}")
+    fun increaseNumberOfLikeOfPost(@Path("id") id:String):Deferred<Response<Post>>
 
     @GET("/post/{id}")
     fun findPostById(@Path("id") id:Long): Call<Post>
@@ -17,10 +21,12 @@ interface PostService {
     fun findByUsername(@Query("username") username:String ): Call<Post>
 
     @POST("/post")
-    fun insertPost(@Body post:Post): Call<Void>
+    fun insertPost(@Body post:Post): Deferred<Response<Post>>
 
     @PUT("/post/{id}")
     fun updatePost(@Path("id") id:Long, @Body post:Post): Call<Void>
+
+
 
     @DELETE("/post/{id}")
     fun deletePost(@Path("id") id:Long): Call<Void>

@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.retrofit
+package com.iyoa.cleanaddis.retrofitEden
 
 import com.iyoa.cleanaddis.utility.BASE_URL
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory

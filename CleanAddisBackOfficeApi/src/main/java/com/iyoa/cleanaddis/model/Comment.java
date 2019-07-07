@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.data;
+package com.iyoa.cleanaddis.model;
 
 import java.sql.Date;
 import java.util.UUID;
@@ -12,8 +12,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.iyoa.cleanaddis.data.Post.CanBeViewedBy;
-import com.iyoa.cleanaddis.data.Post.PostStatus;
+import com.iyoa.cleanaddis.model.Post.CanBeViewedBy;
+import com.iyoa.cleanaddis.model.Post.PostStatus;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

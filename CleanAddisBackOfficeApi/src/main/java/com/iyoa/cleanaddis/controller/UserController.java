@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.iyoa.cleanaddis.error.DataNotFoundException;
 import com.iyoa.cleanaddis.json.PostJson;
 import com.iyoa.cleanaddis.json.UserJson;
-import com.iyoa.cleanaddis.data.Post;
-import com.iyoa.cleanaddis.data.User;
+import com.iyoa.cleanaddis.model.Post;
+import com.iyoa.cleanaddis.model.User;
 import com.iyoa.cleanaddis.service.RoleService;
 import com.iyoa.cleanaddis.service.UserService;
 

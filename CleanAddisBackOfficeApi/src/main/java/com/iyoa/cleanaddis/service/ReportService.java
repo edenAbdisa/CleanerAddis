@@ -6,8 +6,8 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.iyoa.cleanaddis.data.Article;
-import com.iyoa.cleanaddis.data.Report;
+import com.iyoa.cleanaddis.model.Article;
+import com.iyoa.cleanaddis.model.Report;
 import com.iyoa.cleanaddis.repository.ReportRepository;
 @Service
 public class ReportService {

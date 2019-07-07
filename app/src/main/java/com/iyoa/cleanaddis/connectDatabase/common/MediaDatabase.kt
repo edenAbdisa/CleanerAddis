@@ -5,16 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.iyoa.cleanaddis.data.common.Category
-import com.iyoa.cleanaddis.data.common.Media
-import com.iyoa.cleanaddis.data.news.Article
-import com.iyoa.cleanaddis.data.news.ArticleDAO
-import com.iyoa.cleanaddis.data.news.CategoryDAO
+import com.iyoa.cleanaddis.data.common.MediaUUID
 import com.iyoa.cleanaddis.data.news.MediaDAO
 import com.iyoa.cleanaddis.utility.DataConverter
 
 
-@Database(entities = arrayOf(Media:: class),version=1)
+@Database(entities = arrayOf(MediaUUID:: class),version=1)
 @TypeConverters(DataConverter::class)
 abstract class MediaDatabase: RoomDatabase() {
 
