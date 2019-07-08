@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/article_screen"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/news_name" />
         <item
