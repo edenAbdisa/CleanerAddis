@@ -5,6 +5,9 @@ import com.iyoa.cleanaddis.utility.BASE_URL_NEW
 =======
 import com.iyoa.cleanaddis.retrofitEden.FriendService
 import com.iyoa.cleanaddis.utility.BASE_URL
+<<<<<<< HEAD:app/src/main/java/com/iyoa/cleanaddis/retrofit/ArticleServiceImpl.kt
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified:app/src/main/java/com/iyoa/cleanaddis/retrofitDelilah/ArticleServiceImpl.kt
+=======
 >>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified:app/src/main/java/com/iyoa/cleanaddis/retrofitDelilah/ArticleServiceImpl.kt
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import retrofit2.Retrofit

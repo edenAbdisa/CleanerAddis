@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha04@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b92b72dc75ab3bb8d730f2e384bd97cb/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b92b72dc75ab3bb8d730f2e384bd97cb/res" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.1.0-alpha04.aar/34f7df8c85024a4254d6697dd50857bb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.1.0-alpha04.aar/34f7df8c85024a4254d6697dd50857bb/jars/classes.jar!/" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.1.0-alpha04.aar/34f7df8c85024a4254d6697dd50857bb/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-ktx-2.1.0-alpha04.aar/34f7df8c85024a4254d6697dd50857bb/jars/classes.jar!/" />

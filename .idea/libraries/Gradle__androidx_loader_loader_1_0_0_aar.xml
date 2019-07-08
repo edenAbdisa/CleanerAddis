@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.loader:loader:1.0.0@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3087401f2a7cbf02ee44e0d26546109f/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3087401f2a7cbf02ee44e0d26546109f/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/0e5c63a90718aea71a6163521f482279/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/0e5c63a90718aea71a6163521f482279/jars/classes.jar!/" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/0e5c63a90718aea71a6163521f482279/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/loader-1.0.0.aar/0e5c63a90718aea71a6163521f482279/jars/classes.jar!/" />

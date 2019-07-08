@@ -15,7 +15,11 @@
     <uses-feature
             android:name="android.hardware.camera.autofocus"
 <<<<<<< HEAD
+<<<<<<< HEAD
             android:required="false"/>
+=======
+            android:required="false" />/>
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
             android:required="false" />/>
 >>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified

@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.gridlayout:gridlayout:1.0.0-beta01@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/109d34a1ad018e3e428c7857c95eddad/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/109d34a1ad018e3e428c7857c95eddad/jars/classes.jar!/" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/8a6918018568934b5b570404bb3c5768/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/8a6918018568934b5b570404bb3c5768/res" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/8a6918018568934b5b570404bb3c5768/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-1.0.0-beta01.aar/8a6918018568934b5b570404bb3c5768/res" />

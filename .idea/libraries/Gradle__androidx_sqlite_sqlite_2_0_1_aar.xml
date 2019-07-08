@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.sqlite:sqlite:2.0.1@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/622f1896ea90cf5fa15133959460a5cb/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/622f1896ea90cf5fa15133959460a5cb/res" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sqlite-2.0.1.aar/ab12b57d2d9e12d163d722623d36b6ac/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sqlite-2.0.1.aar/ab12b57d2d9e12d163d722623d36b6ac/jars/classes.jar!/" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sqlite-2.0.1.aar/ab12b57d2d9e12d163d722623d36b6ac/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/sqlite-2.0.1.aar/ab12b57d2d9e12d163d722623d36b6ac/jars/classes.jar!/" />

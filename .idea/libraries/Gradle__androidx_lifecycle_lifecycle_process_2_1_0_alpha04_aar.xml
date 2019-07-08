@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.lifecycle:lifecycle-process:2.1.0-alpha04@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2c64f577f44be7f7b78805dcbd0f2b4/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2c64f577f44be7f7b78805dcbd0f2b4/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.1.0-alpha04.aar/2b8d70bf272245c1fce7015640fddc22/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.1.0-alpha04.aar/2b8d70bf272245c1fce7015640fddc22/jars/classes.jar!/" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.1.0-alpha04.aar/2b8d70bf272245c1fce7015640fddc22/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-process-2.1.0-alpha04.aar/2b8d70bf272245c1fce7015640fddc22/jars/classes.jar!/" />

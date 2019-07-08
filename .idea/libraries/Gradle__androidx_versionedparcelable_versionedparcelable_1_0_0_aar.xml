@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.versionedparcelable:versionedparcelable:1.0.0@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a4d0efb3feaa9af04fe4fc0d2511f78/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a4d0efb3feaa9af04fe4fc0d2511f78/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/719a210395215d98638fe447d5d30f26/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/719a210395215d98638fe447d5d30f26/jars/classes.jar!/" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/719a210395215d98638fe447d5d30f26/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.0.0.aar/719a210395215d98638fe447d5d30f26/jars/classes.jar!/" />

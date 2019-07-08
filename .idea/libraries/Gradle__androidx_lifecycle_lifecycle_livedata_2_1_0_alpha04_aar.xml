@@ -2,8 +2,13 @@
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata:2.1.0-alpha04@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/852d17994bd4989517c36f58b0def831/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/852d17994bd4989517c36f58b0def831/jars/classes.jar!/" />
+=======
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.1.0-alpha04.aar/52429d251e5bd324f4cb0da0052a4854/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.1.0-alpha04.aar/52429d251e5bd324f4cb0da0052a4854/jars/classes.jar!/" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.1.0-alpha04.aar/52429d251e5bd324f4cb0da0052a4854/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.1.0-alpha04.aar/52429d251e5bd324f4cb0da0052a4854/jars/classes.jar!/" />

@@ -2,8 +2,13 @@
   <library name="Gradle: io.reactivex.rxjava2:rxandroid:2.0.2@aar">
     <CLASSES>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0dcb109c97fb872287ed39c65d6e52ef/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0dcb109c97fb872287ed39c65d6e52ef/jars/classes.jar!/" />
+=======
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.2.aar/8f4b531e78a1ceafa66821ddab4ca403/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.2.aar/8f4b531e78a1ceafa66821ddab4ca403/res" />
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 =======
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.2.aar/8f4b531e78a1ceafa66821ddab4ca403/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.2.aar/8f4b531e78a1ceafa66821ddab4ca403/res" />
