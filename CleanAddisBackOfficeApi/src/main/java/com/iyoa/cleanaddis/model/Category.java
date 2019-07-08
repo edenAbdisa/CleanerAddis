@@ -6,11 +6,14 @@ import java.util.Date;
 
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -42,9 +45,9 @@ public class Category implements java.io.Serializable{
 	private String name;
 	
 
-
-	@Column(name = "for_what", nullable = false, length = 65535)	
-	private String forWhat;
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="for_what",referencedColumnName="uuid")
+	private Label label;
 
 	
 	

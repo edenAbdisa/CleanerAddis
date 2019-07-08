@@ -1,5 +1,7 @@
 package com.iyoa.cleanaddis.retrofitEden
 
+import android.widget.Toast
+import com.iyoa.cleanaddis.data.posting.PostJSON
 import com.iyoa.cleanaddis.data.posting.PostUUID
 import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.entity.posting.Post
@@ -30,7 +32,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
          withContext(Dispatchers.IO) {
              getPostService().increaseNumberOfLikeOfPost(postId).await()
          }
-     suspend fun getPosts(): Response<List<PostUUID>> =
+     suspend fun getPosts(): Response<List<PostJSON>> =
          withContext(Dispatchers.IO){
              getPostService().getPosts().await()
          }

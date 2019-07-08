@@ -3,12 +3,14 @@ package com.iyoa.cleanaddis.viewModels.posting
 import android.app.Application
 import android.content.Context
 import android.os.Messenger
+import android.widget.Toast
 import androidx.core.content.res.TypedArrayUtils.getString
 import androidx.databinding.ObservableField
 import androidx.lifecycle.*
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.connectDatabase.posting.PostDatabase
 import com.iyoa.cleanaddis.controller.account.SigninFragment
+import com.iyoa.cleanaddis.data.posting.PostJSON
 import com.iyoa.cleanaddis.data.posting.PostUUID
 import com.iyoa.cleanaddis.data.user.User
 import com.iyoa.cleanaddis.entity.posting.Comment
@@ -30,10 +32,10 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     private val postRepos: PostRepository
     private val commentServiceImpl: CommentServiceImpl
     private val postServiceImpl: PostServiceImpl
-    lateinit var post : ObservableField<PostUUID>
+    lateinit var post : ObservableField<PostJSON>
     lateinit var user : ObservableField<User>
     init{
-        post=ObservableField<PostUUID>()
+        post=ObservableField<PostJSON>()
 
         user=ObservableField<User>()
         val  postDAO = PostDatabase.getPostDatabase(application).postDao()
@@ -52,10 +54,11 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     //function called when user enter the comment button
     fun insertCommentForPost()=insertComment(getComment())
 
-    private val _getResponses = MutableLiveData<Response<List<PostUUID>>>()
-    val getResponses: LiveData<Response<List<PostUUID>>>
+    private val _getResponses = MutableLiveData<Response<List<PostJSON>>>()
+    val getResponses: LiveData<Response<List<PostJSON>>>
         get() = _getResponses
     fun getPosts() = viewModelScope.launch{
+
         _getResponses.postValue(postServiceImpl.getPosts())
     }
 

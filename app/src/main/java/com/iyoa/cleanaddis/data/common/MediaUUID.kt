@@ -16,7 +16,7 @@ data class MediaUUID(
 
     @ColumnInfo(name="url") val url:String,
     @ColumnInfo(name="type")val type: String,
-    @ColumnInfo(name = "for_what_data") val forWhatData:String,
+    @ColumnInfo(name = "label") val label:String,
 
     @ColumnInfo(name="description")val description:String
 

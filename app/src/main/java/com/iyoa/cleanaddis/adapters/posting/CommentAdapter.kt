@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.R
+import com.iyoa.cleanaddis.data.posting.CommentJSON
 import com.iyoa.cleanaddis.data.posting.CommentUUID
 import com.iyoa.cleanaddis.databinding.SingleCommentDisplayBinding
 import com.iyoa.cleanaddis.retrofitEden.CommentServiceImpl
@@ -24,13 +25,13 @@ import retrofit2.Response
 
 class CommentAdapter (val context: Context,val commentViewModel: CommentViewModel) : ListAdapter<CommentUUID,CommentAdapter.CommentViewHolder>(CommentDiffCallBack()) {
 
-    private var comments: List<CommentUUID>? = emptyList()
-    private  lateinit var binding:SingleCommentDisplayBinding
+    private var comments: List<CommentJSON>? = emptyList()
+    private lateinit var binding: SingleCommentDisplayBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         binding = SingleCommentDisplayBinding.inflate(inflater, parent, false)
-        val viewHolder = CommentViewHolder( binding)
+        val viewHolder = CommentViewHolder(binding)
 
         return viewHolder
     }
@@ -39,25 +40,34 @@ class CommentAdapter (val context: Context,val commentViewModel: CommentViewMode
         comments!!.get(position).let { comment ->
             with(holder) {
                 commentViewModel.comment.set(comment)
-                binding.viewmodel= commentViewModel
+                binding.viewmodel = commentViewModel
                 bind(comment)
             }
         }
     }
-    internal fun getComments(): List<CommentUUID>? {
+
+    internal fun getComments(): List<CommentJSON>? {
         return comments
     }
 
-    internal fun setComments(commentList: List<CommentUUID>?) {
+    internal fun setComments(commentList: List<CommentJSON>?) {
         this.comments = commentList
         notifyDataSetChanged()
     }
 
-    override fun getItemCount(): Int = comments!!.size
+    override fun getItemCount(): Int {
+
+        if (comments != null) {
+            return comments?.size as Int
+        } else {
+            return 0
+        }
+
+    }
 
     open inner class CommentViewHolder(private val binding: SingleCommentDisplayBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind( item: CommentUUID) {
+        fun bind( item: CommentJSON) {
             with(binding) {
                 executePendingBindings()
             }

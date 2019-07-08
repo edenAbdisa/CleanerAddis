@@ -7,6 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.iyoa.cleanaddis.connectDatabase.posting.CommentDatabase
+import com.iyoa.cleanaddis.data.posting.CommentJSON
 import com.iyoa.cleanaddis.data.posting.CommentUUID
 import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.entity.posting.Post
@@ -20,9 +21,9 @@ class CommentViewModel(application: Application): AndroidViewModel(application) 
     private val commentRepos: CommentRepository
     private val commentServiceImpl: CommentServiceImpl
 
-    lateinit var comment : ObservableField<CommentUUID>
+    lateinit var comment : ObservableField<CommentJSON>
     init{
-        comment=ObservableField<CommentUUID>()
+        comment=ObservableField<CommentJSON>()
         val  commentDAO = CommentDatabase.getCommentDatabase(application).commentDao()
         commentRepos = CommentRepository(commentDAO)
         commentServiceImpl=CommentServiceImpl()

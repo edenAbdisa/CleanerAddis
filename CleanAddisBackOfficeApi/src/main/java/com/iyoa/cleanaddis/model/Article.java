@@ -14,6 +14,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -25,7 +26,6 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import org.hibernate.annotations.GenericGenerator;
-
 
 @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 @Entity
@@ -50,35 +50,34 @@ public class Article implements java.io.Serializable{
 	@Column(name = "text", nullable = false, length = 65535)	
 	private String text;
 
-
-	
-	
-	@Column(name = "published_date", nullable = false, length = 16777215)
+	@Column(name = "published_date",  length = 16777215)
 	private Date publishedDate;
 	
 	@Column(name = "published_status", nullable = false, length = 16777215)
 	private String publishedStatus;
 	
-	@Column(name = "updated_by", nullable = false, length = 16777215)
-	private String updatedBy;
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="updated_by",referencedColumnName="username")
+	private User updater;
 	
-	@Column(name = "updated_date", nullable = false, length = 16777215)
+	@Column(name = "updated_date", length = 16777215)
 	private Date updatedDate;
 	
-	@Column(name = "published_by", nullable = false, length = 16777215)
-	private String publishedBy;
+	@ManyToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="published_by",referencedColumnName="username")
+	private User publisher;
 	
 	@Column(name = "view_count", nullable = false, length = 16777215)
 	private int viewCount;
 	
 	
 	@JsonIgnore
-	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="media_uuid",referencedColumnName="uuid")
 	private Media media;
 
 	@JsonIgnore
-	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="category_uuid",referencedColumnName="uuid")
 	private Category category;
 	

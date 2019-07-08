@@ -1,6 +1,7 @@
 package com.iyoa.cleanaddis.adapters.posting
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +19,9 @@ import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.commenting.CommentAdapter
 import com.iyoa.cleanaddis.controller.posting.DisplayPostsRecyclerViewFragment
 import com.iyoa.cleanaddis.data.common.MediaUUID
+import com.iyoa.cleanaddis.data.posting.CommentJSON
 import com.iyoa.cleanaddis.data.posting.CommentUUID
+import com.iyoa.cleanaddis.data.posting.PostJSON
 import com.iyoa.cleanaddis.data.posting.PostUUID
 import com.iyoa.cleanaddis.viewModels.posting.CommentViewModel
 import com.iyoa.cleanaddis.databinding.SinglePostDisplayBinding
@@ -26,15 +29,13 @@ import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.utility.CommentListConvertor
 import com.iyoa.cleanaddis.utility.DateUtility
 import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonAdapter
-import com.squareup.moshi.JsonReader
-import com.squareup.moshi.Moshi
+import com.squareup.moshi.*
+import com.squareup.picasso.Picasso
 import java.util.*
 
 class PostAdapters (val context: Context,val postViewModel: PostViewModel,val commentViewModel: CommentViewModel) : ListAdapter<PostUUID,PostAdapters.PostViewHolder>(PostDiffCallBack()) {
 
-    private var postList: List<PostUUID> = emptyList()
+    private var postList: List<PostJSON> = emptyList()
     private  lateinit var binding:SinglePostDisplayBinding
 
     lateinit var view:SinglePostDisplayBinding
@@ -47,14 +48,14 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
         return viewHolder
 
     }
-    fun callComment(comments: List<CommentUUID>?){
+    fun callComment(comments: List<CommentJSON>?){
         //  var dis= DisplayPostsRecyclerViewFragment()
         val listComments=comments
 
         val commentListAdapter = CommentAdapter(context,commentViewModel)
         commentListAdapter.setComments(listComments)
 
-        val recyclerViewComment=view.root.findViewById<RecyclerView>(R.id.recyclerView_comment_list)
+        val recyclerViewComment=binding.recyclerViewCommentList
 
         recyclerViewComment.layoutManager = LinearLayoutManager(context)
         recyclerViewComment.adapter = context.let { commentListAdapter }
@@ -65,33 +66,36 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
             with(holder) {
                 val moshi: Moshi = Moshi.Builder().build()
                 val adapter: JsonAdapter<MediaUUID> = moshi.adapter(MediaUUID::class.java)
-                val mediaParsed = adapter.fromJson( post.mediaUuid)
-                Toast.makeText(context,mediaParsed!!.url,Toast.LENGTH_LONG).show()
-                post.mediaUuid=mediaParsed!!.url
+                Log.println(5,"post",post.toString())
                 postViewModel.post.set(post)
                 binding.viewmodel= postViewModel
                 bind(post)
             }
         }
     }
-    internal fun getPosts(): List<PostUUID> {
+    internal fun getPosts(): List<PostJSON> {
         return postList
     }
 
-    internal fun setPosts(postList: List<PostUUID>) {
+    internal fun setPosts(postList: List<PostJSON>) {
         this.postList = postList
         notifyDataSetChanged()
     }
     override fun getItemCount(): Int = postList.size
 
     open inner class PostViewHolder(private val binding: SinglePostDisplayBinding ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind( item: PostUUID) {
+        fun bind( item: PostJSON) {
+          // Picasso.with(context).load(item.media.url).into(binding.imageViewPostedImage);
+
             with(binding) {
 
                 executePendingBindings()
             }
-            val conv= CommentListConvertor()
-            //callComment(conv.toCommentUUIDList(item.listComment))
+           /* val moshi=Moshi.Builder().build()
+            val listType = Types.newParameterizedType(List::class.java, CommentJSON::class.java)
+            val adapter: JsonAdapter<List<CommentJSON>> = moshi.adapter(listType)
+            val result = adapter.fromJson(item.comments.toString())*/
+            callComment(item.comments)
         }
     }
 }

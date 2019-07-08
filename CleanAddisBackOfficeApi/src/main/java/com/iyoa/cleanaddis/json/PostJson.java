@@ -17,7 +17,7 @@ public class PostJson {
 	@JsonProperty("username")
 	private String username;
 	
-	@JsonProperty("media_uuid")
+	@JsonProperty("mediaUuid")
 	private UUID mediaUuid;
 	
 	@JsonProperty("date")
@@ -26,7 +26,7 @@ public class PostJson {
 	@JsonProperty("noLike")
 	private int noLike;
 	
-	@JsonProperty("no_view")
+	@JsonProperty("noView")
 	private int noView;
 	
 	@JsonProperty("status")
@@ -35,9 +35,9 @@ public class PostJson {
 	@JsonProperty("downloadable")
 	private int downloadable;
 	
-	@JsonProperty("can_be_viewed_by")
+	@JsonProperty("canBeViewedBy")
 	private CanBeViewedBy canBeViewedBy;
 	
-	@JsonProperty("allow_to_be_used_for_article")
+	@JsonProperty("allowToBeUsedForArticle")
 	private int allowToBeUsedForArticle;	
 }
