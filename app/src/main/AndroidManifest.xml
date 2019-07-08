@@ -14,7 +14,11 @@
             android:required="true"/>
     <uses-feature
             android:name="android.hardware.camera.autofocus"
+<<<<<<< HEAD
             android:required="false"/>
+=======
+            android:required="false" />/>
+>>>>>>> parent of 259b9a5... Article/News Feature: repository,retrofit endpoints modified
 
     <application
             android:allowBackup="true"
