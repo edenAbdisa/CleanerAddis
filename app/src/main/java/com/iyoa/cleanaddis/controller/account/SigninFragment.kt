@@ -22,6 +22,7 @@ import kotlinx.coroutines.Deferred
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.time.Instant
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -89,7 +90,7 @@ class SigninFragment : Fragment() {
         val password = user.password
         if(usernameEmailEditText.text.toString()==username &&
             passwordEditText.text.toString()==password){
-            saveSession(username,userUUID,user.email,user.lastVisit)
+            saveSession(username,userUUID,user.email,Date.from(Instant.now()))
         }
 
     }

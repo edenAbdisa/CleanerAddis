@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
@@ -25,6 +27,8 @@ import com.iyoa.cleanaddis.utility.Connection.Companion.checkConnection
 import com.iyoa.cleanaddis.viewModels.posting.CommentViewModel
 import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
 import kotlinx.android.synthetic.main.fragment_display_posts_recycler_view.view.*
+import kotlinx.android.synthetic.main.fragment_display_posts_recycler_view.view.navigation_bottom_bar
+import kotlinx.android.synthetic.main.fragment_post_account.view.*
 import kotlinx.android.synthetic.main.single_post_display.*
 import kotlinx.android.synthetic.main.single_post_display.view.*
 import retrofit2.Call
@@ -46,7 +50,9 @@ class DisplayPostsRecyclerViewFragment : NavHostFragment() {
         postViewModel = ViewModelProviders.of(this).get(PostViewModel::class.java)
         commentViewModel = ViewModelProviders.of(this).get(CommentViewModel::class.java)
         val binding = inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
-
+        val navController = this.findNavController()
+        binding.navigation_bottom_bar?.let {
+            NavigationUI.setupWithNavController(it, navController)}
         val postListAdapter = PostAdapters(context,postViewModel,commentViewModel)
         loadPosts(postListAdapter)
 

@@ -15,14 +15,12 @@ import java.util.*
 class UserServiceImpl {
 
     fun getUserService(): UserService {
-        val moshi = Moshi.Builder()
-            .add(Date::class.java!!,Rfc3339DateJsonAdapter().nullSafe()).build()
 
 
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .addConverterFactory(MoshiConverterFactory.create())
             .build()
         return retrofit.create(UserService::class.java)
     }

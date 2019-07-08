@@ -49,10 +49,11 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     val textViewPostUUID=MutableLiveData<String>()
 
     //function called by the databinding layout updateLke
-    fun updateLike()=updatePostLike(textViewPostUUID.toString())
+    fun updateLike(viewmodel:PostViewModel)=updatePostLike(viewmodel.post.get()!!.uuid)
+    fun deletePost(viewmodel:PostViewModel)=deletePost(viewmodel.post.get()!!.uuid)
 
     //function called when user enter the comment button
-    fun insertCommentForPost()=insertComment(getComment())
+    fun insertCommentForPost(viewmodel:PostViewModel)=insertComment(getComment(viewmodel ))
 
     private val _getResponses = MutableLiveData<Response<List<PostJSON>>>()
     val getResponses: LiveData<Response<List<PostJSON>>>
@@ -82,10 +83,18 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     fun updatePostLike(postId:String) = viewModelScope.launch {
         _updatePostLikeResponse.postValue(postServiceImpl.increaseNumberOfLikeOfPost(postId))
     }
-    fun getComment(): Comment {
+
+    private val _deletePostResponse = MutableLiveData<Response<Void>>()
+    val deletePost: LiveData<Response<Void>>
+        get() = _deletePostResponse
+    fun deletePost(postId:String) = viewModelScope.launch {
+        _deletePostResponse.postValue(postServiceImpl.deletePost(postId))
+    }
+
+    fun getComment(viewmodel:PostViewModel): Comment {
         val signinFragment = SigninFragment()
-        val text:String=editTextComment.toString()
-        val postUuid:String=textViewPostUUID.toString()
+        val text:String=viewmodel.editTextComment.toString()
+        val postUuid:String=viewmodel.post.get()!!.uuid
         val status: String="POSTED"
         val noLike: Int=0
         val commenterUuid:String=signinFragment.getSavedUserUUID()

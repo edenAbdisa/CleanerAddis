@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="account_setting_screen">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="article_detail_screen">
                     <value>
                       <LayoutPositions>
@@ -53,25 +65,13 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="postAccountFragment">
+                  <entry key="nav_postFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-352" />
-                            <option name="y" value="-820" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="postFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-889" />
-                            <option name="y" value="-922" />
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -92,6 +92,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="postAccountFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-352" />
+                            <option name="y" value="-820" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -154,7 +166,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_register_to_signup">
+                            <entry key="action_signin_to_account_setting">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -175,7 +187,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_register_to_signup">
+                            <entry key="action_signup_to_account_setting">
                               <value>
                                 <LayoutPositions />
                               </value>

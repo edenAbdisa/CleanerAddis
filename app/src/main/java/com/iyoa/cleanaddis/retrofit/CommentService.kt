@@ -21,7 +21,7 @@ interface CommentService {
     @GET("/comment")
     fun findByUsername(@Query("username") username:String ): Call<Comment>
 
-    @POST("/comment")
+    @POST("/comment/add")
     fun insertComment(@Body comment:Comment): Deferred<Response<Comment>>
 
     @PUT("/comment/{id}")

@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.posting.PostAdapters
+import com.iyoa.cleanaddis.adapters.posting.PostAdaptersEdit
 import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.entity.user.User
 import com.iyoa.cleanaddis.retrofitEden.PostService
@@ -54,18 +55,20 @@ class PostAccountFragment : Fragment() {
         userViewModel = ViewModelProviders.of(this).get(UserViewModel::class.java)
         commentViewModel = ViewModelProviders.of(this).get(CommentViewModel::class.java)
 
-        val postListAdapter = PostAdapters(context,postViewModel,commentViewModel)
-        // loadPosts(postListAdapter)
-        displayUserInfo()
+
+        val postListAdapter = PostAdaptersEdit(context,postViewModel,commentViewModel)
+        loadPosts(postListAdapter)
+
         view.recyclerview_user_posts.layoutManager = LinearLayoutManager(context)
         view.recyclerview_user_posts.adapter = context.let { postListAdapter }
+        displayUserInfo()
         return view
     }
-    fun loadPosts(postAdapter: PostAdapters) {
+    fun loadPosts(postAdapterEdit: PostAdaptersEdit) {
         postViewModel.getPosts()
         postViewModel.getResponses.observe(this, Observer { response ->
             response.body()?.run{
-                postAdapter.setPosts(this)
+                postAdapterEdit.setPosts(this)
             }
         })
     }
@@ -76,9 +79,8 @@ class PostAccountFragment : Fragment() {
         userViewModel.getUserByName(username)
         userViewModel.getResponse.observe(this, Observer { response ->
             response.body()?.run{
-                Toast.makeText(context,"line 79"+this.username,Toast.LENGTH_LONG).show()
-                Toast.makeText(context,this.toString(),Toast.LENGTH_LONG).show()
                 userViewModel.user.set(this)
+                Log.println(5,"user",this.toString())
             }
         })
 

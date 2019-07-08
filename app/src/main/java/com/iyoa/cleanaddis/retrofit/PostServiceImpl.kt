@@ -28,6 +28,10 @@ import retrofit2.converter.moshi.MoshiConverterFactory
          withContext(Dispatchers.IO) {
              getPostService().insertPost(post).await()
          }
+     suspend fun deletePost(postId: String): Response<Void> =
+         withContext(Dispatchers.IO) {
+             getPostService().deletePost(postId).await()
+         }
      suspend fun increaseNumberOfLikeOfPost(postId: String): Response<Post> =
          withContext(Dispatchers.IO) {
              getPostService().increaseNumberOfLikeOfPost(postId).await()

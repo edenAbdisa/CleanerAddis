@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -49,7 +50,7 @@ public class PostController {
     	post.setAllowToBeUsedForArticle(postJson.getAllowToBeUsedForArticle());
     	return new ResponseEntity<Post>(postService.savePost(post), HttpStatus.OK);
     }
-	@PutMapping(value="/increaseLike/{id}", consumes = "application/json")
+	@PutMapping(value="/increaseLike/{id}")
     public ResponseEntity<Post>  increaseNumberOfLikeOfPost(@PathVariable("id") UUID uuid) throws DataNotFoundException {
 		//check if user has already liked the post
 		Post post=postService.getPost(uuid);
@@ -66,6 +67,15 @@ public class PostController {
 	@GetMapping(value = "/getPost/{id}", consumes = "application/json")
     public ResponseEntity<Post> getPost(@PathVariable("id") UUID uuid) throws DataNotFoundException {
 		return new ResponseEntity<Post>(postService.getPost(uuid), HttpStatus.OK);
+	}
+	
+	@DeleteMapping (value = "/deletePost/{id}")
+    public ResponseEntity< Void> deletePost(@PathVariable("id") String uuid) throws DataNotFoundException {
+		
+		UUID u=UUID.fromString(uuid);
+		log.info(uuid);
+		postService.deletePost(u);
+		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
 }

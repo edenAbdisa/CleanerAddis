@@ -23,6 +23,7 @@ import com.iyoa.cleanaddis.data.posting.CommentJSON
 import com.iyoa.cleanaddis.data.posting.CommentUUID
 import com.iyoa.cleanaddis.data.posting.PostJSON
 import com.iyoa.cleanaddis.data.posting.PostUUID
+import com.iyoa.cleanaddis.databinding.SingleEditablePostBinding
 import com.iyoa.cleanaddis.viewModels.posting.CommentViewModel
 import com.iyoa.cleanaddis.databinding.SinglePostDisplayBinding
 import com.iyoa.cleanaddis.entity.posting.Comment
@@ -33,15 +34,14 @@ import com.squareup.moshi.*
 import com.squareup.picasso.Picasso
 import java.util.*
 
-class PostAdapters (val context: Context,val postViewModel: PostViewModel,val commentViewModel: CommentViewModel) : ListAdapter<PostUUID,PostAdapters.PostViewHolder>(PostDiffCallBack()) {
+class PostAdaptersEdit (val context: Context,val postViewModel: PostViewModel,val commentViewModel: CommentViewModel) : ListAdapter<PostUUID,PostAdaptersEdit.PostViewHolder>(PostDiffCallBackEdit()) {
 
     private var postList: List<PostJSON> = emptyList()
-    private  lateinit var binding:SinglePostDisplayBinding
+    private  lateinit var binding:SingleEditablePostBinding
 
-    lateinit var view:SinglePostDisplayBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        binding = SinglePostDisplayBinding.inflate(inflater, parent, false)
+        binding = SingleEditablePostBinding.inflate(inflater, parent, false)
         val viewHolder = PostViewHolder( binding)
         return viewHolder
 
@@ -50,14 +50,14 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
         //  var dis= DisplayPostsRecyclerViewFragment()
         val listComments=comments
 
-        val commentListAdapter = CommentAdapter(context,commentViewModel)
+      /* val commentListAdapter = CommentAdapter(context,commentViewModel)
         commentListAdapter.setComments(listComments)
 
         val recyclerViewComment=binding.recyclerViewCommentList
 
         recyclerViewComment.layoutManager = LinearLayoutManager(context)
         recyclerViewComment.adapter = context.let { commentListAdapter }
-        recyclerViewComment.setHasFixedSize(true)
+        recyclerViewComment.setHasFixedSize(true)*/
     }
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         postList.get(position).let { post ->
@@ -81,7 +81,7 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
     }
     override fun getItemCount(): Int = postList.size
 
-    open inner class PostViewHolder(private val binding: SinglePostDisplayBinding ) : RecyclerView.ViewHolder(binding.root) {
+    open inner class PostViewHolder(private val binding: SingleEditablePostBinding ) : RecyclerView.ViewHolder(binding.root) {
         fun bind( item: PostJSON) {
           // Picasso.with(context).load(item.media.url).into(binding.imageViewPostedImage);
 
@@ -93,12 +93,12 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
             val listType = Types.newParameterizedType(List::class.java, CommentJSON::class.java)
             val adapter: JsonAdapter<List<CommentJSON>> = moshi.adapter(listType)
             val result = adapter.fromJson(item.comments.toString())*/
-            callComment(item.comments)
+            //callComment(item.comments)
         }
     }
 }
 
-class PostDiffCallBack: DiffUtil.ItemCallback<PostUUID>(){
+class PostDiffCallBackEdit: DiffUtil.ItemCallback<PostUUID>(){
     override fun areItemsTheSame(oldItem: PostUUID, newItem: PostUUID): Boolean {
         return oldItem == newItem
     }

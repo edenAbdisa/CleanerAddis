@@ -1131,6 +1131,7 @@ drawable ic_remove_red_eye_black_24dp
 drawable ic_send_black_24dp
 drawable ic_trial_image
 drawable ic_videocam_black_24dp
+drawable icons8_facebook_like_24
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1238,6 +1239,7 @@ id button2
 id button3
 id button4
 id button5
+id button7
 id buttonPanel
 id button_image_from_camera
 id button_image_from_gallery
@@ -1528,6 +1530,7 @@ id textView10
 id textView11
 id textView12
 id textView13
+id textView14
 id textView2
 id textView3
 id textView4
@@ -1690,6 +1693,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout single_comment_display
+layout single_editable_post
 layout single_post_display
 layout singlecategorypage
 layout support_simple_spinner_dropdown_item

@@ -27,4 +27,8 @@ public class PostService  {
 	public Post getPost(UUID uuid) {
 		return postRepository.getOne(uuid);
 	}
+
+	public void deletePost(UUID uuid) { 
+		 postRepository.deleteById(uuid);
+	}
 }
