@@ -1425,7 +1425,6 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id nav_camera
 id nav_controller_view_tag
 id nav_host_fragment
 id nav_manage

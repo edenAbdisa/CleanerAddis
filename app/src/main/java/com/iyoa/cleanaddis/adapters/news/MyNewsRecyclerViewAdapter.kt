@@ -30,7 +30,7 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
-         val inflater = LayoutInflater.from(parent.context)
+        val inflater = LayoutInflater.from(parent.context)
         val recyclerViewItem = inflater
             .inflate(com.iyoa.cleanaddis.R.layout.fragment_news, parent, false)
 
@@ -51,7 +51,7 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
         Log.wtf("ArticleLine35",course.text)
 
         holder.mIdView.text = course.title
-        holder.mContentView.text = course.published_date.toString()
+        holder.mContentView.text = course.text
 
 
     }
@@ -64,7 +64,6 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
         this.articles = articles
         notifyDataSetChanged()
 
-
     }
 
     override fun getItemCount(): Int = articles.size
@@ -72,9 +71,7 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
     inner class ArticleViewHolder(val mView: View) : RecyclerView.ViewHolder(mView),View.OnClickListener {
 
 
-        init{
-          mView.setOnClickListener(ArticleViewHolder(this.itemView))
-        }
+
         override fun onClick(v: View?) {
             itemListen?.recyclerViewClicked(v,this.layoutPosition)
             var article = v as Article
@@ -82,8 +79,6 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
             val args = Bundle()
             args.putSerializable("article",article)
             articleFragment.arguments = args
-
-
 
         }
 
@@ -96,9 +91,9 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
 
 
     }
-     interface RecyclerViewClickListener{
+    interface RecyclerViewClickListener{
 
 
-         fun  recyclerViewClicked(view:View? ,position:Int)
+        fun  recyclerViewClicked(view:View? ,position:Int)
     }
 }

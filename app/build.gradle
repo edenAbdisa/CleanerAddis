@@ -13,7 +13,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.abigail.cleanaddis"
-        minSdkVersion 26
+        minSdkVersion 24
         targetSdkVersion 28
         multiDexEnabled true
         versionCode 1
