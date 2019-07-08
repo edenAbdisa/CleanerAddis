@@ -102,5 +102,8 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
         val newComment=Comment ( text,postUuid, status, noLike,commenterUuid,date)
         return newComment
     }
-
+    ////Repo adding functions
+    fun addToRoom(posts:List<PostUUID>){
+         postRepos.addPosts(posts)
+    }
 }

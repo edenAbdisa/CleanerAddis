@@ -1174,6 +1174,7 @@ id Recycelimg
 id RecycleButton
 id SHIFT
 id SYM
+id accessibility_action_clickable_span
 id account_logout_button
 id account_profile_imageview
 id account_setting_screen
@@ -1276,6 +1277,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialog_button
 id dimensions
 id direct
 id disableHome
@@ -1517,6 +1519,10 @@ id submenuarrow
 id submit_area
 id subtitle_news_card
 id tabMode
+id tag_accessibility_clickable_spans
+id tag_accessibility_heading
+id tag_accessibility_pane_title
+id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -1637,6 +1643,7 @@ layout abc_tooltip
 layout activity_main
 layout app_bar_main
 layout content_main
+layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -2066,6 +2073,9 @@ style Base_Widget_MaterialComponents_TextInputLayout
 style CardView
 style CardView_Dark
 style CardView_Light
+style FragmentScenarioEmptyFragmentActivityTheme
+style InstrumentationActivityInvokerEmptyActivityTheme
+style InstrumentationActivityInvokerFloatingActivityTheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.integratedTesting.ui
+package com.iyoa.cleanaddis.ui
 
 import androidx.navigation.NavController
 import androidx.test.espresso.Espresso
@@ -11,19 +11,20 @@ import org.junit.runner.RunWith
 import org.mockito.Mockito
 
 @RunWith(AndroidJUnit4::class)
-class RegisterScreenTest {
+class PostScreenTest {
     @Test
     fun test1() {
 
         val mockNavController = Mockito.mock(NavController::class.java)
-        Espresso.onView(ViewMatchers.withId(R.id.account_signin_button)).perform(ViewActions.click())
-        Mockito.verify(mockNavController).navigate(R.id.action_register_to_signin)
+        Espresso.onView(ViewMatchers.withId(R.id.button_image_from_camera)).perform(ViewActions.click())
+        Mockito.verify(mockNavController).navigate(R.id.action_postFragment_to_selectPictureToPostFragment)
     }
     @Test
     fun test2() {
 
         val mockNavController = Mockito.mock(NavController::class.java)
-        Espresso.onView(ViewMatchers.withId(R.id.account_signup_button)).perform(ViewActions.click())
-        Mockito.verify(mockNavController).navigate(R.id.action_register_to_signup)
+        Espresso.onView(ViewMatchers.withId(R.id.button_video_from_camera)).perform(ViewActions.click())
+        Mockito.verify(mockNavController).navigate(R.id.action_postFragment_to_selectPictureToPostFragment)
     }
+
 }

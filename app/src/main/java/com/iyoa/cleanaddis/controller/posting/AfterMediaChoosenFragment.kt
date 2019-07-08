@@ -95,7 +95,7 @@ class AfterMediaChoosenFragment : DialogFragment() {
                     })
                 .setNegativeButton("Cancel",
                     DialogInterface.OnClickListener { dialog, id ->
-                        getDialog().cancel()
+                        getDialog()!!.cancel()
                     })
             builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")

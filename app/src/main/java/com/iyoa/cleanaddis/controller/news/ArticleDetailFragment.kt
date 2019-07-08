@@ -47,11 +47,11 @@ class ArticleDetailFragment : Fragment() {
 
     }
 
-    override fun onAttach(context: Context?) {
+    /*override fun onAttach(context: Context?) {
         super.onAttach(context)
         if (context != null) {
             // Get dog names and descriptions.
 
         }
-    }
+    }*/
 }

@@ -69,6 +69,7 @@ class DisplayPostsRecyclerViewFragment : NavHostFragment() {
                 postAdapter.setPosts(this)
             }
         })
+
     }
 
 

@@ -40,7 +40,6 @@ class PostFragment : Fragment() {
         return view
     }
 
-
     fun replaceChildFragmenty(fragment: Fragment,allowStateLoss: Boolean = false, @IdRes containerViewId: Int) {
 
         val ft = childFragmentManager

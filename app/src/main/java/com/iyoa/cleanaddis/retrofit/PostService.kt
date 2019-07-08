@@ -27,8 +27,6 @@ interface PostService {
     @PUT("/post/{id}")
     fun updatePost(@Path("id") id:Long, @Body post:Post): Call<Void>
 
-
-
     @DELETE("/post/deletePost/{id}")
     fun deletePost(@Path("id") id:String): Deferred<Response<Void>>
 }

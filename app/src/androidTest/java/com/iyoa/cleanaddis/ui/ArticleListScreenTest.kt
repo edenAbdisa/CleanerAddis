@@ -1,4 +1,4 @@
-package com.iyoa.cleanaddis.integratedTesting.ui
+package com.iyoa.cleanaddis.ui
 
 import androidx.test.runner.AndroidJUnit4
 import com.iyoa.cleanaddis.R
