@@ -93,7 +93,7 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
             val listType = Types.newParameterizedType(List::class.java, CommentJSON::class.java)
             val adapter: JsonAdapter<List<CommentJSON>> = moshi.adapter(listType)
             val result = adapter.fromJson(item.comments.toString())*/
-            callComment(item.comments)
+           // callComment(item.comments)
         }
     }
 }
