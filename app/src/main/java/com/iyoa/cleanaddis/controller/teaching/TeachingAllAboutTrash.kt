@@ -48,14 +48,14 @@ val ft = childFragmentManager
             ft.commitAllowingStateLoss()
         }
  */
-            val ABTFragment = RecycleViewAllAboutTrash()
+            //val ABTFragment = RecycleViewAllAboutTrash()
             val l=childFragmentManager.beginTransaction()
 
 
-              val o=l.replace(view.frameFirst.id, ABTFragment)
+              //val o=l.replace(view.frameFirst.id, ABTFragment)
             Toast.makeText(context,"here3",Toast.LENGTH_LONG).show()
 
-               o.commit()
+              // o.commit()
         }
 
 

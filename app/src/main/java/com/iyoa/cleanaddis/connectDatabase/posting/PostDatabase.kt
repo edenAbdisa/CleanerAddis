@@ -38,6 +38,19 @@ abstract class PostDatabase: RoomDatabase() {
                 return instance
             }
         }
-
+        fun getCommentDatabase(context: Context):PostDatabase{
+            val tempInstance= INSTANCE
+            if(tempInstance!=null){
+                return tempInstance
+            }
+            synchronized(this){
+                val instance= Room.databaseBuilder(
+                    context.applicationContext,
+                    PostDatabase::class.java,"comment_database"
+                ).build()
+                INSTANCE=instance
+                return instance
+            }
+        }
     }
 }

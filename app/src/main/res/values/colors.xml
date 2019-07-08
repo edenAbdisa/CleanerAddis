@@ -7,9 +7,7 @@
     <color name="greenPrimaryDark">#356859</color>
     <color name="orangeSecondary">#FD5523</color>
     <color name="fadedWhiteSecondary">#FFFBE6</color>
-
-
-
+    <color name="white">#FFFF</color>
 
 
 </resources>

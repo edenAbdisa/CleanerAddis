@@ -45,16 +45,18 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         postViewModel = ViewModelProviders.of(this).get(PostViewModel::class.java)
         commentViewModel = ViewModelProviders.of(this).get(CommentViewModel::class.java)
-        val binding = SinglePostDisplayBinding.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
+       // val binding = SinglePostDisplayBinding.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
 
         val postListAdapter = PostAdapters(context,commentViewModel)
         var postList = postListAdapter.getPosts()
 
         loadPosts(postListAdapter,postList)
+        /*
 
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = context?.let { PostAdapters(it) }
         binding.recyclerView.setHasFixedSize(true)
+        */
         return view
     }
     fun loadPosts(postAdapter:PostAdapters,  postList:List<Post>){
@@ -80,6 +82,7 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
         postViewModel = ViewModelProviders.of(this).get(
             PostViewModel::class.java
         )
+        /*
         if(checkConnection(view?.context)){
             postViewModel.allPost.observe(this,androidx.lifecycle.Observer {
                     posts->posts?.let{PostAdapters(context).setPosts(posts)}
@@ -88,7 +91,7 @@ class DisplayPostsRecyclerViewFragment : Fragment() {
         }
         else{
             Toast.makeText(context,"Check your network connection",Toast.LENGTH_SHORT)
-        }
+        }*/
 
     }
 

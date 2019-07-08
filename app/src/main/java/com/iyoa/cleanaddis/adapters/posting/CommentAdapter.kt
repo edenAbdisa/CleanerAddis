@@ -54,7 +54,7 @@ class CommentAdapter (val context: Context) : ListAdapter<Comment,CommentAdapter
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind( item: Comment) {
             with(binding) {
-                comment=item
+               // comment=item
                 executePendingBindings()
             }
         }

@@ -15,9 +15,10 @@ class FriendViewModel(application: Application): AndroidViewModel(application)  
     val allFriend : LiveData<List<Friend>>
 
     init{
-        val  friendDAO = PostDatabase.getFriendDatabase(application).friendDao()
+        val  friendDAO = PostDatabase.getPostDatabase(application).friendDao()
         friendRepos = FriendRepository(friendDAO)
         allFriend = friendRepos.getAllFriend()
+
     }
     fun insertFriend(friend:Friend) = viewModelScope.launch(Dispatchers.IO)
     {

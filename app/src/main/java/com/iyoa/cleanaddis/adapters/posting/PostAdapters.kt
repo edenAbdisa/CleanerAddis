@@ -22,19 +22,19 @@ class PostAdapters (val context: Context,val commentViewModel:CommentViewModel) 
 
     private var postList: List<Post> = emptyList()
     private  lateinit var binding:ViewDataBinding
-    lateinit var view:ViewDataBinding
+    lateinit var view:SinglePostDisplayBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
 
         view =   DataBindingUtil.inflate(
                 LayoutInflater.from(parent.context),
                 R.layout.single_post_display, parent, false
             )
-        )
+
 
         return PostViewHolder(view)
 
     }
-     fun callComment(val uuid: String){
+     fun callComment( uuid: String){
 
         val commentListAdapter = CommentAdapter(context)
         var commentList = commentListAdapter.getComments()
@@ -69,7 +69,7 @@ class PostAdapters (val context: Context,val commentViewModel:CommentViewModel) 
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind( item: Post) {
             with(binding) {
-                post=item
+                binding.textViewUsername.text = item.username
                 executePendingBindings()
             }
             callComment(item.uuid)

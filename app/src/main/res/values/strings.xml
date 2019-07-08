@@ -57,7 +57,6 @@
     <string name="fragment_post_account_no">No</string>
     <string name="fragment_post_account_friends">Friends</string>
     <string name="fragment_post_account_posts">Posts</string>
-    <string name="fragment_post_account_posts">Posts</string>
     <string name="fragment_post_account_second_no">no</string>
     <string name="fragment_post_account_request">Request</string>
     <string name="fragment_teaching_rec_all_about_trash">All About Trash</string>
@@ -88,5 +87,4 @@
     <string name="teaching_rec_next">Next</string>
     <string name="teaching_rec_button">Button</string>
     <string name="rec_recycleable_trash">Recycleable Trash</string>
-    <string name="report_message">Your message..</string>
 </resources>
