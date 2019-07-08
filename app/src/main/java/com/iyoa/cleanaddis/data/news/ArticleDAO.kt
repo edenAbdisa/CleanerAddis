@@ -10,17 +10,20 @@ interface ArticleDAO {
 
 
     @Query("SELECT * FROM Article WHERE uuid =:uuid")
-    fun getNewsByUuid(uuid: Long): LiveData<Article>
+    fun getNewsByUuid(uuid: Long): Article
 
 
     @Query("SELECT * FROM Article")
     fun getAllNews(): LiveData<List<Article>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertArticle(article:Article)
+    fun insertNews(news: Article)
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addArticles(listOfArticles: List<Article>)
+    @Update
+    fun updateNews(news: Article)
+
+    @Delete
+    fun deleteNews(news: Article)
 
 
 

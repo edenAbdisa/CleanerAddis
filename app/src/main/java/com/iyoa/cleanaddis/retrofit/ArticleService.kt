@@ -6,7 +6,7 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface ArticleService {
-    @GET("article/articles")
+    @GET("/articles")
     fun findArticles(): Call<List<Article>>
 
     @GET("/article/{id}")

@@ -1,33 +1,21 @@
 package com.iyoa.cleanaddis.data.news
 
+<<<<<<< HEAD
 import androidx.room.*
+=======
+import java.util.*
+>>>>>>> parent of 77bccfc... Article feature modified
 
-
-@Entity(tableName = "article")
 data class ArticleData(
-    @PrimaryKey
-    @ColumnInfo(name="uuid")
-    var uuid:String,
-    @ColumnInfo(name="title")
     var title:String,
-    @ColumnInfo(name="media_uuid")
-    var media_uuid:String,
-    @ColumnInfo(name="text")
+    var media_uuid:UUID,
     var text:String,
-    @ColumnInfo(name="published_date")
-    var published_date:Long?,
-    @ColumnInfo(name="view_count")
+    var published_date:Date,
     var view_count:Int,
-    @ColumnInfo(name="category_uuid")
-    var category_uuid:String
-                   )
+    var category_uuid:UUID
+                   ) {
 
 
 
 
-
-
-
-
-
-
+}

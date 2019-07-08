@@ -3,8 +3,7 @@ package com.iyoa.cleanaddis.utility
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-
-val BASE_URL_NEW:String ="http://192.168.1.107:7990"
+val BASE_URL_NEW:String ="http://192.168.1.1:7990"
 
 =======
 <<<<<<< HEAD

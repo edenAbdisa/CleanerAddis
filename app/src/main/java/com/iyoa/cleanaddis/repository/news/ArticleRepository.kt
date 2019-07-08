@@ -8,11 +8,7 @@ class ArticleRepository(private val articleDAO: ArticleDAO) {
     fun allArticles(): LiveData<List<Article>> = articleDAO.getAllNews()
 
     fun insertArticles(article: Article){
-        articleDAO.insertArticle(article)
-    }
-
-    fun addArticles(listOfarticles: List<Article>) {
-        articleDAO.addArticles(listOfarticles)
+        articleDAO.insertNews(article)
     }
 
     fun getArticle(uuid:Long):LiveData<Article>{
