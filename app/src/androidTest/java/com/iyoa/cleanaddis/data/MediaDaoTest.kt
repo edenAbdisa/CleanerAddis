@@ -14,15 +14,22 @@
  * limitations under the License.
  */
 
-package com.iyoa.cleanaddis.unitTesting.daoTest
+package com.google.samples.apps.sunflower.data
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
+import com.iyoa.cleanaddis.connectDatabase.DatabaseHelper
 import com.iyoa.cleanaddis.connectDatabase.news.ArticleDatabase
+import com.iyoa.cleanaddis.connectDatabase.news.CategoryDatabase
+import com.iyoa.cleanaddis.connectDatabase.news.MediaDatabase
+import com.iyoa.cleanaddis.data.common.Category
+import com.iyoa.cleanaddis.data.common.Media
 import com.iyoa.cleanaddis.data.news.Article
 import com.iyoa.cleanaddis.data.news.ArticleDAO
+import com.iyoa.cleanaddis.data.news.CategoryDAO
+import com.iyoa.cleanaddis.data.news.MediaDAO
 import io.reactivex.internal.util.NotificationLite.getValue
 import org.hamcrest.Matchers.equalTo
 import org.junit.After
@@ -34,13 +41,14 @@ import org.junit.runner.RunWith
 import java.text.SimpleDateFormat
 
 @RunWith(AndroidJUnit4::class)
-class ArticleDaoTestTest {
+class MediaDaoTest {
 
-    private lateinit var database: ArticleDatabase
+    private lateinit var database: MediaDatabase
     val sdf = SimpleDateFormat("yy-mm-dd")
-    private lateinit var articleDao: ArticleDAO
-    private val articleA = Article("e9e847af-a680-4704-8d6b-840106aad78d".toLong(), "delilah", "c2545c58-3352-4986-94ee-68c64b6e935e".toLong(), "post",
-        sdf.parse("2019-11-10"),0,"b7d68bed-bb4c-4e71-bad5-f0a0e28c9c79".toLong())
+    private lateinit var mediaDao: MediaDAO
+    private val mediaA = Media("e9e847af-a680-4704-8d6b-840106aad78d".toLong(), "delilah",
+        "Report","bla bla bla","hey there"
+    )
 
 
     @get:Rule
@@ -50,10 +58,10 @@ class ArticleDaoTestTest {
 
     @Before fun createDb() {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        database = Room.inMemoryDatabaseBuilder(context, ArticleDatabase::class.java).build()
-        articleDao = database.articleDao()
+        database = Room.inMemoryDatabaseBuilder(context, MediaDatabase::class.java).build()
+        mediaDao = database.mediaDao()
 
-        articleDao.insertArticle(articleA)
+        mediaDao.insertMedia(mediaA)
     }
 
     @After fun closeDb() {
@@ -66,7 +74,7 @@ class ArticleDaoTestTest {
 
 
     @Test fun testGetArticle() {
-        assertThat(getValue(articleDao.getNewsByUuid(articleA.uuid)), equalTo(articleA))
+        assertThat(getValue(mediaDao.getMediaByUuid(mediaA.uuid)), equalTo(mediaA))
     }
 
 }
