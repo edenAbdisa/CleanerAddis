@@ -59,7 +59,6 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     val getResponses: LiveData<Response<List<PostJSON>>>
         get() = _getResponses
     fun getPosts() = viewModelScope.launch{
-
         _getResponses.postValue(postServiceImpl.getPosts())
     }
 

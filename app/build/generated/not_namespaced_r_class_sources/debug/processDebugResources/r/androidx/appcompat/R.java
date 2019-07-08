@@ -671,61 +671,6 @@ public final class R {
         public static final int list_item = 0x7f080109;
         public static final int message = 0x7f08010d;
         public static final int multiply = 0x7f080112;
-<<<<<<< HEAD
-        public static final int none = 0x7f080122;
-        public static final int normal = 0x7f080123;
-        public static final int notification_background = 0x7f080124;
-        public static final int notification_main_column = 0x7f080125;
-        public static final int notification_main_column_container = 0x7f080126;
-        public static final int parentPanel = 0x7f08012d;
-        public static final int progress_circular = 0x7f080137;
-        public static final int progress_horizontal = 0x7f080138;
-        public static final int radio = 0x7f080139;
-        public static final int right = 0x7f08015c;
-        public static final int right_icon = 0x7f08015d;
-        public static final int right_side = 0x7f08015e;
-        public static final int screen = 0x7f080162;
-        public static final int scrollIndicatorDown = 0x7f080164;
-        public static final int scrollIndicatorUp = 0x7f080165;
-        public static final int scrollView = 0x7f080166;
-        public static final int search_badge = 0x7f080169;
-        public static final int search_bar = 0x7f08016a;
-        public static final int search_button = 0x7f08016b;
-        public static final int search_close_btn = 0x7f08016c;
-        public static final int search_edit_frame = 0x7f08016d;
-        public static final int search_go_btn = 0x7f08016e;
-        public static final int search_mag_icon = 0x7f08016f;
-        public static final int search_plate = 0x7f080170;
-        public static final int search_src_text = 0x7f080171;
-        public static final int search_voice_btn = 0x7f080172;
-        public static final int select_dialog_listview = 0x7f080175;
-        public static final int shortcut = 0x7f080177;
-        public static final int spacer = 0x7f080180;
-        public static final int split_action_bar = 0x7f080181;
-        public static final int src_atop = 0x7f080184;
-        public static final int src_in = 0x7f080185;
-        public static final int src_over = 0x7f080186;
-        public static final int start = 0x7f080188;
-        public static final int submenuarrow = 0x7f08018d;
-        public static final int submit_area = 0x7f08018e;
-        public static final int tabMode = 0x7f080190;
-        public static final int tag_transition_group = 0x7f080196;
-        public static final int tag_unhandled_key_event_manager = 0x7f080197;
-        public static final int tag_unhandled_key_listeners = 0x7f080198;
-        public static final int text = 0x7f080199;
-        public static final int text2 = 0x7f08019a;
-        public static final int textSpacerNoButtons = 0x7f08019b;
-        public static final int textSpacerNoTitle = 0x7f08019c;
-        public static final int time = 0x7f0801ba;
-        public static final int title = 0x7f0801bb;
-        public static final int titleDividerNoCustom = 0x7f0801bc;
-        public static final int title_template = 0x7f0801be;
-        public static final int top = 0x7f0801c1;
-        public static final int topPanel = 0x7f0801c2;
-        public static final int uniform = 0x7f0801c9;
-        public static final int up = 0x7f0801cb;
-        public static final int wrap_content = 0x7f0801da;
-=======
         public static final int none = 0x7f080121;
         public static final int normal = 0x7f080122;
         public static final int notification_background = 0x7f080123;
@@ -779,7 +724,6 @@ public final class R {
         public static final int uniform = 0x7f0801c8;
         public static final int up = 0x7f0801ca;
         public static final int wrap_content = 0x7f0801d9;
->>>>>>> e9da948be2c1196f83efb2b2394d1304b38fa332
     }
     public static final class integer {
         private integer() {}
