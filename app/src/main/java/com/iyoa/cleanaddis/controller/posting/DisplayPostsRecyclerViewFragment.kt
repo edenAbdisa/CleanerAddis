@@ -54,22 +54,27 @@ class DisplayPostsRecyclerViewFragment : NavHostFragment() {
         binding.navigation_bottom_bar?.let {
             NavigationUI.setupWithNavController(it, navController)}
         val postListAdapter = PostAdapters(context,postViewModel,commentViewModel)
-        loadPosts(postListAdapter)
-
+        if(checkConnection(view?.context)) {
+            loadPosts(postListAdapter)
+        }else{
+            getFromRoom(postListAdapter)
+        }
         binding.recyclerView_front_post_view.layoutManager = LinearLayoutManager(context)
         binding.recyclerView_front_post_view.adapter = context.let { postListAdapter }
 
         return binding
     }
-
+    fun getFromRoom(postAdapter: PostAdapters){
+       // postViewModel.addToRoom()
+    }
     fun loadPosts(postAdapter: PostAdapters) {
         postViewModel.getPosts()
         postViewModel.getResponses.observe(this, Observer { response ->
             response.body()?.run{
+                postViewModel.addToRoom(this)
                 postAdapter.setPosts(this)
             }
         })
-
     }
 
 

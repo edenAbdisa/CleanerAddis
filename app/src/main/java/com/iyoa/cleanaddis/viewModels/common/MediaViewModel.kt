@@ -15,6 +15,7 @@ import com.iyoa.cleanaddis.retrofitEden.MediaServiceImpl
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.Multipart
 import java.io.File
@@ -31,12 +32,10 @@ class MediaViewModel(application: Application):AndroidViewModel(application) {
         mediaServiceImpl=MediaServiceImpl()
     }
 
-
-
     private val _insertMediaResponse = MutableLiveData<Response<MediaUUID>>()
     val insertMediaResponse: LiveData<Response<MediaUUID>>
         get() = _insertMediaResponse
-    fun insertMedia(file: Multipart, media: Media) = viewModelScope.launch {
+    fun insertMedia(file: RequestBody, media: Media) = viewModelScope.launch {
         _insertMediaResponse.postValue(mediaServiceImpl.insertMedia(file,media))
     }
 

@@ -39,7 +39,7 @@ class NavigationTesting   {
     fun drawerNavigationFromMainToOthers() {
 
         val activityScenario = ActivityScenario.launch(MainActivity::class.java)
-        dataBindingIdlingResource.monitorActivity(activityScenario)
+        //dataBindingIdlingResource.monitorActivity(activityScenario)
 
         onView(withId(R.id.drawer_layout))
             .check(matches(isClosed(Gravity.START)))

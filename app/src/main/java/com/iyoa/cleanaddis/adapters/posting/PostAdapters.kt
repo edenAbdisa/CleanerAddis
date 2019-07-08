@@ -84,7 +84,7 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
     open inner class PostViewHolder(private val binding: SinglePostDisplayBinding ) : RecyclerView.ViewHolder(binding.root) {
         fun bind( item: PostJSON) {
           // Picasso.with(context).load(item.media.url).into(binding.imageViewPostedImage);
-
+            //Glide.with(this).load(fileUri).into(imageView);
             with(binding) {
 
                 executePendingBindings()
