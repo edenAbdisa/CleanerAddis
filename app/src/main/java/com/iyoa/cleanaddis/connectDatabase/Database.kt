@@ -13,7 +13,13 @@ import com.iyoa.cleanaddis.data.report.Report
 import com.iyoa.cleanaddis.data.report.ReportDAO
 import com.iyoa.cleanaddis.utility.DataConverter
 
+<<<<<<< HEAD
 @Database(entities = arrayOf(Report:: class, Address::class),version=1)
+=======
+@Database(entities = arrayOf(Report:: class, Address::class
+,Category::class, Article::class, Friend::class, Post::class, Media::class,
+    Address::class),version=1)
+>>>>>>> parent of 1e47baa... merge resolved
 @TypeConverters(DataConverter::class)
 abstract class DatabaseHelper: RoomDatabase()  {
 
