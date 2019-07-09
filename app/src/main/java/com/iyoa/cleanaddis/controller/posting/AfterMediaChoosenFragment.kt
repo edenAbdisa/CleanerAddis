@@ -10,6 +10,7 @@ import androidx.fragment.app.DialogFragment
 import com.iyoa.cleanaddis.R
 import kotlinx.android.synthetic.main.fragment_after_media_choosen.view.*
 import android.graphics.BitmapFactory
+import android.util.Log
 import android.view.View.GONE
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -25,6 +26,8 @@ import com.iyoa.cleanaddis.viewModels.news.CategoryViewModel
 import com.iyoa.cleanaddis.viewModels.common.MediaViewModel
 import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
 import kotlinx.android.synthetic.main.fragment_after_media_choosen.*
+import okhttp3.MediaType
+import okhttp3.RequestBody
 import java.io.*
 
 
@@ -68,9 +71,9 @@ class AfterMediaChoosenFragment : DialogFragment() {
                         var labelViewModel = ViewModelProviders.of(this).get(LabelViewModel::class.java)
                         var media: MediaUUID?=null
                         if( _imv.visibility!= GONE){
-                            //media= addMedia("PHOTO",imgUri)
+                            media= addMedia("PHOTO",imgUri)
                         }else{
-                            // media = addMedia("VIDEO",videoUri)
+                            media = addMedia("VIDEO",videoUri)
                         }
                         var label: LabelUUID?=null
 
@@ -82,8 +85,7 @@ class AfterMediaChoosenFragment : DialogFragment() {
 
                         }
                         })
-                        Toast.makeText(context,"Sucessfully posted category"+label!!.uuid,Toast.LENGTH_LONG).show()
-                        Toast.makeText(context,"Sucessfully posted media"+media!!.uuid,Toast.LENGTH_LONG).show()
+
                         val post = insertPost(media!!.uuid,label!!.uuid)
                         postViewModel.insertPost(post)
                         postViewModel.insertResponse.observe(this, Observer { response ->
@@ -103,22 +105,26 @@ class AfterMediaChoosenFragment : DialogFragment() {
     fun addMedia(mediatype:String,mediaData:String): MediaUUID? {
 
         var mediaViewModel = ViewModelProviders.of(this).get(MediaViewModel::class.java)
-        val file= File(mediaData)
 
-        val out=FileOutputStream(file)
-
+        var MEDIA_TYPE_PNG = MediaType.parse("image/jpg")
+        var file =  File("/storage/emulated/0/DCIM/Camera/IMG_20190708_201249.JPG")
+        var requestBody = RequestBody.create(MediaType.parse("*/*"), file)
+        Log.println(5,"addedMedia",file.name)
+        Log.println(5,"addedMedia",requestBody.contentType().toString())
 
         var newMedia= Media(mediaData,mediatype,"POST","editText_post_description.text.toString()")
-        //  mediaViewModel.insertMedia(file,newMedia)
+        Log.println(5,"newMedia",newMedia.toString())
+        mediaViewModel.insertMedia(requestBody,newMedia)
         mediaViewModel.insertMediaResponse.observe(this, Observer { response ->
             response.body()?.run{
                 mediaViewModel.media.set(this)
             }
         })
+        Log.println(5,"addedMedia",mediaViewModel.media.get().toString())
         return mediaViewModel.media.get()
     }
 
-    fun insertPost(mediaUuid:String,categoryUuid:String):Post {
+    fun insertPost(mediaUUID:String,categoryUUID:String):Post {
         val sharedPreference =
             activity?.getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE)
         var username: String = sharedPreference!!.getString("username", "null")
@@ -126,8 +132,8 @@ class AfterMediaChoosenFragment : DialogFragment() {
         var noView: Int = 0
         var downloadable: Int = 1
         var allowToBeUsedForArticle: Int = 1
-        var mediaUuid: String=mediaUuid
-        var categoryUuid: String=categoryUuid
+        var mediaUuid: String=mediaUUID
+        var categoryUuid: String=categoryUUID
         var canBeViewedBy: String = "ALL"
         var status: String = "POSTED"
 

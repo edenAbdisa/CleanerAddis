@@ -12,7 +12,7 @@ import com.iyoa.cleanaddis.utility.DataConverter
 
 
 @Database(entities = arrayOf(PostUUID:: class ),version=1)
-@TypeConverters(CommentListConvertor::class)
+//@TypeConverters(CommentListConvertor::class)
 abstract class PostDatabase: RoomDatabase() {
     abstract fun postDao(): PostDAO
     companion object{

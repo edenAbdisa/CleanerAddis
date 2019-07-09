@@ -84,7 +84,7 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
     open inner class PostViewHolder(private val binding: SinglePostDisplayBinding ) : RecyclerView.ViewHolder(binding.root) {
         fun bind( item: PostJSON) {
           // Picasso.with(context).load(item.media.url).into(binding.imageViewPostedImage);
-
+            //Glide.with(this).load(fileUri).into(imageView);
             with(binding) {
 
                 executePendingBindings()
@@ -93,7 +93,7 @@ class PostAdapters (val context: Context,val postViewModel: PostViewModel,val co
             val listType = Types.newParameterizedType(List::class.java, CommentJSON::class.java)
             val adapter: JsonAdapter<List<CommentJSON>> = moshi.adapter(listType)
             val result = adapter.fromJson(item.comments.toString())*/
-            callComment(item.comments)
+           // callComment(item.comments)
         }
     }
 }

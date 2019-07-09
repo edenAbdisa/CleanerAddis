@@ -149,7 +149,7 @@
             app:layout_constraintVertical_bias="1.0"
             style="@android:style/Widget.Holo.Light.ImageButton"/>
     <TextView
-            android:text="Comments...."
+            android:text="Comments..."
             android:textColor="#FFFFFF"
             android:background="@drawable/button"
             android:layout_width="wrap_content"

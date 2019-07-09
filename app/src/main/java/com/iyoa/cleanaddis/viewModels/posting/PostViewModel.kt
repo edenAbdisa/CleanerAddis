@@ -59,7 +59,6 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
     val getResponses: LiveData<Response<List<PostJSON>>>
         get() = _getResponses
     fun getPosts() = viewModelScope.launch{
-
         _getResponses.postValue(postServiceImpl.getPosts())
     }
 
@@ -103,7 +102,10 @@ class PostViewModel(application: Application): AndroidViewModel(application)  {
         return newComment
     }
     ////Repo adding functions
-    fun addToRoom(posts:List<PostUUID>){
-         postRepos.addPosts(posts)
+    fun addToRoom(posts:List<PostJSON>){
+        // postRepos.addPosts(posts)
     }
+    //fun getPostFromRoom():LiveData<List<PostJSON>>{
+      //return  postRepos.getAllPost()
+    //}
 }
