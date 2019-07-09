@@ -52,12 +52,12 @@
         "source": "C:\\Users\\Delilah Dessalegn\\.gradle\\caches\\transforms-2\\files-2.1\\08c9582775de616bf605a8dc0fcf5f5e\\res\\drawable-tvdpi-v4\\ic_plusone_standard_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_explore.png.flat",
-        "source": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\src\\main\\res\\drawable-hdpi\\ic_action_explore.png"
-    },
-    {
         "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_bar.xml.flat",
         "source": "C:\\Users\\Delilah Dessalegn\\.gradle\\caches\\transforms-2\\files-2.1\\6ccf36b9221e206d6eb1253f9c64ac34\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_explore.png.flat",
+        "source": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\src\\main\\res\\drawable-hdpi\\ic_action_explore.png"
     },
     {
         "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -272,12 +272,12 @@
         "source": "C:\\Users\\Delilah Dessalegn\\.gradle\\caches\\transforms-2\\files-2.1\\6ccf36b9221e206d6eb1253f9c64ac34\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
-        "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_spinner.xml.flat",
         "source": "C:\\Users\\Delilah Dessalegn\\.gradle\\caches\\transforms-2\\files-2.1\\6ccf36b9221e206d6eb1253f9c64ac34\\res\\color-v23\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\Delilah Dessalegn\\Documents\\CleanerAddis\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",

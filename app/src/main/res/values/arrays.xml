@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorySpinnerItems">
+        <item>Waste</item>
+        <item>Paper</item>
+        <item>Water</item>
+    </string-array>
+
+    <string-array name="subcitySpinnerItems">
+        <item>Bole</item>
+        <item>Yeka</item>
+    </string-array>
+    <string-array name="woredaSpinnerItems">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="streetnameSpinnerItems">
+        <item>meri</item>
+        <item>kotebe</item>
+    </string-array>
+
+</resources>
