@@ -14,29 +14,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 
 import com.iyoa.cleanaddis.R
-import com.iyoa.cleanaddis.data.common.Address
-import com.iyoa.cleanaddis.data.common.AddressData
-import com.iyoa.cleanaddis.data.common.MediaUUID
-import com.iyoa.cleanaddis.data.common.MediaData
+import com.iyoa.cleanaddis.data.common.*
 import com.iyoa.cleanaddis.data.report.Report
 import com.iyoa.cleanaddis.data.report.ReportData
+import com.iyoa.cleanaddis.entity.common.Media
 import com.iyoa.cleanaddis.retrofit.*
 import com.iyoa.cleanaddis.retrofitEden.MediaService
+import com.iyoa.cleanaddis.retrofitEden.MediaServiceImpl
 import kotlinx.android.synthetic.main.fragment_add_report.*
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.runBlocking
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.File
 import java.lang.Exception
-import java.time.Instant
 import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+
 
 /**
  * A simple [Fragment] subclass.
@@ -44,7 +43,7 @@ private const val ARG_PARAM2 = "param2"
  */
 
 class AddReportFragment : Fragment() {
-/*
+
     private lateinit var addButton: ImageButton
     private lateinit var headerEditText: EditText
     private lateinit var textEditText : EditText
@@ -66,21 +65,24 @@ class AddReportFragment : Fragment() {
         // Inflate the layout for this fragment
        val view =  inflater.inflate(R.layout.fragment_add_report, container, false)
 
-        view.findViewById<View>(R.id.addreport_button).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_addreport_to_report_list)
-            val user = getUserInfo()
-            if(user!="") {
-                addReport(user)
-            }
-        }
-        view.findViewById<View>(R.id.attach_image_view).setOnClickListener{
 
-            dispatchFileChooser()
-        }
+        //view.findViewById<View>(R.id.attach_image_view).setOnClickListener{
+
+            //dispatchFileChooser()
+        //}
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<View>(R.id.addreport_button).setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(com.iyoa.cleanaddis.R.id.action_addreport_to_report_list)
+            val user = "Delilah14"
 
+                addReport(user)
+
+        }
+    }
     fun loadFields(){
         subcitySpinner = subcity_spinner
         woredaSpinner = woreda_spinner
@@ -89,8 +91,7 @@ class AddReportFragment : Fragment() {
         textEditText = add_report_message
         categorySpinner = category_spinner
         addButton = addreport_button
-        impactRatingBar = impact_rating_bar
-        attachImageView = attach_image_view
+
 
 
         var subcity = subcitySpinner.selectedItem.toString()
@@ -98,7 +99,7 @@ class AddReportFragment : Fragment() {
         var streetName = streetNameSpinner.selectedItem.toString()
         var header = headerEditText.text
         var category = categorySpinner.selectedItem.toString()
-        var impact = impactRatingBar.numStars
+        //var impact = impactRatingBar.numStars
 
         //TODO get the username
         //TODO get the email of the user by using the username
@@ -126,46 +127,65 @@ class AddReportFragment : Fragment() {
         val username = sharedPref?.getString("username","")
         return username
     }
-    fun addMedia(): Call<com.iyoa.cleanaddis.entity.posting.Media> {
-        mediaService = MediaServiceImpl().getMediaServiceImpl()
-        var media = MediaData(mCapturedImageURI.toString(),"IMAGE","REPORT",
+    suspend fun addMedia(): MediaJSON? {
+        mediaService = MediaServiceImpl().getMediaService()
+        var media = MediaData("C://image","IMAGE","REPORT",
             textEditText.text.toString())
         var savedMedia = mediaService.insertMedia(media)
-        return savedMedia
+        return savedMedia.await().body()
     }
 
-    fun addAddress(): Call<AddressData> {
+    fun addAddress(): Address? {
+        var saved:Address? = null
         addressService = AddressServiceImpl().getAddressServiceImpl()
         val addressData = AddressData(subcitySpinner.selectedItem.toString(),
             woredaSpinner.selectedItem.toString(),woredaSpinner.selectedItem.toString())
        var savedAddress = addressService.addAddress(addressData)
-        return savedAddress
-    }
+        savedAddress.enqueue(object: Callback<AddressData> {
+            override fun onResponse(call: Call<AddressData>, response: Response<AddressData>) {
 
-    fun addReport(user:String?){
-        loadFields()
-        reportService = ReportServiceImpl().getReportServiceImpl()
-        var mediaUUID:MediaUUID = addMedia() as MediaUUID
-        var address:Address = addAddress() as Address
-
-        val report = ReportData(user.toString(),textEditText.text.toString(),
-            mediaUUID.uuid,"WASTE", Date.from(Instant.now()),address.uuid,
-            impactRatingBar.numStars)
-        val call: Call<Report> = reportService.addReport(report)
-
-        call.enqueue(object: Callback<Report> {
+                 saved = response.body() as Address
 
 
-            override fun onResponse(call: Call<Report>, response: Response<Report>) {
-
-                var response = response.body() as Report
+                //Log.println(Log.INFO, "ArticleLine81", reportList?.get(0).toString())
             }
 
-            override fun onFailure(call: Call<Report>, t:Throwable){
+            override fun onFailure(call: Call<AddressData>, t:Throwable){
                 Log.wtf("ArticleLine85",t.message)
             }
 
         })
+        return saved
+    }
+
+     fun addReport(user:String?){
+        loadFields()
+        reportService = ReportServiceImpl().getReportServiceImpl()
+         runBlocking {
+             var mediaUUID:MediaJSON = addMedia()!!
+             var address:Address = addAddress()!!
+
+             val report = ReportData(user.toString(),textEditText.text.toString(),
+                 mediaUUID.uuid,"WASTE", Date.UTC(2019,7,0,0,9,6),address.uuid,
+                 2)
+             val call: Call<Report> = reportService.addReport(report)
+
+             call.enqueue(object: Callback<Report> {
+
+
+                 override fun onResponse(call: Call<Report>, response: Response<Report>) {
+
+                     var response = response.body() as Report
+                 }
+
+                 override fun onFailure(call: Call<Report>, t:Throwable){
+                     Log.wtf("ArticleLine85",t.message)
+                 }
+
+             })
+         }
+
+
         //TODO get the uuid of the report by adding it through the api
         //TODO using the uuid, create a Report object
         //TODO add the report object using viewModel
@@ -197,6 +217,6 @@ class AddReportFragment : Fragment() {
         //TODO observe the data change using viewmodel and livedata
 
     }
-*/
+
 
 }

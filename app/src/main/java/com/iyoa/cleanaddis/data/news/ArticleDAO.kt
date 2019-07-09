@@ -10,7 +10,7 @@ interface ArticleDAO {
 
 
     @Query("SELECT * FROM Article WHERE uuid =:uuid")
-    fun getNewsByUuid(uuid: Long): LiveData<Article>
+    fun getNewsByUuid(uuid: String): LiveData<Article>
 
 
     @Query("SELECT * FROM Article")

@@ -28,16 +28,20 @@ class ArticleDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-
-        val binding:NewsDetailFragmentBinding= DataBindingUtil.setContentView(this.requireActivity(), R.layout.news_detail_fragment)
+        val view = inflater.inflate(R.layout.news_detail_fragment, container, false)
+         //val viewModel by lazy { ViewModelProviders.of(this).get(ArticleDetailViewModel::class.java) }
+        val binding:NewsDetailFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.news_detail_fragment, container, false);
+       // val binding:NewsDetailFragmentBinding= DataBindingUtil.setContentView(activity!!, R.layout.news_detail_fragment)
         val article = arguments?.getSerializable("article") as Article
-        var myView : View  = binding.root
+
+        //var myView : View  = binding.root
         binding.text = article.text
         binding.title = article.title
+        //binding.model = viewModel
+        binding.lifecycleOwner = this
 
 
-
-        return myView
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

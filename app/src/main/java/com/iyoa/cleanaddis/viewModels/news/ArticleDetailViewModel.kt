@@ -26,7 +26,7 @@ class ArticleDetailViewModel(
         val  articleDAO = ArticleDatabase.getArticleDatabase(application).articleDao()
         articleRepos = ArticleRepository(articleDAO)
         allArticles = articleRepos.allArticles()
-        article = articleRepos.getArticle(articleID) as Article
+        article = articleRepos.getArticle(articleID.toString()) as Article
         title = article.title
         text = article.text
     }

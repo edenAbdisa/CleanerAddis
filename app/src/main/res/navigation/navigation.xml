@@ -23,9 +23,9 @@
     <fragment
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/article_detail_screen"
-            android:name="com.iyoa.cleanaddis.controller.news.ArticleFragment"
+            android:name="com.iyoa.cleanaddis.controller.news.ArticleDetailFragment"
             android:label="fragment_main"
-            tools:layout="@layout/fragment_news_list">
+            tools:layout="@layout/news_detail_fragment">
 
     </fragment>
 
@@ -34,7 +34,7 @@
             android:id="@+id/report_screen"
             android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
             android:label="fragment_report"
-            tools:layout="@layout/fragment_report">
+            tools:layout="@layout/fragment_report_list">
         <action
                 android:id="@+id/action_report_list_to_report_detail"
                 app:destination="@id/report_detail_screen"
@@ -54,7 +54,7 @@
     <fragment
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/report_detail_screen"
-            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportDetailFragment"
             android:label="fragment_detail_report"
             tools:layout="@layout/fragment_report_detail">
         <action
@@ -78,7 +78,7 @@
     <fragment
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/report_add_screen"
-            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:name="com.iyoa.cleanaddis.controller.report.AddReportFragment"
             android:label="fragment_add_report"
             tools:layout="@layout/fragment_add_report">
         <action

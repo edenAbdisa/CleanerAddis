@@ -3791,7 +3791,21 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
-    </style></file><file path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file></source><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\build\generated\res\rs\debug"/><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </style></file><file path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\res\values-w820dp\dimens.xml" qualifiers="w820dp-v13"><dimen name="activity_horizontal_margin">64dp</dimen></file><file path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\main\res\values\arrays.xml" qualifiers=""><string-array name="categorySpinnerItems">
+        <item>Waste</item>
+        <item>Paper</item>
+        <item>Water</item>
+    </string-array><string-array name="subcitySpinnerItems">
+        <item>Bole</item>
+        <item>Yeka</item>
+    </string-array><string-array name="woredaSpinnerItems">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array><string-array name="streetnameSpinnerItems">
+        <item>meri</item>
+        <item>kotebe</item>
+    </string-array></file></source><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\build\generated\res\rs\debug"/><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\Delilah Dessalegn\Documents\CleanerAddis\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>

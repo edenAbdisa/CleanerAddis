@@ -102,6 +102,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          .antMatchers("/user/"+ALPHANUMERIC).permitAll()
          .antMatchers("/user/"+UUID).permitAll()
          
+         .antMatchers("/report/reports/"+ALPHA).permitAll()
+         .antMatchers("/report/reports/"+ALPHANUMERIC).permitAll()
+         .antMatchers("/report/report/"+UUID).permitAll()
+         .antMatchers("/report/add").permitAll()
+         .antMatchers("/report/delete/"+ALPHA).permitAll()
+
+
+         
+         
          
 
          .anyRequest().authenticated();

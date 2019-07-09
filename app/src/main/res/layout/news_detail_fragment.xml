@@ -23,7 +23,7 @@
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp" app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="8dp"
-                android:text="@{model.title}"
+                android:text="@{title}"
                 android:layout_marginBottom="704dp" app:layout_constraintBottom_toBottomOf="parent"/>
         <ImageView
                 android:src="@android:drawable/ic_menu_report_image"
@@ -67,7 +67,7 @@
                 android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                android:text="@{model.text}"
+                android:text="@{text}"
                 app:layout_constraintBottom_toTopOf="@+id/divider2"/>
         <View
                 android:id="@+id/divider2"

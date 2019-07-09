@@ -39,8 +39,8 @@ class ArticleDaoTestTest {
     private lateinit var database: ArticleDatabase
     val sdf = SimpleDateFormat("yy-mm-dd")
     private lateinit var articleDao: ArticleDAO
-    private val articleA = Article("e9e847af-a680-4704-8d6b-840106aad78d".toLong(), "delilah", "c2545c58-3352-4986-94ee-68c64b6e935e".toLong(), "post",
-        sdf.parse("2019-11-10"),0,"b7d68bed-bb4c-4e71-bad5-f0a0e28c9c79".toLong())
+    private val articleA = Article("e9e847af-a680-4704-8d6b-840106aad78d", "delilah", "c2545c58-3352-4986-94ee-68c64b6e935e".toLong(), "post",
+        "2019-11-10",0,"b7d68bed-bb4c-4e71-bad5-f0a0e28c9c79".toLong())
 
 
     @get:Rule

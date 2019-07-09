@@ -12,6 +12,7 @@ import com.iyoa.cleanaddis.data.news.ArticleDAO
 import com.iyoa.cleanaddis.repository.news.ArticleRepository
 import com.iyoa.cleanaddis.viewModels.news.ArticleViewModel
 import io.reactivex.internal.util.NotificationLite.getValue
+import junit.framework.Assert.assertTrue
 import org.junit.After
 import org.junit.Assert.assertFalse
 import org.junit.Before
@@ -24,8 +25,7 @@ class ArticleViewModelTest {
     private lateinit var viewModel: ArticleViewModel
     private lateinit var articleDao:ArticleDAO
 
-    @get:Rule
-    var instantTaskExecutorRule = InstantTaskExecutorRule()
+
 
     @Before
     fun setUp() {
@@ -43,8 +43,7 @@ class ArticleViewModelTest {
     }
 
     @Test
-    @Throws(InterruptedException::class)
     fun testDefaultValues() {
-        assertFalse(getValue(viewModel.allArticles))
+        assertTrue(getValue(viewModel.allArticles))
     }
 }

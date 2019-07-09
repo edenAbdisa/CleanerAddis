@@ -31,4 +31,9 @@ public class ReportService {
 		// TODO Auto-generated method stub
 		return reportRepos.getOne(uuid);
 	}
+
+	public void delete(String subject) {
+		reportRepos.deleteReportBySubject(subject);
+		
+	}
 }

@@ -5,26 +5,21 @@
                                                    android:layout_height="wrap_content"
                                                    android:orientation="horizontal"
 >
-<androidx.recyclerview.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/list"
-        android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:layoutManager="LinearLayoutManager"
-        tools:context="com.iyoa.cleanaddis.controller.report.ReportFragment"
-        tools:listitem="@layout/fragment_report"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/report_list"
+            android:name="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="com.iyoa.cleanaddis.controller.report.ReportFragment"
+            tools:listitem="@layout/fragment_report" android:background="#FFFFFF"
+    >
+    </androidx.recyclerview.widget.RecyclerView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
                                                                            android:layout_height="wrap_content"
-                                                                           app:layout_constraintTop_toTopOf="parent"
-                                                                           android:layout_marginTop="628dp"
                                                                            app:layout_constraintEnd_toEndOf="parent"
                                                                            android:layout_marginEnd="16dp"
-                                                                           android:layout_marginRight="16dp"
                                                                            android:src="@android:drawable/ic_menu_add"
-                                                                           android:id="@+id/add_report_button"/>
+                                                                           android:id="@+id/add_report_button"
+                                                                           tools:layout_editor_absoluteY="41dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

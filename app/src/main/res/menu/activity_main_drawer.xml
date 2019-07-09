@@ -17,7 +17,7 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/teaching_name" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/report_screen"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/report_name" />
     </group>

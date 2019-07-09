@@ -28,7 +28,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
             <ImageView
                     android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                     android:layout_marginRight="8dp" android:text="views"/>
             <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="360dp"
+                    android:layout_height="100dp"
                     app:layout_constraintBottom_toTopOf="@id/title_news_card"
                     android:src="@drawable/ic_menu_gallery"
                     android:layout_margin="0dp" android:id="@+id/news_card_image"/>

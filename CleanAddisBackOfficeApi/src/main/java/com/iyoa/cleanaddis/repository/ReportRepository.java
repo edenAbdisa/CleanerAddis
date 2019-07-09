@@ -15,4 +15,8 @@ public interface ReportRepository extends JpaRepository<Report, UUID> {
 			, nativeQuery = true)
 	List<Report> findReportByUsername(String username);
 
+	
+	
+	void deleteReportBySubject(String subject);
+
 }

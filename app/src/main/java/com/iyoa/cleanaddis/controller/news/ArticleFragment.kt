@@ -9,7 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.news.MyNewsRecyclerViewAdapter
@@ -29,33 +34,31 @@ import retrofit2.Response
  * Activities containing this fragment MUST implement the
  * [ArticleFragment.OnListFragmentInteractionListener] interface.
  */
-class ArticleFragment : Fragment() {
-
-
+class ArticleFragment : Fragment(),MyNewsRecyclerViewAdapter.RecyclerViewClickListener {
     lateinit var articleViewModel: ArticleViewModel
     val context = MainActivity()
-
-
     private var columnCount = 1
-
     private var listener: OnListFragmentInteractionListener? = null
-
     private lateinit var  articleService: ArticleService
     lateinit var recyclerView: RecyclerView
 
+    override fun recyclerViewClicked(item:Article) {
+        //val articleFragment = ArticleDetailFragment()
+        val args = Bundle()
+        args.putSerializable("article",item)
 
+        NavHostFragment.findNavController(this).navigate(R.id.action_article_list_to_article_detail, args)
+
+}
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val articleListAdapter = MyNewsRecyclerViewAdapter(context)
+        val articleListAdapter = MyNewsRecyclerViewAdapter(context,this)
         var articleList = articleListAdapter.getArticles()
 
         val view = inflater.inflate(R.layout.fragment_news_list, container, false)
-
-        //view.findViewById<View>(R.id.news_card).setOnClickListener {
-        //  Navigation.findNavController(view).navigate(R.id.action_article_list_to_article_detail)
 
 
         recyclerView = view.findViewById(R.id.fragment_news_list)
@@ -75,14 +78,6 @@ class ArticleFragment : Fragment() {
         }
 
 
-        /*
-            articleViewModel = ViewModelProviders.of(this).get(
-                ArticleViewModel::class.java
-            )
-           articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
-               articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
-           })
-    */
 
         return view
     }
@@ -158,7 +153,7 @@ class ArticleFragment : Fragment() {
         )
 
         articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
-                articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
+                articles->articles?.let{MyNewsRecyclerViewAdapter(context,this).setArticlesForApi(articles)}
         })
         run{articleViewModel.addArticles(article)}
 

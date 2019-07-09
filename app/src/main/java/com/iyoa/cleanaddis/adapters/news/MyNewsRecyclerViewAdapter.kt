@@ -17,11 +17,12 @@ import kotlinx.android.synthetic.main.fragment_news.view.*
 import java.util.*
 import android.R
 import android.os.Bundle
+import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.controller.news.ArticleDetailFragment
 import com.iyoa.cleanaddis.controller.news.ArticleFragment
 
 
-class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyNewsRecyclerViewAdapter.ArticleViewHolder>() {
+class MyNewsRecyclerViewAdapter(val context: Context, private val listener: RecyclerViewClickListener) : RecyclerView.Adapter<MyNewsRecyclerViewAdapter.ArticleViewHolder>() {
 
     private var articles: List<Article> = emptyList()
     private var itemListen: RecyclerViewClickListener? = null
@@ -52,7 +53,9 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
 
         holder.mIdView.text = course.title
         holder.mContentView.text = course.text
-
+        holder.mView.setOnClickListener {
+            listener.recyclerViewClicked(articles[position])
+        }
 
     }
 
@@ -68,22 +71,16 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
 
     override fun getItemCount(): Int = articles.size
 
-    inner class ArticleViewHolder(val mView: View) : RecyclerView.ViewHolder(mView),View.OnClickListener {
+    inner class ArticleViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
 
 
 
-        override fun onClick(v: View?) {
-            itemListen?.recyclerViewClicked(v,this.layoutPosition)
-            var article = v as Article
-            val articleFragment = ArticleDetailFragment()
-            val args = Bundle()
-            args.putSerializable("article",article)
-            articleFragment.arguments = args
 
-        }
+
 
         val mIdView: TextView = mView.title_news_card
         val mContentView: TextView = mView.subtitle_news_card
+        val mViewButton:Button = mView.view_button_news
 
         override fun toString(): String {
             return super.toString() + " '" + mContentView.text + "'"
@@ -94,6 +91,6 @@ class MyNewsRecyclerViewAdapter(val context: Context) : RecyclerView.Adapter<MyN
     interface RecyclerViewClickListener{
 
 
-        fun  recyclerViewClicked(view:View? ,position:Int)
+        fun  recyclerViewClicked(item:Article)
     }
 }

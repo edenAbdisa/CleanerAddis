@@ -20,8 +20,8 @@
                     android:id="@+id/profile_divider"
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="?android:attr/listDivider"
-                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="84dp"
+                    android:background="#00FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_marginStart="84dp" tools:layout_editor_absoluteY="0dp"/>
             <ImageView
                     android:layout_width="84dp"

@@ -7,12 +7,15 @@ import com.iyoa.cleanaddis.data.news.Article
 @Dao
 interface ReportDAO {
 
-    @Query("SELECT * FROM Report WHERE uuid =:uuid")
+    @Query("SELECT * FROM report WHERE uuid =:uuid")
     fun getReportByUuid(uuid: Long): LiveData<Report>
 
 
-    @Query("SELECT * FROM Report WHERE username=:username")
+    @Query("SELECT * FROM report WHERE username=:username")
     fun getAllReports(username:String): LiveData<List<Report>>
+
+    @Query("SELECT * FROM report")
+    fun getAllReport(): LiveData<List<Report>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun addReport(report: Report)
