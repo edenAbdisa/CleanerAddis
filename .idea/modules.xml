@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/CleanerAddis.iml" filepath="$PROJECT_DIR$/.idea/CleanerAddis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/CleanerAddis.app.iml" filepath="$PROJECT_DIR$/app/CleanerAddis.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CleanerAddisBackend/CleanerAddisBackend.iml" filepath="$PROJECT_DIR$/CleanerAddisBackend/CleanerAddisBackend.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/CleanerAddis.iml" filepath="$PROJECT_DIR$/CleanerAddis.iml" />
->>>>>>> e3b77cace2c565ad96836ee286f8ec41c567d987
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
