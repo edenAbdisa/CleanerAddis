@@ -12,7 +12,7 @@ import retrofit2.http.Path
 
 interface ReportService {
 
-    //Interface of ReportService
+   
 
     @POST("report/add")
     fun addReport(report: ReportData): Call<Report>
