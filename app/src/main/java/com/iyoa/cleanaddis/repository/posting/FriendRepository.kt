@@ -2,30 +2,30 @@ package com.iyoa.cleanaddis.repository.posting
 
 import androidx.lifecycle.LiveData
 import com.iyoa.cleanaddis.data.posting.FriendDAO
-import com.iyoa.cleanaddis.entity.posting.Friend
+import com.iyoa.cleanaddis.data.posting.FriendUUID
 
 
 class FriendRepository(private val friendDAO: FriendDAO) {
-    fun getAllFriend():LiveData<List<Friend>> = friendDAO.getAllFriend()
+    fun getAllFriend():LiveData<List<FriendUUID>> = friendDAO.getAllFriend()
 
-    fun insertFriend(friend :Friend){
-        friendDAO.insertFriend(friend)
+    fun insertFriend(friendUUID :FriendUUID){
+        friendDAO.insertFriend(friendUUID)
     }
 
-    fun updateFriend(friend:Friend){
-        friendDAO.updateFriend(friend)
+    fun updateFriend(friendUUID:FriendUUID){
+        friendDAO.updateFriend(friendUUID)
     }
-    fun getFriendByUUID(uuid:Long){
+    fun getFriendByUUID(uuid:String){
         friendDAO.getFriendByUUID(uuid)
     }
-    fun deleteFriend(friend:Friend){
-        friendDAO.deleteFriend(friend)
+    fun deleteFriend(friendUUID:FriendUUID){
+        friendDAO.deleteFriend(friendUUID)
     }
     fun deleteAll(){
         friendDAO.deleteAll()
     }
-    fun addFriends(friends:List<Friend>){
-        friendDAO.addFriends(friends)
+    fun addFriends(friendUUIDS:List<FriendUUID>){
+        friendDAO.addFriends(friendUUIDS)
     }
 
 }

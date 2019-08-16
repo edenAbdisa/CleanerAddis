@@ -7,6 +7,7 @@
 	<artifactId>CleanAddisBackOfficeApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CleanAddisBackOfficeApi</name>
+	    <packaging>war</packaging>	
 	<description>Api for clean addis backend</description>
 
 	<parent>
@@ -96,3 +97,4 @@
 	</build>
 
 </project>
+

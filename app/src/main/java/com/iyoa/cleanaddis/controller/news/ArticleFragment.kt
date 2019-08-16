@@ -1,36 +1,28 @@
 package com.iyoa.cleanaddis.controller.news
 
 import android.content.Context
-import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
-import androidx.navigation.Navigation
 import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.news.MyNewsRecyclerViewAdapter
 
 import com.iyoa.cleanaddis.controller.news.dummy.DummyContent.DummyItem
 import com.iyoa.cleanaddis.data.news.Article
-import com.iyoa.cleanaddis.retrofitDelilah.ArticleService
-import com.iyoa.cleanaddis.retrofitDelilah.ArticleServiceImpl
+import com.iyoa.cleanaddis.retrofit.ArticleService
+import com.iyoa.cleanaddis.retrofit.ArticleServiceImpl
 import com.iyoa.cleanaddis.utility.Connection.Companion.checkConnection
 import com.iyoa.cleanaddis.viewModels.news.ArticleViewModel
-import kotlinx.android.synthetic.main.fragment_news.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.text.SimpleDateFormat
-import java.util.*
 
 /**
  * A fragment representing a list of Items.
@@ -59,29 +51,51 @@ class ArticleFragment : Fragment() {
     ): View? {
         val articleListAdapter = MyNewsRecyclerViewAdapter(context)
         var articleList = articleListAdapter.getArticles()
-        loadArticles(articleListAdapter,articleList)
-        val view = inflater.inflate(R.layout.fragment_news_list, container, false)
-        view.findViewById<View>(R.id.news_card).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_article_list_to_article_detail)
 
-        }
+        val view = inflater.inflate(R.layout.fragment_news_list, container, false)
+
+        //view.findViewById<View>(R.id.news_card).setOnClickListener {
+        //  Navigation.findNavController(view).navigate(R.id.action_article_list_to_article_detail)
+
 
         recyclerView = view.findViewById(R.id.fragment_news_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
+        articleListAdapter.notifyDataSetChanged()
+
         recyclerView.adapter = articleListAdapter
         recyclerView.setHasFixedSize(true)
 
 
-    /*
+
+        if(checkConnection(view?.context)) {
+            loadArticles(articleListAdapter, articleList)
+        }
+        else{
+            getArticles(articleListAdapter)
+        }
+
+
+        /*
+            articleViewModel = ViewModelProviders.of(this).get(
+                ArticleViewModel::class.java
+            )
+           articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
+               articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
+           })
+    */
+
+        return view
+    }
+
+    private fun getArticles(articleListAdapter: MyNewsRecyclerViewAdapter) {
         articleViewModel = ViewModelProviders.of(this).get(
             ArticleViewModel::class.java
         )
-       articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
-           articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
-       })
-*/
 
-        return view
+        articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
+                articles->articles?.let{articleListAdapter.setArticlesForApi(it)}
+        })
+
     }
 
     override fun onAttach(context: Context) {
@@ -142,41 +156,36 @@ class ArticleFragment : Fragment() {
         articleViewModel = ViewModelProviders.of(this).get(
             ArticleViewModel::class.java
         )
-        if(checkConnection(view?.context)){
-            articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
-                    articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
-            })
-            run{articleViewModel.addArticles(article)}
-        }
-        else if(!checkConnection(view?.context)){
-            articleViewModel.getArticles()
-            articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
-                    articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
-            })
-        }
-        else{
-            Toast.makeText(context,"Check your network connection",Toast.LENGTH_SHORT)
-        }
+
+        articleViewModel.allArticles.observe(this,androidx.lifecycle.Observer {
+                articles->articles?.let{MyNewsRecyclerViewAdapter(context).setArticlesForApi(articles)}
+        })
+        run{articleViewModel.addArticles(article)}
+
+
+
+
+
 
     }
 
 
     fun addNews(){
-    /*
-        val addButton: Button = add_news
-        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
-        val currentDate = sdf.format(Date())
-        addButton.setOnClickListener {
-            val article =
-                Article("1","Plastic","1"
-                    ,"Hey there plastic",currentDate,"PUBLISHED",
-                    "delilah","delilah",0,"1")
+        /*
+            val addButton: Button = add_news
+            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+            val currentDate = sdf.format(Date())
+            addButton.setOnClickListener {
+                val article =
+                    Article("1","Plastic","1"
+                        ,"Hey there plastic",currentDate,"PUBLISHED",
+                        "delilah","delilah",0,"1")
 
-            AsyncTask.execute{
-                articleViewModel.insertArticle(article)
-            }
-              }
-              */
+                AsyncTask.execute{
+                    articleViewModel.insertArticle(article)
+                }
+                  }
+                  */
 
 
 

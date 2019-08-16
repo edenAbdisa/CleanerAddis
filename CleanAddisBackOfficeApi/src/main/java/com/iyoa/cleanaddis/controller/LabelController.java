@@ -1,8 +1,11 @@
 package com.iyoa.cleanaddis.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,5 +29,11 @@ public class LabelController {
 		Label label=new Label();
 		label.setLabelName(labelJson.getLabel());
 		return new ResponseEntity<Label>(labelService.saveLabel(label), HttpStatus.OK);
+	}
+	
+	@GetMapping(value="/get",consumes="application/json")
+	public ResponseEntity<List<Label>> getLabel(){
+		List<Label> label = labelService.getAllLabels();
+		return new ResponseEntity<List<Label>>(label,HttpStatus.OK);
 	}
 }

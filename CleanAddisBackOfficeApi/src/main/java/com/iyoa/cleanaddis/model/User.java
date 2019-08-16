@@ -72,7 +72,7 @@ public class User implements java.io.Serializable{
 	private int isBlocked;
 	
 	@JsonIgnore
-	@OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="role_uuid",referencedColumnName="uuid")
 	private Role role;
 	

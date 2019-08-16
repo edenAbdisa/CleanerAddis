@@ -2,30 +2,29 @@ package com.iyoa.cleanaddis.repository.posting
 
 import androidx.lifecycle.LiveData
 import com.iyoa.cleanaddis.data.posting.PostDAO
-import com.iyoa.cleanaddis.entity.posting.Post
-import java.util.*
+import com.iyoa.cleanaddis.data.posting.PostUUID
 
 class PostRepository(private val postDAO: PostDAO) {
-    fun getAllPost():LiveData<List<Post>> = postDAO.getAllPost()
+    fun getAllPost():LiveData<List<PostUUID>> = postDAO.getAllPost()
 
-    fun insertPost(post :Post){
-        postDAO.insertPost(post)
+    fun insertPost(postUUID :PostUUID){
+        postDAO.insertPost(postUUID)
     }
 
-    fun updatePost(post:Post){
-        postDAO.updatePost(post)
+    fun updatePost(postUUID:PostUUID){
+        postDAO.updatePost(postUUID)
     }
-    fun getPostByUUID(uuid:Long){
+    fun getPostByUUID(uuid:String){
         postDAO.getPostByUUID(uuid)
     }
-    fun deletePost(post:Post){
-        postDAO.deletePost(post)
+    fun deletePost(postUUID:PostUUID){
+        postDAO.deletePost(postUUID)
     }
     fun deleteAll(){
         postDAO.deleteAll()
     }
-    fun addPosts(posts:List<Post>){
-        postDAO.addPost(posts)
+    fun addPosts(postUUIDS:List<PostUUID>){
+        postDAO.addPost(postUUIDS)
     }
 
 }

@@ -153,10 +153,14 @@
                                   <option name="values">
                                     <map>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                       <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_send_black_24dp.xml" />
 =======
                                       <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_check_circle_black_24dp.xml" />
 >>>>>>> 14f865db55ec1675d8203d1e43beaa84279fdd6a
+=======
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/file/ic_attachment_black_24dp.xml" />
+>>>>>>> 1e134995d476569c612b5ed24358e3472a76afe0
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -171,8 +175,12 @@
                             <entry key="outputName" value="ic_newsend" />
 =======
                             <entry key="color" value="f9aa33" />
+<<<<<<< HEAD
                             <entry key="outputName" value="ic_check_circle_black_24dp" />
 >>>>>>> 14f865db55ec1675d8203d1e43beaa84279fdd6a
+=======
+                            <entry key="outputName" value="ic_attachment_black_24dp" />
+>>>>>>> 1e134995d476569c612b5ed24358e3472a76afe0
                             <entry key="sourceFile" value="C:\Users\Delilah Dessalegn" />
                           </map>
                         </option>

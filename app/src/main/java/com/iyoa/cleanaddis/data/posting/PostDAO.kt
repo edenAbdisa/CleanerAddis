@@ -2,29 +2,27 @@ package com.iyoa.cleanaddis.data.posting
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.iyoa.cleanaddis.entity.posting.Post
-import java.util.*
 
 @Dao
 interface PostDAO {
     @Query("SELECT * FROM post WHERE uuid =:uuid")
-    fun getPostByUUID(uuid: Long): LiveData<Post>
+    fun getPostByUUID(uuid: String): LiveData<PostUUID>
 
     @Query("SELECT * FROM post")
-    fun getAllPost(): LiveData<List<Post>>
+    fun getAllPost(): LiveData<List<PostUUID>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertPost(post: Post)
+    fun insertPost(postUUID: PostUUID)
 
     @Update
-    fun updatePost(post: Post)
+    fun updatePost(postUUID: PostUUID)
 
     @Delete
-    fun deletePost(post: Post)
+    fun deletePost(postUUID: PostUUID)
 
     @Query("DELETE FROM post")
     fun deleteAll()
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addPost(listOfPost: List<Post>)
+    fun addPost(listOfPostUUID: List<PostUUID>)
 }

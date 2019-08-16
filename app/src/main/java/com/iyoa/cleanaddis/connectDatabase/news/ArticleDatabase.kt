@@ -5,8 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.iyoa.cleanaddis.data.common.Category
-import com.iyoa.cleanaddis.data.common.Media
 import com.iyoa.cleanaddis.data.news.*
 import com.iyoa.cleanaddis.utility.DataConverter
 

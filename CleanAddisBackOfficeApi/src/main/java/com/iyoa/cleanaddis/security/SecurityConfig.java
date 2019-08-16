@@ -78,9 +78,32 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     	 http.cors().and().csrf().disable().authorizeRequests()
     	 .antMatchers("/article/articles").permitAll()
          .antMatchers("/article/create").permitAll()
+         .antMatchers("/article/"+ALPHA+"/"+ALPHANUMERIC).permitAll()
+         .antMatchers("/article/"+ALPHA).permitAll()
          .antMatchers("/category/create").permitAll()
          .antMatchers("/media/create").permitAll()
+         .antMatchers("/media/createMedia").permitAll()
+         .antMatchers("/label/get").permitAll()
+         .antMatchers("/label/add").permitAll()
+         .antMatchers("/media/get/id").permitAll()
+         .antMatchers("/media/get/"+UUID).permitAll()
+         .antMatchers("/category/**").permitAll()
+         .antMatchers("/category/get/"+UUID).permitAll()
+         .antMatchers("/role/get/"+ALPHA).permitAll()
+         .antMatchers("/role/"+ALPHA).permitAll()
+         .antMatchers("/media/"+ALPHA).permitAll()
+         .antMatchers("/role/get/"+UUID).permitAll()
+
          .antMatchers("/user/changepasswordexternal").permitAll()
+         .antMatchers("/user/"+ALPHA).permitAll()
+         .antMatchers("/user/get/"+ALPHANUMERIC).permitAll()
+         .antMatchers("/user/get/"+ALPHA+"/"+ALPHANUMERIC).permitAll()
+         .antMatchers("/user/"+ALPHA +"/"+ALPHANUMERIC).permitAll()
+         .antMatchers("/user/"+ALPHANUMERIC).permitAll()
+         .antMatchers("/user/"+UUID).permitAll()
+         
+         
+
          .anyRequest().authenticated();
     }
 

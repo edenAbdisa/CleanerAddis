@@ -13,6 +13,8 @@ import com.iyoa.cleanaddis.model.Article;
 
 public interface ArticleRepository extends JpaRepository<Article, UUID> {
 
+	Article findArticleByTitle(String title);
+
 
 	
 	

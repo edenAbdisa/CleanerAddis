@@ -3,8 +3,12 @@
     <color name="colorPrimary"> #00796B</color>
     <color name="colorPrimaryDark">#009688</color>
     <color name="colorAccent">#F9AA33</color>
+<<<<<<< HEAD
     <color name="lightercoloraccent">#FBC97D</color>
 
+=======
+    <color name="white">#FFFFFF</color>
+>>>>>>> 1e134995d476569c612b5ed24358e3472a76afe0
     <color name="greenPrimaryDark">#356859</color>
     <color name="orangeSecondary">#FD5523</color>
     <color name="fadedWhiteSecondary">#FFFBE6</color>

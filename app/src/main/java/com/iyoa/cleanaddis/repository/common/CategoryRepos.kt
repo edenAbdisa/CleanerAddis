@@ -10,5 +10,7 @@ class CategoryRepos(val categoryDAO: CategoryDAO) {
     fun insertMedia(category: Category){
         categoryDAO.insertCategory(category)
     }
-
+    fun getCategoryByName(name: String): Category{
+        return categoryDAO.getCategoryByName(name)
+    }
 }

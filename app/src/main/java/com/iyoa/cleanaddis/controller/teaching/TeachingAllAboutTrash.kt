@@ -48,7 +48,11 @@ val ft = childFragmentManager
             ft.commitAllowingStateLoss()
         }
  */
+<<<<<<< HEAD
             val ABTFragment = RecycleViewAllAboutTrash()
+=======
+            val ABTFragment = RecyclerViewAllAboutTrash()
+>>>>>>> 1e134995d476569c612b5ed24358e3472a76afe0
             val l=childFragmentManager.beginTransaction()
 
 

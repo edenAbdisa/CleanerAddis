@@ -8,4 +8,6 @@ import com.iyoa.cleanaddis.model.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, UUID> {
 
+	Category findCategoryByName(String name);
+
 }

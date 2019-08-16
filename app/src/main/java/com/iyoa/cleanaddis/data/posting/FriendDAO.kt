@@ -2,30 +2,27 @@ package com.iyoa.cleanaddis.data.posting
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.iyoa.cleanaddis.entity.posting.Friend
-import com.iyoa.cleanaddis.entity.posting.Post
-import java.util.*
 
 @Dao
 interface FriendDAO {
     @Query("SELECT * FROM friend WHERE uuid =:uuid")
-    fun getFriendByUUID(uuid: Long): LiveData<Friend>
+    fun getFriendByUUID(uuid: String): LiveData<FriendUUID>
 
     @Query("SELECT * FROM friend")
-    fun getAllFriend(): LiveData<List<Friend>>
+    fun getAllFriend(): LiveData<List<FriendUUID>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertFriend(friend: Friend)
+    fun insertFriend(friendUUID: FriendUUID)
 
     @Update
-    fun updateFriend(friend: Friend)
+    fun updateFriend(friendUUID: FriendUUID)
 
     @Delete
-    fun deleteFriend(friend: Friend)
+    fun deleteFriend(friendUUID: FriendUUID)
 
     @Query("DELETE FROM friend")
     fun deleteAll()
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addFriends(listOfFriend: List<Friend>)
+    fun addFriends(listOfFriendUUID: List<FriendUUID>)
 }

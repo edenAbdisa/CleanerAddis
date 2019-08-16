@@ -51,6 +51,10 @@
     <com.google.android.material.button.MaterialButton
             android:text="@string/teaching_nrec_more"
             android:textColor="#FFFFFF"
+<<<<<<< HEAD
+=======
+            android:background="@drawable/button"
+>>>>>>> 1e134995d476569c612b5ed24358e3472a76afe0
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" tools:layout_editor_absoluteY="490dp"
             tools:layout_editor_absoluteX="153dp" android:id="@+id/NRECButton"
@@ -58,7 +62,10 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="@+id/NREC2"
+<<<<<<< HEAD
             android:background="@drawable/button"
+=======
+>>>>>>> 1e134995d476569c612b5ed24358e3472a76afe0
     />
     <androidx.constraintlayout.widget.Guideline
             android:orientation="vertical"

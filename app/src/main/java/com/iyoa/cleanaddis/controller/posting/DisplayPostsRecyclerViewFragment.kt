@@ -1,110 +1,94 @@
 package com.iyoa.cleanaddis.controller.posting
 
 import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.iyoa.cleanaddis.MainActivity
 import com.iyoa.cleanaddis.R
 import com.iyoa.cleanaddis.adapters.posting.PostAdapters
+import com.iyoa.cleanaddis.data.posting.CommentUUID
+import com.iyoa.cleanaddis.data.posting.PostUUID
+import com.iyoa.cleanaddis.entity.posting.Comment
 import com.iyoa.cleanaddis.entity.posting.Post
 import com.iyoa.cleanaddis.retrofitEden.PostService
 import com.iyoa.cleanaddis.retrofitEden.PostServiceImpl
-import com.iyoa.cleanaddis.utility.Connection
 import com.iyoa.cleanaddis.utility.Connection.Companion.checkConnection
+import com.iyoa.cleanaddis.viewModels.posting.CommentViewModel
 import com.iyoa.cleanaddis.viewModels.posting.PostViewModel
+import kotlinx.android.synthetic.main.fragment_display_posts_recycler_view.view.*
+import kotlinx.android.synthetic.main.fragment_display_posts_recycler_view.view.navigation_bottom_bar
+import kotlinx.android.synthetic.main.fragment_post_account.view.*
+import kotlinx.android.synthetic.main.single_post_display.*
+import kotlinx.android.synthetic.main.single_post_display.view.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class DisplayPostsRecyclerViewFragment : Fragment() {
-     lateinit var postViewModel: PostViewModel
+class DisplayPostsRecyclerViewFragment : NavHostFragment() {
+    lateinit var postViewModel: PostViewModel
+
+    lateinit var commentViewModel: CommentViewModel
+    //lateinit var userViewModel: UserViewModel
+
     val context = MainActivity()
-    var listItems :List <Post>? = emptyList()
     private var listener: OnFragmentInteractionListener? = null
-    lateinit var recyclerView: RecyclerView
-    private lateinit var postService:PostService
+    private lateinit var postService: PostService
 
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
-        val view= inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        postViewModel = ViewModelProviders.of(this).get(PostViewModel::class.java)
+        commentViewModel = ViewModelProviders.of(this).get(CommentViewModel::class.java)
+        val binding = inflater.inflate(R.layout.fragment_display_posts_recycler_view, container, false)
+        val navController = this.findNavController()
+        binding.navigation_bottom_bar?.let {
+            NavigationUI.setupWithNavController(it, navController)}
+        val postListAdapter = PostAdapters(context,postViewModel,commentViewModel)
+        if(checkConnection(view?.context)) {
+            loadPosts(postListAdapter)
+        }else{
+            getFromRoom(postListAdapter)
+        }
+        binding.recyclerView_front_post_view.layoutManager = LinearLayoutManager(context)
+        binding.recyclerView_front_post_view.adapter = context.let { postListAdapter }
 
-        val postListAdapter = PostAdapters(context)
-        var postList = postListAdapter.getPosts()
-        loadPosts(postListAdapter,postList)
-        recyclerView = view.findViewById(R.id.recyclerView_front_post_view)
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = context?.let { PostAdapters(it) }
-        recyclerView.setHasFixedSize(true)
-        return view
+        return binding
     }
-    fun loadPosts(postAdapter:PostAdapters,  postList:List<Post>){
-        var postList = postList
-        postService =PostServiceImpl().getPostServiceImpl()
-        val call: Call<List<Post>> = postService.findPosts()
-        call.enqueue(object:Callback<List<Post>>{
-            override fun onResponse(call: Call<List<Post>>, response: Response<List<Post>>) {
-
-                postList = response.body() as List<Post>
-                postAdapter.setPosts(postList)
-                addToViewModel(postList)
-                Log.println(Log.INFO, "PostLine78", postList?.get(0).toString())
+    fun getFromRoom(postAdapter: PostAdapters){
+       // postViewModel.addToRoom()
+    }
+    fun loadPosts(postAdapter: PostAdapters) {
+        postViewModel.getPosts()
+        postViewModel.getResponses.observe(this, Observer { response ->
+            response.body()?.run{
+                postViewModel.addToRoom(this)
+                postAdapter.setPosts(this)
             }
-
-            override fun onFailure(call:Call<List<Post>>,t:Throwable){
-                Log.wtf("PostLine82",t.message)
-            }
-
         })
     }
-    fun addToViewModel(posts:List<Post>){
-        postViewModel = ViewModelProviders.of(this).get(
-            PostViewModel::class.java
-        )
-        if(checkConnection(view?.context)){
-            postViewModel.allPost.observe(this,androidx.lifecycle.Observer {
-                    posts->posts?.let{PostAdapters(context).setPosts(posts)}
-            })
-            run{postViewModel.addPosts(posts)}
-        }
-        else{
-            Toast.makeText(context,"Check your network connection",Toast.LENGTH_SHORT)
-        }
 
-    }
 
     fun onButtonPressed(uri: Uri) {
         listener?.onFragmentInteraction(uri)
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        /*if (context is OnFragmentInteractionListener) {
-            listener = context
-        } else {
-            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
-        }*/
-    }
-
     override fun onDetach() {
         super.onDetach()
+        commentViewModel = ViewModelProviders.of(this).get(CommentViewModel::class.java)
         listener = null
     }
+
     interface OnFragmentInteractionListener {
         fun onFragmentInteraction(uri: Uri)
-    }
-
-    companion object {
     }
 }

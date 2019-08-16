@@ -6,13 +6,13 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.iyoa.cleanaddis.data.posting.PostDAO
-import com.iyoa.cleanaddis.entity.posting.Post
+import com.iyoa.cleanaddis.data.posting.PostUUID
+import com.iyoa.cleanaddis.utility.CommentListConvertor
 import com.iyoa.cleanaddis.utility.DataConverter
 
 
-@Database(entities = arrayOf(Post:: class ),version=1)
-@TypeConverters(DataConverter::class)
-
+@Database(entities = arrayOf(PostUUID:: class ),version=1)
+//@TypeConverters(CommentListConvertor::class)
 abstract class PostDatabase: RoomDatabase() {
     abstract fun postDao(): PostDAO
     companion object{

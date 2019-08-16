@@ -9,11 +9,11 @@ import java.io.Serializable
 
 @Entity(tableName = "category")
 data class Category(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @ColumnInfo(name="uuid")
-    val uuid: Long,
+    val uuid: String,
 
-    @ColumnInfo(name="name") val url:String,
+    @ColumnInfo(name="name") val name:String,
 
     @ColumnInfo(name = "for_what_data") val forWhatData:String
 

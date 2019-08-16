@@ -1,5 +1,6 @@
 package com.iyoa.cleanaddis.service;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -22,6 +23,14 @@ public class CategoryService {
 	
 	public Optional<Category> findById(UUID id){
 		return categoryRepos.findById(id);
+	}
+	
+	public List<Category> getAllCategories(){
+		return categoryRepos.findAll();
+	}
+
+	public Category findCategoryByName(String name) {
+		return categoryRepos.findCategoryByName(name);
 	}
 	
 

@@ -22,7 +22,7 @@ class FirebaseDatabaseExamples {
 
 
             //getting reference to the media document I'm going to create inside the trash collection
-            var media: Media = Media("images/delilah.png","IMAGE","article"
+            var media: MediaUUID = MediaUUID("images/delilah.png","IMAGE","article"
                 ,"this is my second first article")
 
 

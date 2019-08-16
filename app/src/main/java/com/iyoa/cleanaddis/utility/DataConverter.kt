@@ -3,16 +3,30 @@ package com.iyoa.cleanaddis.utility
 
 import java.util.*
 import androidx.room.TypeConverter
-import com.iyoa.cleanaddis.entity.posting.CanBeViewedBy
-import com.iyoa.cleanaddis.entity.posting.FriendRequestStatus
+import com.iyoa.cleanaddis.data.posting.CanBeViewedBy
+import com.iyoa.cleanaddis.data.posting.FriendRequestStatus
 import java.io.Serializable
-import java.time.Instant
+import java.time.format.DateTimeFormatter
 
-class DataConverter:Serializable{
+class DataConverter : Serializable{
+
     companion object {
+        private val FORMATTER = DateTimeFormatter.ISO_LOCAL_DATE_TIME
         @TypeConverter
         @JvmStatic
-        fun fromInstant(value: Date): Long {
+        fun dateToTimestamp(date: Date?): Long? {
+            return date?.time?.toLong()
+        }
+        @TypeConverter
+        @JvmStatic
+        fun fromTimestamp(value: Long?): Date? {
+
+            return value?.let{Date(it)}
+        }
+
+        @TypeConverter
+        @JvmStatic
+        public fun fromInstant(value: Date): Long {
             return value.time
         }
 
@@ -38,6 +52,7 @@ class DataConverter:Serializable{
         fun enumToString(value:Enum<CanBeViewedBy>):String{
             return value.toString()
         }
+
     }
 
 

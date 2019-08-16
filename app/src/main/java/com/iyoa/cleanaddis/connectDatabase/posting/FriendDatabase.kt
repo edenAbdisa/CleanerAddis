@@ -6,15 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.iyoa.cleanaddis.data.posting.FriendDAO
-import com.iyoa.cleanaddis.data.posting.PostDAO
-import com.iyoa.cleanaddis.entity.posting.Friend
-import com.iyoa.cleanaddis.entity.posting.Post
+import com.iyoa.cleanaddis.data.posting.FriendUUID
 import com.iyoa.cleanaddis.utility.DataConverter
 
 
-@Database(entities = arrayOf(Friend:: class ),version=1)
+@Database(entities = arrayOf(FriendUUID:: class ),version=1)
 @TypeConverters(DataConverter::class)
-
 abstract class FriendDatabase: RoomDatabase() {
     abstract fun friendDao(): FriendDAO
     companion object{
